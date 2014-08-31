@@ -1,4 +1,4 @@
-Pod::Spec.new do |spec|
+Pod::Spec.new do |s|
   s.name         = 'PDKTModelBuilder'
   s.version      = '0.1'
   s.license      = { :type => 'MIT' }
