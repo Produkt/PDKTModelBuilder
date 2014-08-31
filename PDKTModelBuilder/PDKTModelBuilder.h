@@ -7,6 +7,3 @@
 //
 
 #import "PDKTEntityDataParser.h"
-#ifdef _COREDATADEFINES_H
-    #import "NSManagedObject+PDKTModelBuilder.h"
-#endif
