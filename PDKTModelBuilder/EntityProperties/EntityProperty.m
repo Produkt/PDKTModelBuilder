@@ -15,6 +15,7 @@
 #import "EntityPropertyURL.h"
 #import "EntityPropertyTimeStamp.h"
 
+#pragma clang diagnostic ignored "-Wincomplete-implementation"
 @implementation EntityProperty
 + (EntityProperty *)entityPropertyWithPropertyType:(EntityPropertyType)propertyType{
     EntityProperty *property = nil;
@@ -43,15 +44,9 @@
     }
     return property;
 }
-
-- (id)parsedValueForObject:(id)object{
-    // Abstract implementation
-    return nil;
-}
-
-// think what would happen with recursive relationdships. Probable infinite loop. Perhaps add a maxdepth parameter for this method
-- (id)randomValueWithDepth:(NSInteger)depth{
-    // Abstract implementation
+- (id)forwardingTargetForSelector:(SEL)aSelector{
+    NSLog(@"\n\n*** '%@' selector must be implemented by the subclass %@ ***\n\n",NSStringFromSelector(aSelector),NSStringFromClass([self class]));
+    [self doesNotRecognizeSelector:aSelector];
     return nil;
 }
 @end
