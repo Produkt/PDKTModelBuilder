@@ -16,7 +16,6 @@ static NSString * const propertyBindingPropertyTypeKey = @"propertyBindingProper
 @implementation PDKTEntityDataParser
 @dynamic propertiesBindings;
 @dynamic propertiesTypeTransformers;
-@dynamic entityPropertyId;
 - (instancetype)init
 {
     self = [super init];

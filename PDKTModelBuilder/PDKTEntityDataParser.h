@@ -10,7 +10,6 @@
 #import "EntityProperty.h"
 
 @interface PDKTEntityDataParser : NSObject
-@property (nonatomic, readonly) NSString *entityPropertyId;
 @property (nonatomic, readonly) NSDictionary *propertiesBindings;
 @property (nonatomic, readonly) NSDictionary *propertiesTypeTransformers;
 - (void)parseDictionary:(NSDictionary *)dictionary withEntity:(NSObject *)entity;
