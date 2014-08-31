@@ -6,13 +6,12 @@ Pod::Spec.new do |s|
   s.author       = 'Daniel García' 
   s.summary      = 'Build and populate your models (CoreData or not) in a simple way'
   s.source       = { :git => 'https://github.com/Produkt/PDKTModelBuilder.git', :tag => s.version.to_s }
-  s.source_files = 'PDKTModelBuilder/*.{h,m}'
   s.requires_arc = true
   
   s.default_subspec = 'Core'
 
   s.subspec 'Core' do |core|
-    core.source_files = 'PDKTModelBuilder/*.{h,m}'
+    core.source_files = 'PDKTModelBuilder/**/*'
     core.exclude_files = 'PDKTModelBuilder/CoreData/*.*'
   end
 
