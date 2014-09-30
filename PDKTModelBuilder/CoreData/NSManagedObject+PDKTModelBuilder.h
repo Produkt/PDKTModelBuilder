@@ -7,11 +7,9 @@
 //
 
 #import <CoreData/CoreData.h>
+#import "PDKTModelBuilderEntity.h"
 
-@class PDKTEntityDataParser;
-@protocol PDKTModelBuilderEntity <NSObject>
-+ (PDKTEntityDataParser *)pdktmb_dataParser;
-@optional
+@protocol PDKTModelBuilderCoreDataEntity <PDKTModelBuilderEntity>
 + (NSString *)pdktmb_entityIdPropertyName;
 @end
 

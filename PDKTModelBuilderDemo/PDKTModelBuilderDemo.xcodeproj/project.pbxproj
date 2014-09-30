@@ -15,15 +15,15 @@
 		88720AFC19DAC4570019775B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88720AFB19DAC4570019775B /* Images.xcassets */; };
 		88720AFF19DAC4570019775B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88720AFD19DAC4570019775B /* LaunchScreen.xib */; };
 		88720B0B19DAC4570019775B /* PDKTModelBuilderDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B0A19DAC4570019775B /* PDKTModelBuilderDemoTests.m */; };
-		88720B2B19DAC46C0019775B /* NSManagedObject+PDKTModelBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B1719DAC46C0019775B /* NSManagedObject+PDKTModelBuilder.m */; };
-		88720B2C19DAC46C0019775B /* EntityProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B1B19DAC46C0019775B /* EntityProperty.m */; };
-		88720B2D19DAC46C0019775B /* EntityPropertyBool.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B1D19DAC46C0019775B /* EntityPropertyBool.m */; };
-		88720B2E19DAC46C0019775B /* EntityPropertyFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B1F19DAC46C0019775B /* EntityPropertyFloat.m */; };
-		88720B2F19DAC46C0019775B /* EntityPropertyInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B2119DAC46C0019775B /* EntityPropertyInteger.m */; };
-		88720B3019DAC46C0019775B /* EntityPropertyString.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B2319DAC46C0019775B /* EntityPropertyString.m */; };
-		88720B3119DAC46C0019775B /* EntityPropertyTimeStamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B2519DAC46C0019775B /* EntityPropertyTimeStamp.m */; };
-		88720B3219DAC46C0019775B /* EntityPropertyURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B2719DAC46C0019775B /* EntityPropertyURL.m */; };
-		88720B3319DAC46C0019775B /* PDKTEntityDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B2919DAC46C0019775B /* PDKTEntityDataParser.m */; };
+		88720B6519DAC7AB0019775B /* NSManagedObject+PDKTModelBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B5019DAC7AB0019775B /* NSManagedObject+PDKTModelBuilder.m */; };
+		88720B6619DAC7AB0019775B /* EntityProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B5419DAC7AB0019775B /* EntityProperty.m */; };
+		88720B6719DAC7AB0019775B /* EntityPropertyBool.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B5619DAC7AB0019775B /* EntityPropertyBool.m */; };
+		88720B6819DAC7AB0019775B /* EntityPropertyFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B5819DAC7AB0019775B /* EntityPropertyFloat.m */; };
+		88720B6919DAC7AB0019775B /* EntityPropertyInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B5A19DAC7AB0019775B /* EntityPropertyInteger.m */; };
+		88720B6A19DAC7AB0019775B /* EntityPropertyString.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B5C19DAC7AB0019775B /* EntityPropertyString.m */; };
+		88720B6B19DAC7AB0019775B /* EntityPropertyTimeStamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B5E19DAC7AB0019775B /* EntityPropertyTimeStamp.m */; };
+		88720B6C19DAC7AB0019775B /* EntityPropertyURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B6019DAC7AB0019775B /* EntityPropertyURL.m */; };
+		88720B6D19DAC7AB0019775B /* PDKTEntityDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B6219DAC7AB0019775B /* PDKTEntityDataParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,27 +51,27 @@
 		88720B0419DAC4570019775B /* PDKTModelBuilderDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PDKTModelBuilderDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88720B0919DAC4570019775B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88720B0A19DAC4570019775B /* PDKTModelBuilderDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDKTModelBuilderDemoTests.m; sourceTree = "<group>"; };
-		88720B1619DAC46C0019775B /* NSManagedObject+PDKTModelBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+PDKTModelBuilder.h"; sourceTree = "<group>"; };
-		88720B1719DAC46C0019775B /* NSManagedObject+PDKTModelBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+PDKTModelBuilder.m"; sourceTree = "<group>"; };
-		88720B1819DAC46C0019775B /* PDKTModelBuilder+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PDKTModelBuilder+CoreData.h"; sourceTree = "<group>"; };
-		88720B1A19DAC46C0019775B /* EntityProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityProperty.h; sourceTree = "<group>"; };
-		88720B1B19DAC46C0019775B /* EntityProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityProperty.m; sourceTree = "<group>"; };
-		88720B1C19DAC46C0019775B /* EntityPropertyBool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyBool.h; sourceTree = "<group>"; };
-		88720B1D19DAC46C0019775B /* EntityPropertyBool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyBool.m; sourceTree = "<group>"; };
-		88720B1E19DAC46C0019775B /* EntityPropertyFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyFloat.h; sourceTree = "<group>"; };
-		88720B1F19DAC46C0019775B /* EntityPropertyFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyFloat.m; sourceTree = "<group>"; };
-		88720B2019DAC46C0019775B /* EntityPropertyInteger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyInteger.h; sourceTree = "<group>"; };
-		88720B2119DAC46C0019775B /* EntityPropertyInteger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyInteger.m; sourceTree = "<group>"; };
-		88720B2219DAC46C0019775B /* EntityPropertyString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyString.h; sourceTree = "<group>"; };
-		88720B2319DAC46C0019775B /* EntityPropertyString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyString.m; sourceTree = "<group>"; };
-		88720B2419DAC46C0019775B /* EntityPropertyTimeStamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyTimeStamp.h; sourceTree = "<group>"; };
-		88720B2519DAC46C0019775B /* EntityPropertyTimeStamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyTimeStamp.m; sourceTree = "<group>"; };
-		88720B2619DAC46C0019775B /* EntityPropertyURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyURL.h; sourceTree = "<group>"; };
-		88720B2719DAC46C0019775B /* EntityPropertyURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyURL.m; sourceTree = "<group>"; };
-		88720B2819DAC46C0019775B /* PDKTEntityDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTEntityDataParser.h; sourceTree = "<group>"; };
-		88720B2919DAC46C0019775B /* PDKTEntityDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKTEntityDataParser.m; sourceTree = "<group>"; };
-		88720B2A19DAC46C0019775B /* PDKTModelBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTModelBuilder.h; sourceTree = "<group>"; };
-		88720B3419DAC4890019775B /* PDKTModelBuilderEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTModelBuilderEntity.h; sourceTree = "<group>"; };
+		88720B4F19DAC7AB0019775B /* NSManagedObject+PDKTModelBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+PDKTModelBuilder.h"; sourceTree = "<group>"; };
+		88720B5019DAC7AB0019775B /* NSManagedObject+PDKTModelBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+PDKTModelBuilder.m"; sourceTree = "<group>"; };
+		88720B5119DAC7AB0019775B /* PDKTModelBuilder+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PDKTModelBuilder+CoreData.h"; sourceTree = "<group>"; };
+		88720B5319DAC7AB0019775B /* EntityProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityProperty.h; sourceTree = "<group>"; };
+		88720B5419DAC7AB0019775B /* EntityProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityProperty.m; sourceTree = "<group>"; };
+		88720B5519DAC7AB0019775B /* EntityPropertyBool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyBool.h; sourceTree = "<group>"; };
+		88720B5619DAC7AB0019775B /* EntityPropertyBool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyBool.m; sourceTree = "<group>"; };
+		88720B5719DAC7AB0019775B /* EntityPropertyFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyFloat.h; sourceTree = "<group>"; };
+		88720B5819DAC7AB0019775B /* EntityPropertyFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyFloat.m; sourceTree = "<group>"; };
+		88720B5919DAC7AB0019775B /* EntityPropertyInteger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyInteger.h; sourceTree = "<group>"; };
+		88720B5A19DAC7AB0019775B /* EntityPropertyInteger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyInteger.m; sourceTree = "<group>"; };
+		88720B5B19DAC7AB0019775B /* EntityPropertyString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyString.h; sourceTree = "<group>"; };
+		88720B5C19DAC7AB0019775B /* EntityPropertyString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyString.m; sourceTree = "<group>"; };
+		88720B5D19DAC7AB0019775B /* EntityPropertyTimeStamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyTimeStamp.h; sourceTree = "<group>"; };
+		88720B5E19DAC7AB0019775B /* EntityPropertyTimeStamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyTimeStamp.m; sourceTree = "<group>"; };
+		88720B5F19DAC7AB0019775B /* EntityPropertyURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyURL.h; sourceTree = "<group>"; };
+		88720B6019DAC7AB0019775B /* EntityPropertyURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyURL.m; sourceTree = "<group>"; };
+		88720B6119DAC7AB0019775B /* PDKTEntityDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTEntityDataParser.h; sourceTree = "<group>"; };
+		88720B6219DAC7AB0019775B /* PDKTEntityDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKTEntityDataParser.m; sourceTree = "<group>"; };
+		88720B6319DAC7AB0019775B /* PDKTModelBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTModelBuilder.h; sourceTree = "<group>"; };
+		88720B6419DAC7AB0019775B /* PDKTModelBuilderEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTModelBuilderEntity.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +121,7 @@
 				88720AFB19DAC4570019775B /* Images.xcassets */,
 				88720AFD19DAC4570019775B /* LaunchScreen.xib */,
 				88720AF219DAC4570019775B /* PDKTModelBuilderDemo.xcdatamodeld */,
-				88720B1419DAC46C0019775B /* PDKTModelBuilder */,
+				88720B4D19DAC7AB0019775B /* PDKTModelBuilder */,
 				88720AEB19DAC4570019775B /* Supporting Files */,
 			);
 			path = PDKTModelBuilderDemo;
@@ -153,46 +153,47 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		88720B1419DAC46C0019775B /* PDKTModelBuilder */ = {
+		88720B4D19DAC7AB0019775B /* PDKTModelBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				88720B1519DAC46C0019775B /* CoreData */,
-				88720B1919DAC46C0019775B /* EntityProperties */,
-				88720B3419DAC4890019775B /* PDKTModelBuilderEntity.h */,
-				88720B2819DAC46C0019775B /* PDKTEntityDataParser.h */,
-				88720B2919DAC46C0019775B /* PDKTEntityDataParser.m */,
-				88720B2A19DAC46C0019775B /* PDKTModelBuilder.h */,
+				88720B4E19DAC7AB0019775B /* CoreData */,
+				88720B5219DAC7AB0019775B /* EntityProperties */,
+				88720B6119DAC7AB0019775B /* PDKTEntityDataParser.h */,
+				88720B6219DAC7AB0019775B /* PDKTEntityDataParser.m */,
+				88720B6319DAC7AB0019775B /* PDKTModelBuilder.h */,
+				88720B6419DAC7AB0019775B /* PDKTModelBuilderEntity.h */,
 			);
-			path = PDKTModelBuilder;
+			name = PDKTModelBuilder;
+			path = ../../PDKTModelBuilder;
 			sourceTree = "<group>";
 		};
-		88720B1519DAC46C0019775B /* CoreData */ = {
+		88720B4E19DAC7AB0019775B /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				88720B1619DAC46C0019775B /* NSManagedObject+PDKTModelBuilder.h */,
-				88720B1719DAC46C0019775B /* NSManagedObject+PDKTModelBuilder.m */,
-				88720B1819DAC46C0019775B /* PDKTModelBuilder+CoreData.h */,
+				88720B4F19DAC7AB0019775B /* NSManagedObject+PDKTModelBuilder.h */,
+				88720B5019DAC7AB0019775B /* NSManagedObject+PDKTModelBuilder.m */,
+				88720B5119DAC7AB0019775B /* PDKTModelBuilder+CoreData.h */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
 		};
-		88720B1919DAC46C0019775B /* EntityProperties */ = {
+		88720B5219DAC7AB0019775B /* EntityProperties */ = {
 			isa = PBXGroup;
 			children = (
-				88720B1A19DAC46C0019775B /* EntityProperty.h */,
-				88720B1B19DAC46C0019775B /* EntityProperty.m */,
-				88720B1C19DAC46C0019775B /* EntityPropertyBool.h */,
-				88720B1D19DAC46C0019775B /* EntityPropertyBool.m */,
-				88720B1E19DAC46C0019775B /* EntityPropertyFloat.h */,
-				88720B1F19DAC46C0019775B /* EntityPropertyFloat.m */,
-				88720B2019DAC46C0019775B /* EntityPropertyInteger.h */,
-				88720B2119DAC46C0019775B /* EntityPropertyInteger.m */,
-				88720B2219DAC46C0019775B /* EntityPropertyString.h */,
-				88720B2319DAC46C0019775B /* EntityPropertyString.m */,
-				88720B2419DAC46C0019775B /* EntityPropertyTimeStamp.h */,
-				88720B2519DAC46C0019775B /* EntityPropertyTimeStamp.m */,
-				88720B2619DAC46C0019775B /* EntityPropertyURL.h */,
-				88720B2719DAC46C0019775B /* EntityPropertyURL.m */,
+				88720B5319DAC7AB0019775B /* EntityProperty.h */,
+				88720B5419DAC7AB0019775B /* EntityProperty.m */,
+				88720B5519DAC7AB0019775B /* EntityPropertyBool.h */,
+				88720B5619DAC7AB0019775B /* EntityPropertyBool.m */,
+				88720B5719DAC7AB0019775B /* EntityPropertyFloat.h */,
+				88720B5819DAC7AB0019775B /* EntityPropertyFloat.m */,
+				88720B5919DAC7AB0019775B /* EntityPropertyInteger.h */,
+				88720B5A19DAC7AB0019775B /* EntityPropertyInteger.m */,
+				88720B5B19DAC7AB0019775B /* EntityPropertyString.h */,
+				88720B5C19DAC7AB0019775B /* EntityPropertyString.m */,
+				88720B5D19DAC7AB0019775B /* EntityPropertyTimeStamp.h */,
+				88720B5E19DAC7AB0019775B /* EntityPropertyTimeStamp.m */,
+				88720B5F19DAC7AB0019775B /* EntityPropertyURL.h */,
+				88720B6019DAC7AB0019775B /* EntityPropertyURL.m */,
 			);
 			path = EntityProperties;
 			sourceTree = "<group>";
@@ -297,19 +298,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88720B2E19DAC46C0019775B /* EntityPropertyFloat.m in Sources */,
-				88720B2B19DAC46C0019775B /* NSManagedObject+PDKTModelBuilder.m in Sources */,
-				88720B2F19DAC46C0019775B /* EntityPropertyInteger.m in Sources */,
+				88720B6819DAC7AB0019775B /* EntityPropertyFloat.m in Sources */,
+				88720B6519DAC7AB0019775B /* NSManagedObject+PDKTModelBuilder.m in Sources */,
+				88720B6919DAC7AB0019775B /* EntityPropertyInteger.m in Sources */,
 				88720AF419DAC4570019775B /* PDKTModelBuilderDemo.xcdatamodeld in Sources */,
-				88720B3319DAC46C0019775B /* PDKTEntityDataParser.m in Sources */,
+				88720B6D19DAC7AB0019775B /* PDKTEntityDataParser.m in Sources */,
 				88720AF119DAC4570019775B /* AppDelegate.m in Sources */,
 				88720AF719DAC4570019775B /* ViewController.m in Sources */,
 				88720AEE19DAC4570019775B /* main.m in Sources */,
-				88720B3219DAC46C0019775B /* EntityPropertyURL.m in Sources */,
-				88720B2C19DAC46C0019775B /* EntityProperty.m in Sources */,
-				88720B3119DAC46C0019775B /* EntityPropertyTimeStamp.m in Sources */,
-				88720B3019DAC46C0019775B /* EntityPropertyString.m in Sources */,
-				88720B2D19DAC46C0019775B /* EntityPropertyBool.m in Sources */,
+				88720B6C19DAC7AB0019775B /* EntityPropertyURL.m in Sources */,
+				88720B6619DAC7AB0019775B /* EntityProperty.m in Sources */,
+				88720B6B19DAC7AB0019775B /* EntityPropertyTimeStamp.m in Sources */,
+				88720B6A19DAC7AB0019775B /* EntityPropertyString.m in Sources */,
+				88720B6719DAC7AB0019775B /* EntityPropertyBool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +503,7 @@
 				88720B1019DAC4570019775B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		88720B1119DAC4570019775B /* Build configuration list for PBXNativeTarget "PDKTModelBuilderDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +512,7 @@
 				88720B1319DAC4570019775B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

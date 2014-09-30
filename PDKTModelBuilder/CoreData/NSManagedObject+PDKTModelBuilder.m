@@ -12,7 +12,7 @@
 
 @implementation NSManagedObject (PDKTModelBuilder)
 + (instancetype)updateOrInsertIntoManagedObjectContext:(NSManagedObjectContext *)managedObjectContext withDictionary:(NSDictionary *)dictionary{
-    NSAssert([[self class] conformsToProtocol:@protocol(PDKTModelBuilderEntity)], @"must implement PDKTModelBuilderEntity for using this method");
+    NSAssert([[self class] conformsToProtocol:@protocol(PDKTModelBuilderCoreDataEntity)], @"must implement PDKTModelBuilderCoreDataEntity for using this method");
     NSString *entityName=NSStringFromClass([self class]);
     NSString *objectId = [self pdktmb_entityId];
     PDKTEntityDataParser *dataParser = [(id<PDKTModelBuilderEntity>)self pdktmb_dataParser];
@@ -39,7 +39,7 @@
     return entity;
 }
 + (instancetype)insertIntoManagedObjectContext:(NSManagedObjectContext *)managedObjectContext withDictionary:(NSDictionary *)dictionary{
-    NSAssert([[self class] conformsToProtocol:@protocol(PDKTModelBuilderEntity)], @"must implement PDKTModelBuilderEntity for using this method");
+    NSAssert([[self class] conformsToProtocol:@protocol(PDKTModelBuilderCoreDataEntity)], @"must implement PDKTModelBuilderCoreDataEntity for using this method");
     NSString *entityName=NSStringFromClass([self class]);
     NSString *objectId = [self pdktmb_entityId];
     PDKTEntityDataParser *dataParser = [(id<PDKTModelBuilderEntity>)self pdktmb_dataParser];
