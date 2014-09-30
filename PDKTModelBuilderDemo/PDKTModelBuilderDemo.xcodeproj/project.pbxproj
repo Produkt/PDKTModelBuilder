@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		88720AEE19DAC4570019775B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720AED19DAC4570019775B /* main.m */; };
+		88720AF119DAC4570019775B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720AF019DAC4570019775B /* AppDelegate.m */; };
+		88720AF419DAC4570019775B /* PDKTModelBuilderDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88720AF219DAC4570019775B /* PDKTModelBuilderDemo.xcdatamodeld */; };
+		88720AF719DAC4570019775B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720AF619DAC4570019775B /* ViewController.m */; };
+		88720AFA19DAC4570019775B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88720AF819DAC4570019775B /* Main.storyboard */; };
+		88720AFC19DAC4570019775B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88720AFB19DAC4570019775B /* Images.xcassets */; };
+		88720AFF19DAC4570019775B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88720AFD19DAC4570019775B /* LaunchScreen.xib */; };
+		88720B0B19DAC4570019775B /* PDKTModelBuilderDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B0A19DAC4570019775B /* PDKTModelBuilderDemoTests.m */; };
+		88720B2B19DAC46C0019775B /* NSManagedObject+PDKTModelBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B1719DAC46C0019775B /* NSManagedObject+PDKTModelBuilder.m */; };
+		88720B2C19DAC46C0019775B /* EntityProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B1B19DAC46C0019775B /* EntityProperty.m */; };
+		88720B2D19DAC46C0019775B /* EntityPropertyBool.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B1D19DAC46C0019775B /* EntityPropertyBool.m */; };
+		88720B2E19DAC46C0019775B /* EntityPropertyFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B1F19DAC46C0019775B /* EntityPropertyFloat.m */; };
+		88720B2F19DAC46C0019775B /* EntityPropertyInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B2119DAC46C0019775B /* EntityPropertyInteger.m */; };
+		88720B3019DAC46C0019775B /* EntityPropertyString.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B2319DAC46C0019775B /* EntityPropertyString.m */; };
+		88720B3119DAC46C0019775B /* EntityPropertyTimeStamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B2519DAC46C0019775B /* EntityPropertyTimeStamp.m */; };
+		88720B3219DAC46C0019775B /* EntityPropertyURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B2719DAC46C0019775B /* EntityPropertyURL.m */; };
+		88720B3319DAC46C0019775B /* PDKTEntityDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B2919DAC46C0019775B /* PDKTEntityDataParser.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		88720B0519DAC4570019775B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88720AE019DAC4570019775B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88720AE719DAC4570019775B;
+			remoteInfo = PDKTModelBuilderDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		88720AE819DAC4570019775B /* PDKTModelBuilderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDKTModelBuilderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88720AEC19DAC4570019775B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88720AED19DAC4570019775B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		88720AEF19DAC4570019775B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		88720AF019DAC4570019775B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		88720AF319DAC4570019775B /* PDKTModelBuilderDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PDKTModelBuilderDemo.xcdatamodel; sourceTree = "<group>"; };
+		88720AF519DAC4570019775B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		88720AF619DAC4570019775B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		88720AF919DAC4570019775B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		88720AFB19DAC4570019775B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		88720AFE19DAC4570019775B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		88720B0419DAC4570019775B /* PDKTModelBuilderDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PDKTModelBuilderDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		88720B0919DAC4570019775B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88720B0A19DAC4570019775B /* PDKTModelBuilderDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDKTModelBuilderDemoTests.m; sourceTree = "<group>"; };
+		88720B1619DAC46C0019775B /* NSManagedObject+PDKTModelBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+PDKTModelBuilder.h"; sourceTree = "<group>"; };
+		88720B1719DAC46C0019775B /* NSManagedObject+PDKTModelBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+PDKTModelBuilder.m"; sourceTree = "<group>"; };
+		88720B1819DAC46C0019775B /* PDKTModelBuilder+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PDKTModelBuilder+CoreData.h"; sourceTree = "<group>"; };
+		88720B1A19DAC46C0019775B /* EntityProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityProperty.h; sourceTree = "<group>"; };
+		88720B1B19DAC46C0019775B /* EntityProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityProperty.m; sourceTree = "<group>"; };
+		88720B1C19DAC46C0019775B /* EntityPropertyBool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyBool.h; sourceTree = "<group>"; };
+		88720B1D19DAC46C0019775B /* EntityPropertyBool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyBool.m; sourceTree = "<group>"; };
+		88720B1E19DAC46C0019775B /* EntityPropertyFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyFloat.h; sourceTree = "<group>"; };
+		88720B1F19DAC46C0019775B /* EntityPropertyFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyFloat.m; sourceTree = "<group>"; };
+		88720B2019DAC46C0019775B /* EntityPropertyInteger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyInteger.h; sourceTree = "<group>"; };
+		88720B2119DAC46C0019775B /* EntityPropertyInteger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyInteger.m; sourceTree = "<group>"; };
+		88720B2219DAC46C0019775B /* EntityPropertyString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyString.h; sourceTree = "<group>"; };
+		88720B2319DAC46C0019775B /* EntityPropertyString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyString.m; sourceTree = "<group>"; };
+		88720B2419DAC46C0019775B /* EntityPropertyTimeStamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyTimeStamp.h; sourceTree = "<group>"; };
+		88720B2519DAC46C0019775B /* EntityPropertyTimeStamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyTimeStamp.m; sourceTree = "<group>"; };
+		88720B2619DAC46C0019775B /* EntityPropertyURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyURL.h; sourceTree = "<group>"; };
+		88720B2719DAC46C0019775B /* EntityPropertyURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyURL.m; sourceTree = "<group>"; };
+		88720B2819DAC46C0019775B /* PDKTEntityDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTEntityDataParser.h; sourceTree = "<group>"; };
+		88720B2919DAC46C0019775B /* PDKTEntityDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKTEntityDataParser.m; sourceTree = "<group>"; };
+		88720B2A19DAC46C0019775B /* PDKTModelBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTModelBuilder.h; sourceTree = "<group>"; };
+		88720B3419DAC4890019775B /* PDKTModelBuilderEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTModelBuilderEntity.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88720AE519DAC4570019775B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88720B0119DAC4570019775B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		88720ADF19DAC4570019775B = {
+			isa = PBXGroup;
+			children = (
+				88720AEA19DAC4570019775B /* PDKTModelBuilderDemo */,
+				88720B0719DAC4570019775B /* PDKTModelBuilderDemoTests */,
+				88720AE919DAC4570019775B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		88720AE919DAC4570019775B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88720AE819DAC4570019775B /* PDKTModelBuilderDemo.app */,
+				88720B0419DAC4570019775B /* PDKTModelBuilderDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88720AEA19DAC4570019775B /* PDKTModelBuilderDemo */ = {
+			isa = PBXGroup;
+			children = (
+				88720AEF19DAC4570019775B /* AppDelegate.h */,
+				88720AF019DAC4570019775B /* AppDelegate.m */,
+				88720AF519DAC4570019775B /* ViewController.h */,
+				88720AF619DAC4570019775B /* ViewController.m */,
+				88720AF819DAC4570019775B /* Main.storyboard */,
+				88720AFB19DAC4570019775B /* Images.xcassets */,
+				88720AFD19DAC4570019775B /* LaunchScreen.xib */,
+				88720AF219DAC4570019775B /* PDKTModelBuilderDemo.xcdatamodeld */,
+				88720B1419DAC46C0019775B /* PDKTModelBuilder */,
+				88720AEB19DAC4570019775B /* Supporting Files */,
+			);
+			path = PDKTModelBuilderDemo;
+			sourceTree = "<group>";
+		};
+		88720AEB19DAC4570019775B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				88720AEC19DAC4570019775B /* Info.plist */,
+				88720AED19DAC4570019775B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		88720B0719DAC4570019775B /* PDKTModelBuilderDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				88720B0A19DAC4570019775B /* PDKTModelBuilderDemoTests.m */,
+				88720B0819DAC4570019775B /* Supporting Files */,
+			);
+			path = PDKTModelBuilderDemoTests;
+			sourceTree = "<group>";
+		};
+		88720B0819DAC4570019775B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				88720B0919DAC4570019775B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		88720B1419DAC46C0019775B /* PDKTModelBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				88720B1519DAC46C0019775B /* CoreData */,
+				88720B1919DAC46C0019775B /* EntityProperties */,
+				88720B3419DAC4890019775B /* PDKTModelBuilderEntity.h */,
+				88720B2819DAC46C0019775B /* PDKTEntityDataParser.h */,
+				88720B2919DAC46C0019775B /* PDKTEntityDataParser.m */,
+				88720B2A19DAC46C0019775B /* PDKTModelBuilder.h */,
+			);
+			path = PDKTModelBuilder;
+			sourceTree = "<group>";
+		};
+		88720B1519DAC46C0019775B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				88720B1619DAC46C0019775B /* NSManagedObject+PDKTModelBuilder.h */,
+				88720B1719DAC46C0019775B /* NSManagedObject+PDKTModelBuilder.m */,
+				88720B1819DAC46C0019775B /* PDKTModelBuilder+CoreData.h */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		88720B1919DAC46C0019775B /* EntityProperties */ = {
+			isa = PBXGroup;
+			children = (
+				88720B1A19DAC46C0019775B /* EntityProperty.h */,
+				88720B1B19DAC46C0019775B /* EntityProperty.m */,
+				88720B1C19DAC46C0019775B /* EntityPropertyBool.h */,
+				88720B1D19DAC46C0019775B /* EntityPropertyBool.m */,
+				88720B1E19DAC46C0019775B /* EntityPropertyFloat.h */,
+				88720B1F19DAC46C0019775B /* EntityPropertyFloat.m */,
+				88720B2019DAC46C0019775B /* EntityPropertyInteger.h */,
+				88720B2119DAC46C0019775B /* EntityPropertyInteger.m */,
+				88720B2219DAC46C0019775B /* EntityPropertyString.h */,
+				88720B2319DAC46C0019775B /* EntityPropertyString.m */,
+				88720B2419DAC46C0019775B /* EntityPropertyTimeStamp.h */,
+				88720B2519DAC46C0019775B /* EntityPropertyTimeStamp.m */,
+				88720B2619DAC46C0019775B /* EntityPropertyURL.h */,
+				88720B2719DAC46C0019775B /* EntityPropertyURL.m */,
+			);
+			path = EntityProperties;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		88720AE719DAC4570019775B /* PDKTModelBuilderDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88720B0E19DAC4570019775B /* Build configuration list for PBXNativeTarget "PDKTModelBuilderDemo" */;
+			buildPhases = (
+				88720AE419DAC4570019775B /* Sources */,
+				88720AE519DAC4570019775B /* Frameworks */,
+				88720AE619DAC4570019775B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PDKTModelBuilderDemo;
+			productName = PDKTModelBuilderDemo;
+			productReference = 88720AE819DAC4570019775B /* PDKTModelBuilderDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		88720B0319DAC4570019775B /* PDKTModelBuilderDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88720B1119DAC4570019775B /* Build configuration list for PBXNativeTarget "PDKTModelBuilderDemoTests" */;
+			buildPhases = (
+				88720B0019DAC4570019775B /* Sources */,
+				88720B0119DAC4570019775B /* Frameworks */,
+				88720B0219DAC4570019775B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88720B0619DAC4570019775B /* PBXTargetDependency */,
+			);
+			name = PDKTModelBuilderDemoTests;
+			productName = PDKTModelBuilderDemoTests;
+			productReference = 88720B0419DAC4570019775B /* PDKTModelBuilderDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		88720AE019DAC4570019775B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Produkt;
+				TargetAttributes = {
+					88720AE719DAC4570019775B = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					88720B0319DAC4570019775B = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 88720AE719DAC4570019775B;
+					};
+				};
+			};
+			buildConfigurationList = 88720AE319DAC4570019775B /* Build configuration list for PBXProject "PDKTModelBuilderDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 88720ADF19DAC4570019775B;
+			productRefGroup = 88720AE919DAC4570019775B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88720AE719DAC4570019775B /* PDKTModelBuilderDemo */,
+				88720B0319DAC4570019775B /* PDKTModelBuilderDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88720AE619DAC4570019775B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88720AFA19DAC4570019775B /* Main.storyboard in Resources */,
+				88720AFF19DAC4570019775B /* LaunchScreen.xib in Resources */,
+				88720AFC19DAC4570019775B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88720B0219DAC4570019775B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88720AE419DAC4570019775B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88720B2E19DAC46C0019775B /* EntityPropertyFloat.m in Sources */,
+				88720B2B19DAC46C0019775B /* NSManagedObject+PDKTModelBuilder.m in Sources */,
+				88720B2F19DAC46C0019775B /* EntityPropertyInteger.m in Sources */,
+				88720AF419DAC4570019775B /* PDKTModelBuilderDemo.xcdatamodeld in Sources */,
+				88720B3319DAC46C0019775B /* PDKTEntityDataParser.m in Sources */,
+				88720AF119DAC4570019775B /* AppDelegate.m in Sources */,
+				88720AF719DAC4570019775B /* ViewController.m in Sources */,
+				88720AEE19DAC4570019775B /* main.m in Sources */,
+				88720B3219DAC46C0019775B /* EntityPropertyURL.m in Sources */,
+				88720B2C19DAC46C0019775B /* EntityProperty.m in Sources */,
+				88720B3119DAC46C0019775B /* EntityPropertyTimeStamp.m in Sources */,
+				88720B3019DAC46C0019775B /* EntityPropertyString.m in Sources */,
+				88720B2D19DAC46C0019775B /* EntityPropertyBool.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88720B0019DAC4570019775B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88720B0B19DAC4570019775B /* PDKTModelBuilderDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		88720B0619DAC4570019775B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88720AE719DAC4570019775B /* PDKTModelBuilderDemo */;
+			targetProxy = 88720B0519DAC4570019775B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		88720AF819DAC4570019775B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88720AF919DAC4570019775B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		88720AFD19DAC4570019775B /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88720AFE19DAC4570019775B /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		88720B0C19DAC4570019775B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		88720B0D19DAC4570019775B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88720B0F19DAC4570019775B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PDKTModelBuilderDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		88720B1019DAC4570019775B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PDKTModelBuilderDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		88720B1219DAC4570019775B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PDKTModelBuilderDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PDKTModelBuilderDemo.app/PDKTModelBuilderDemo";
+			};
+			name = Debug;
+		};
+		88720B1319DAC4570019775B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PDKTModelBuilderDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PDKTModelBuilderDemo.app/PDKTModelBuilderDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88720AE319DAC4570019775B /* Build configuration list for PBXProject "PDKTModelBuilderDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88720B0C19DAC4570019775B /* Debug */,
+				88720B0D19DAC4570019775B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88720B0E19DAC4570019775B /* Build configuration list for PBXNativeTarget "PDKTModelBuilderDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88720B0F19DAC4570019775B /* Debug */,
+				88720B1019DAC4570019775B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		88720B1119DAC4570019775B /* Build configuration list for PBXNativeTarget "PDKTModelBuilderDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88720B1219DAC4570019775B /* Debug */,
+				88720B1319DAC4570019775B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		88720AF219DAC4570019775B /* PDKTModelBuilderDemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				88720AF319DAC4570019775B /* PDKTModelBuilderDemo.xcdatamodel */,
+			);
+			currentVersion = 88720AF319DAC4570019775B /* PDKTModelBuilderDemo.xcdatamodel */;
+			path = PDKTModelBuilderDemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 88720AE019DAC4570019775B /* Project object */;
+}
