@@ -42,7 +42,7 @@ static NSString * const propertyBindingPropertyTypeKey = @"propertyBindingProper
     [propertiesBindings enumerateKeysAndObjectsUsingBlock:^(NSString *entityPropertyName, NSString *sourcePath, BOOL *stop) {
         id propertyValue = [self propertyValueForKey:entityPropertyName sourcePath:sourcePath inDictionary:dictionary withTransformers:propertiesTypeTransformers];
         if (propertyValue) {
-            [self setValue:propertyValue forKey:entityPropertyName];
+            [entity setValue:propertyValue forKey:entityPropertyName];
         }
     }];
 }
