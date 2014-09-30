@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'PDKTModelBuilder'
-  s.version      = '0.1'
+  s.version      = '0.2'
   s.license      = { :type => 'MIT' }
   s.homepage     = 'https://github.com/Produkt/PDKTModelBuilder.git'
   s.author       = 'Daniel García' 
