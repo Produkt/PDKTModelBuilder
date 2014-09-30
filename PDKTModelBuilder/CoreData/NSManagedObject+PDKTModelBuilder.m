@@ -67,10 +67,19 @@
     NSString *entityName=NSStringFromClass([self class]);
     NSString *objectId;
     if ([self respondsToSelector:@selector(pdktmb_entityIdPropertyName)]) {
-        objectId = [(id<PDKTModelBuilderEntity>)self pdktmb_entityIdPropertyName];
+        objectId = [(id<PDKTModelBuilderCoreDataEntity>)self pdktmb_entityIdPropertyName];
     }else{
-        objectId = [[NSString stringWithFormat:@"%@Id",[entityName stringByReplacingOccurrencesOfString:@"Entity" withString:@""]]stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:[[entityName substringToIndex:1]lowercaseString]];
+        objectId = [self defaultObjectIdForEntityName:entityName];
+        [self validateDefaultObjectId:objectId];
     }
     return objectId.length ? objectId : nil;
+}
++ (void)validateDefaultObjectId:(NSString *)objectId{
+    NSString *objectIdAssertMessage = [NSString stringWithFormat:@"uniqueId must be '%@' or must implement 'pdktmb_entityIdPropertyName'",objectId];
+    objc_property_t property = class_getProperty([self class], [objectId UTF8String]);
+    NSAssert(property, objectIdAssertMessage);
+}
++ (NSString *)defaultObjectIdForEntityName:(NSString *)entityName{
+    return [[NSString stringWithFormat:@"%@Id",[entityName stringByReplacingOccurrencesOfString:@"Entity" withString:@""]]stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:[[entityName substringToIndex:1]lowercaseString]];
 }
 @end

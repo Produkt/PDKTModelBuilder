@@ -10,6 +10,7 @@
 #import "PDKTModelBuilderEntity.h"
 
 @protocol PDKTModelBuilderCoreDataEntity <PDKTModelBuilderEntity>
+@optional
 + (NSString *)pdktmb_entityIdPropertyName;
 @end
 
