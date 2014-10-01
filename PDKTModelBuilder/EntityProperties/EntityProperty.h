@@ -10,6 +10,7 @@
 typedef NS_ENUM(NSUInteger, EntityPropertyType) {
 	EntityPropertyTypeInteger,
     EntityPropertyTypeFloat,
+    EntityPropertyTypeDouble,
 	EntityPropertyTypeString,
 	EntityPropertyTypeBool,
 	EntityPropertyTypeURL,

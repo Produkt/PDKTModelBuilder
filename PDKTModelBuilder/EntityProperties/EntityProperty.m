@@ -10,6 +10,7 @@
 
 #import "EntityPropertyInteger.h"
 #import "EntityPropertyFloat.h"
+#import "EntityPropertyDouble.h"
 #import "EntityPropertyBool.h"
 #import "EntityPropertyString.h"
 #import "EntityPropertyURL.h"
@@ -25,6 +26,9 @@
             break;
         case EntityPropertyTypeFloat:
             property = [[EntityPropertyFloat alloc] init];
+            break;
+        case EntityPropertyTypeDouble:
+            property = [[EntityPropertyDouble alloc] init];
             break;
         case EntityPropertyTypeBool:
             property = [[EntityPropertyBool alloc] init];
