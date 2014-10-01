@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EntityProperty.h"
+#import "EntityProperties.h"
 
 @interface PDKTEntityDataParser : NSObject
 @property (nonatomic, readonly) NSDictionary *propertiesBindings;

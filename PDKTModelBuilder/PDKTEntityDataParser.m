@@ -62,8 +62,7 @@ static NSString * const propertyBindingPropertyTypeKey = @"propertyBindingProper
     id propertyValue;
     id rawValue = [dictionary valueForKeyPath:sourcePath];
     if (![rawValue isKindOfClass:[NSNull class]]) {
-        EntityPropertyType propertyType = [[propertiesTypeTransformers valueForKey:key]?:@(EntityPropertyTypeString) integerValue];
-        EntityProperty *entityProperty=[EntityProperty entityPropertyWithPropertyType:propertyType];
+        EntityProperty *entityProperty=[propertiesTypeTransformers valueForKey:key]?:[EntityPropertyString new];
         propertyValue=[entityProperty parsedValueForObject:rawValue];
     }
     return propertyValue;
