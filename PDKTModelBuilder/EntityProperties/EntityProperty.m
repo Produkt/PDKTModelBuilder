@@ -8,7 +8,6 @@
 
 #import "EntityProperty.h"
 
-
 #pragma clang diagnostic ignored "-Wincomplete-implementation"
 @implementation EntityProperty
 - (id)forwardingTargetForSelector:(SEL)aSelector{
