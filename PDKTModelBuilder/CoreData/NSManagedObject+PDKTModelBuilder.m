@@ -10,6 +10,20 @@
 #import "PDKTEntityDataParser.h"
 #import <objc/runtime.h>
 
+@implementation NSManagedObject (PDKTModelBuilderEntityDefault)
++ (NSString *)defaultEntityIdPropertyName{
+    return [self defaultEntityIdPropertyNameForEntityName:NSStringFromClass([self class])];
+}
++ (NSString *)defaultEntityIdPropertyNameForEntityName:(NSString *)entityName{
+    return [[NSString stringWithFormat:@"%@Id",[entityName stringByReplacingOccurrencesOfString:@"Entity" withString:@""]]stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:[[entityName substringToIndex:1]lowercaseString]];
+}
++ (void)validateDefaultObjectId:(NSString *)objectId{
+    NSString *objectIdAssertMessage = [NSString stringWithFormat:@"uniqueId must be '%@' or must implement 'pdktmb_entityIdPropertyName'",objectId];
+    objc_property_t property = class_getProperty([self class], [objectId UTF8String]);
+    NSAssert(property, objectIdAssertMessage);
+}
+@end
+
 @implementation NSManagedObject (PDKTModelBuilder)
 + (instancetype)updateOrInsertIntoManagedObjectContext:(NSManagedObjectContext *)managedObjectContext withDictionary:(NSDictionary *)dictionary{
     NSAssert([[self class] conformsToProtocol:@protocol(PDKTModelBuilderCoreDataEntity)], @"must implement PDKTModelBuilderCoreDataEntity for using this method");
@@ -77,17 +91,10 @@
     if ([self respondsToSelector:@selector(pdktmb_entityIdPropertyName)]) {
         objectId = [(id<PDKTModelBuilderCoreDataEntity>)self pdktmb_entityIdPropertyName];
     }else{
-        objectId = [self defaultObjectIdForEntityName:entityName];
+        objectId = [self defaultEntityIdPropertyNameForEntityName:entityName];
         [self validateDefaultObjectId:objectId];
     }
     return objectId.length ? objectId : nil;
 }
-+ (void)validateDefaultObjectId:(NSString *)objectId{
-    NSString *objectIdAssertMessage = [NSString stringWithFormat:@"uniqueId must be '%@' or must implement 'pdktmb_entityIdPropertyName'",objectId];
-    objc_property_t property = class_getProperty([self class], [objectId UTF8String]);
-    NSAssert(property, objectIdAssertMessage);
-}
-+ (NSString *)defaultObjectIdForEntityName:(NSString *)entityName{
-    return [[NSString stringWithFormat:@"%@Id",[entityName stringByReplacingOccurrencesOfString:@"Entity" withString:@""]]stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:[[entityName substringToIndex:1]lowercaseString]];
-}
 @end
+

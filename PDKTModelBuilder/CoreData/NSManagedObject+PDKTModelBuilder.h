@@ -15,6 +15,11 @@
 @end
 
 @class PDKTEntityDataParser;
+
+@interface NSManagedObject (PDKTModelBuilderEntityDefault)
++ (NSString *)defaultEntityIdPropertyName;
+@end
+
 @interface NSManagedObject (PDKTModelBuilder)
 + (instancetype)updateOrInsertIntoManagedObjectContext:(NSManagedObjectContext *)managedObjectContext withDictionary:(NSDictionary *)dictionary;
 + (instancetype)updateOrInsertIntoManagedObjectContext:(NSManagedObjectContext *)managedObjectContext withDictionary:(NSDictionary *)dictionary dataParser:(PDKTEntityDataParser *)entityDataParser;
