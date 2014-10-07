@@ -29,15 +29,18 @@
     return [itemClass updateOrInsertIntoManagedObjectContext:managedObjectContext withDictionary:itemData];
 }
 - (void)addItem:(id)item toEntity:(NSManagedObject *)entity toColletionInPropertyWithName:(NSString *)relationshipPropertyName{
-    NSString *addObjectsSelectorName = [NSString stringWithFormat:@"add%@Object:", [relationshipPropertyName stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:[[relationshipPropertyName substringToIndex:1] capitalizedString]]];
-    SEL selector = NSSelectorFromString(addObjectsSelectorName);
-    if ([entity respondsToSelector:selector]) {
-        NSMethodSignature *methodSignature = [entity methodSignatureForSelector:selector];
-        NSInvocation *methodInvocation = [NSInvocation invocationWithMethodSignature:methodSignature];
-        [methodInvocation setSelector:selector];
-        [methodInvocation setTarget:entity];
-        [methodInvocation setArgument:&item atIndex:2];
-        [methodInvocation invoke];
+    NSSet *relationShipSet = [entity valueForKey:relationshipPropertyName];
+    if (![relationShipSet containsObject:item]) {
+        NSString *addObjectsSelectorName = [NSString stringWithFormat:@"add%@Object:", [relationshipPropertyName stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:[[relationshipPropertyName substringToIndex:1] capitalizedString]]];
+        SEL selector = NSSelectorFromString(addObjectsSelectorName);
+        if ([entity respondsToSelector:selector]) {
+            NSMethodSignature *methodSignature = [entity methodSignatureForSelector:selector];
+            NSInvocation *methodInvocation = [NSInvocation invocationWithMethodSignature:methodSignature];
+            [methodInvocation setSelector:selector];
+            [methodInvocation setTarget:entity];
+            [methodInvocation setArgument:&item atIndex:2];
+            [methodInvocation invoke];
+        }
     }
 }
 @end
