@@ -7,6 +7,5 @@
 //
 
 #import "PDKTModelBuilder.h"
-#ifdef _COREDATADEFINES_H
-    #import "NSManagedObject+PDKTModelBuilder.h"
-#endif
+#import "NSManagedObject+PDKTModelBuilder.h"
+#import "PDKTCoreDataEntityRelationship.h"

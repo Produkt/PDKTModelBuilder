@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EntityProperties.h"
+#import "PDKTModelBuilderEntity.h"
 
 @interface PDKTEntityDataParser : NSObject
-@property (nonatomic, readonly) NSDictionary *propertiesBindings;
-@property (nonatomic, readonly) NSDictionary *propertiesTypeTransformers;
-- (void)parseDictionary:(NSDictionary *)dictionary withEntity:(NSObject *)entity;
-- (id)propertyValueForKey:(NSString *)key inDictionary:(NSDictionary *)dictionary;
++ (instancetype)dataParserForPlanEntity;
++ (instancetype)dataParserForCoreDataEntity;
+- (void)parseDictionary:(NSDictionary *)dictionary withEntity:(NSObject<PDKTModelBuilderEntity> *)entity;
+- (void)parseRelationshipsInDictionary:(NSDictionary *)dictionary withEntity:(NSObject<PDKTModelBuilderEntity> *)entity;
+- (id)propertyValueForKey:(NSString *)key inDictionary:(NSDictionary *)dictionary forEntityClass:(Class)entityClass;
 @end

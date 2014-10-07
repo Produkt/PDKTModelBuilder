@@ -7,15 +7,21 @@
 //
 
 #import "PDKTEntityDataParser.h"
-
-static NSString * const propertyBindingSourceKeyKey = @"propertyBindingSourceKeyKey";
-static NSString * const propertyBindingPropertyTypeKey = @"propertyBindingPropertyTypeKey";
+#import "EntityProperties.h"
+#import "__PDKTPlainObjectEntityDataParser.h"
+#import "__PDKTCoreDataEntityDataParser.h"
 
 @interface PDKTEntityDataParser()
 @end
 @implementation PDKTEntityDataParser
-@dynamic propertiesBindings;
-@dynamic propertiesTypeTransformers;
++ (instancetype)dataParserForPlanEntity{
+    return [__PDKTPlainObjectEntityDataParser new];
+}
++ (instancetype)dataParserForCoreDataEntity{
+    PDKTEntityDataParser *dataParser;
+    dataParser = [__PDKTCoreDataEntityDataParser new];
+    return dataParser;
+}
 - (instancetype)init
 {
     self = [super init];
@@ -24,20 +30,15 @@ static NSString * const propertyBindingPropertyTypeKey = @"propertyBindingProper
     }
     return self;
 }
-- (id)forwardingTargetForSelector:(SEL)aSelector{
-    NSLog(@"\n\n*** '%@' selector must be implemented by the subclass %@ ***\n\n",NSStringFromSelector(aSelector),NSStringFromClass([self class]));
-    [self doesNotRecognizeSelector:aSelector];
-    return nil;
-}
 #pragma mark - Automated properties parsing
-- (void)parseDictionary:(NSDictionary *)dictionary withEntity:(NSObject *)entity{
+- (void)parseDictionary:(NSDictionary *)dictionary withEntity:(NSObject<PDKTModelBuilderEntity> *)entity{
     NSDictionary *propertiesBindings = @{};
-    if ([self respondsToSelector:@selector(propertiesBindings)]) {
-        propertiesBindings = self.propertiesBindings;
+    if ([[entity class] respondsToSelector:@selector(propertiesBindings)]) {
+        propertiesBindings = [[entity class] propertiesBindings];
     }
     NSDictionary *propertiesTypeTransformers = @{};
-    if ([self respondsToSelector:@selector(propertiesTypeTransformers)]) {
-        propertiesTypeTransformers = self.propertiesTypeTransformers;
+    if ([[entity class] respondsToSelector:@selector(propertiesTypeTransformers)]) {
+        propertiesTypeTransformers = [[entity class] propertiesTypeTransformers];
     }
     [propertiesBindings enumerateKeysAndObjectsUsingBlock:^(NSString *entityPropertyName, NSString *sourcePath, BOOL *stop) {
         id propertyValue = [self propertyValueForKey:entityPropertyName sourcePath:sourcePath inDictionary:dictionary withTransformers:propertiesTypeTransformers];
@@ -46,15 +47,16 @@ static NSString * const propertyBindingPropertyTypeKey = @"propertyBindingProper
         }
     }];
 }
-- (id)propertyValueForKey:(NSString *)key inDictionary:(NSDictionary *)dictionary{
+- (id)propertyValueForKey:(NSString *)key inDictionary:(NSDictionary *)dictionary forEntityClass:(Class)entityClass{
+    NSAssert([entityClass conformsToProtocol:@protocol(PDKTModelBuilderEntity)], @"entityClass must conform PDKTModelBuilderEntity");
     NSDictionary *propertiesBindings = @{};
-    if ([self respondsToSelector:@selector(propertiesBindings)]) {
-        propertiesBindings = self.propertiesBindings;
+    if ([entityClass respondsToSelector:@selector(propertiesBindings)]) {
+        propertiesBindings = [entityClass propertiesBindings];
     }
     NSString *sourcePath = [propertiesBindings valueForKey:key];
     NSDictionary *propertiesTypeTransformers = @{};
-    if ([self respondsToSelector:@selector(propertiesTypeTransformers)]) {
-        propertiesTypeTransformers = self.propertiesTypeTransformers;
+    if ([entityClass respondsToSelector:@selector(propertiesTypeTransformers)]) {
+        propertiesTypeTransformers = [entityClass propertiesTypeTransformers];
     }
     return [self propertyValueForKey:key sourcePath:sourcePath inDictionary:dictionary withTransformers:propertiesTypeTransformers];
 }
@@ -66,5 +68,8 @@ static NSString * const propertyBindingPropertyTypeKey = @"propertyBindingProper
         propertyValue=[entityProperty parsedValueForObject:rawValue];
     }
     return propertyValue;
+}
+- (void)parseRelationshipsInDictionary:(NSDictionary *)dictionary withEntity:(NSObject<PDKTModelBuilderEntity> *)entity{
+    
 }
 @end

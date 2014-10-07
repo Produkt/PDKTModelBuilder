@@ -7,3 +7,4 @@
 //
 
 #import "PDKTEntityDataParser.h"
+#import "EntityProperties.h"

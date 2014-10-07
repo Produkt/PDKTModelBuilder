@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PDKTEntityDataParser.h"
 
 @protocol PDKTModelBuilderEntity <NSObject>
-+ (PDKTEntityDataParser *)pdktmb_dataParser;
++ (NSDictionary *)propertiesBindings;
+@optional
++ (NSDictionary *)relationshipsBindings;
++ (NSDictionary *)propertiesTypeTransformers;
 @end
