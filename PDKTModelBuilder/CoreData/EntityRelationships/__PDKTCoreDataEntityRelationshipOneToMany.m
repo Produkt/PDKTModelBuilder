@@ -18,11 +18,6 @@
                 [self addItem:item toEntity:entity toColletionInPropertyWithName:relationshipProperty];
             }
         }
-    }else{
-        id item = [self parseItemData:relationshipData withClass:self.relatedClass inManagedObjectContext:managedObjectContext];
-        if (item) {
-            [entity setValue:item forKey:relationshipProperty];
-        }
     }
 }
 - (id)parseItemData:(NSDictionary *)itemData withClass:(Class)itemClass inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext{
