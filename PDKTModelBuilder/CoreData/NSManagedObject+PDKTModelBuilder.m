@@ -50,6 +50,7 @@
         entity = [NSEntityDescription insertNewObjectForEntityForName:[NSString stringWithFormat:@"%@",entityName] inManagedObjectContext:managedObjectContext];
     }
     [entityDataParser parseDictionary:dictionary withEntity:(NSManagedObject<PDKTModelBuilderEntity> *)entity];
+    [entityDataParser parseRelationshipsInDictionary:dictionary withEntity:(NSManagedObject<PDKTModelBuilderEntity> *)entity];
     return entity;
 }
 + (instancetype)insertIntoManagedObjectContext:(NSManagedObjectContext *)managedObjectContext withDictionary:(NSDictionary *)dictionary{

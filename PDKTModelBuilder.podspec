@@ -12,11 +12,11 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |core|
     core.source_files = 'PDKTModelBuilder/**/*'
-    core.exclude_files = 'PDKTModelBuilder/CoreData/*.{h,m}'
+    core.exclude_files = 'PDKTModelBuilder/CoreData/**/*'
   end
 
   s.subspec 'CoreData' do |cd|
-    cd.source_files = 'PDKTModelBuilder/CoreData/*.{h,m}'
+    cd.source_files = 'PDKTModelBuilder/CoreData/**/*'
     cd.framework = 'CoreData'
     cd.dependency 'PDKTModelBuilder/Core'
   end

@@ -12,9 +12,11 @@
 @implementation __PDKTPlainObjectEntityDataParser
 - (void)parseRelationshipsInDictionary:(NSDictionary *)dictionary withEntity:(NSObject<PDKTModelBuilderEntity> *)entity{
     [super parseRelationshipsInDictionary:dictionary withEntity:entity];
-    NSDictionary *relationships = [[self class] relationshipsBindings];
-    [relationships enumerateKeysAndObjectsUsingBlock:^(NSString *relationshipProperty, PDKTEntityRelationship *relationship, BOOL *stop) {
-        [relationship parseRelationshipInDictionary:dictionary withEntity:entity relationshipProperty:relationshipProperty];
-    }];
+    if ([[entity class] respondsToSelector:@selector(relationshipsBindings)]) {
+        NSDictionary *relationships = [[entity class] relationshipsBindings];
+        [relationships enumerateKeysAndObjectsUsingBlock:^(NSString *relationshipProperty, PDKTEntityRelationship *relationship, BOOL *stop) {
+            [relationship parseRelationshipInDictionary:dictionary withEntity:entity relationshipProperty:relationshipProperty];
+        }];
+    }
 }
 @end
