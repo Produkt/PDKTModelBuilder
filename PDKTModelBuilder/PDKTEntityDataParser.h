@@ -10,9 +10,9 @@
 #import "PDKTModelBuilderEntity.h"
 
 @interface PDKTEntityDataParser : NSObject
-+ (instancetype)dataParserForPlanEntity;
-+ (instancetype)dataParserForCoreDataEntity;
 - (void)parseDictionary:(NSDictionary *)dictionary withEntity:(NSObject<PDKTModelBuilderEntity> *)entity;
 - (void)parseRelationshipsInDictionary:(NSDictionary *)dictionary withEntity:(NSObject<PDKTModelBuilderEntity> *)entity;
 - (id)propertyValueForKey:(NSString *)key inDictionary:(NSDictionary *)dictionary forEntityClass:(Class)entityClass;
+- (NSDictionary *)propertiesBindingsForEntity:(NSObject<PDKTModelBuilderEntity> *)entity;
+- (NSDictionary *)propertiesTypeTransformersForEntity:(NSObject<PDKTModelBuilderEntity> *)entity;
 @end

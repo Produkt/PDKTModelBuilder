@@ -32,6 +32,7 @@
 		88720B6B19DAC7AB0019775B /* EntityPropertyTimeStamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B5E19DAC7AB0019775B /* EntityPropertyTimeStamp.m */; };
 		88720B6C19DAC7AB0019775B /* EntityPropertyURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B6019DAC7AB0019775B /* EntityPropertyURL.m */; };
 		88720B6D19DAC7AB0019775B /* PDKTEntityDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 88720B6219DAC7AB0019775B /* PDKTEntityDataParser.m */; };
+		8888696219EFE1930097C61A /* PDKTEntityDataParserFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8888696119EFE1930097C61A /* PDKTEntityDataParserFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,8 @@
 		88720B6219DAC7AB0019775B /* PDKTEntityDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKTEntityDataParser.m; sourceTree = "<group>"; };
 		88720B6319DAC7AB0019775B /* PDKTModelBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTModelBuilder.h; sourceTree = "<group>"; };
 		88720B6419DAC7AB0019775B /* PDKTModelBuilderEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTModelBuilderEntity.h; sourceTree = "<group>"; };
+		8888696019EFE1930097C61A /* PDKTEntityDataParserFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTEntityDataParserFactory.h; sourceTree = "<group>"; };
+		8888696119EFE1930097C61A /* PDKTEntityDataParserFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKTEntityDataParserFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +215,8 @@
 				880CD7A819E3105C00075003 /* EntityRelationships */,
 				88720B6119DAC7AB0019775B /* PDKTEntityDataParser.h */,
 				88720B6219DAC7AB0019775B /* PDKTEntityDataParser.m */,
+				8888696019EFE1930097C61A /* PDKTEntityDataParserFactory.h */,
+				8888696119EFE1930097C61A /* PDKTEntityDataParserFactory.m */,
 				88364C2119E3F61200C722E0 /* __PDKTPlainObjectEntityDataParser.h */,
 				88364C2219E3F61200C722E0 /* __PDKTPlainObjectEntityDataParser.m */,
 				88720B6319DAC7AB0019775B /* PDKTModelBuilder.h */,
@@ -361,6 +366,7 @@
 				88720B6519DAC7AB0019775B /* NSManagedObject+PDKTModelBuilder.m in Sources */,
 				88720B6919DAC7AB0019775B /* EntityPropertyInteger.m in Sources */,
 				88720AF419DAC4570019775B /* PDKTModelBuilderDemo.xcdatamodeld in Sources */,
+				8888696219EFE1930097C61A /* PDKTEntityDataParserFactory.m in Sources */,
 				88720B6D19DAC7AB0019775B /* PDKTEntityDataParser.m in Sources */,
 				880CD7AB19E3108800075003 /* PDKTEntityRelationship.m in Sources */,
 				88364C1719E3E95500C722E0 /* PDKTCoreDataEntityRelationship.m in Sources */,

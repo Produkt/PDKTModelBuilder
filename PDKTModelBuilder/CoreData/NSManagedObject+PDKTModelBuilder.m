@@ -7,7 +7,7 @@
 //
 
 #import "NSManagedObject+PDKTModelBuilder.h"
-#import "PDKTEntityDataParser.h"
+#import "PDKTEntityDataParserFactory.h"
 #import <objc/runtime.h>
 
 @implementation NSManagedObject (PDKTModelBuilderEntityDefault)
@@ -27,7 +27,7 @@
 @implementation NSManagedObject (PDKTModelBuilder)
 + (instancetype)updateOrInsertIntoManagedObjectContext:(NSManagedObjectContext *)managedObjectContext withDictionary:(NSDictionary *)dictionary{
     NSAssert([[self class] conformsToProtocol:@protocol(PDKTModelBuilderCoreDataEntity)], @"must implement PDKTModelBuilderCoreDataEntity for using this method");
-    PDKTEntityDataParser *entityDataParser = [PDKTEntityDataParser dataParserForCoreDataEntity];
+    PDKTEntityDataParser *entityDataParser = [PDKTEntityDataParserFactory dataParserForCoreDataEntity];
     NSString *entityName=NSStringFromClass([self class]);
     NSString *objectId = [self pdktmb_entityId];
     NSString *objectIdValue=[entityDataParser propertyValueForKey:objectId inDictionary:dictionary forEntityClass:[self class]];
@@ -55,7 +55,7 @@
 }
 + (instancetype)insertIntoManagedObjectContext:(NSManagedObjectContext *)managedObjectContext withDictionary:(NSDictionary *)dictionary{
     NSAssert([[self class] conformsToProtocol:@protocol(PDKTModelBuilderCoreDataEntity)], @"must implement PDKTModelBuilderCoreDataEntity for using this method");
-    PDKTEntityDataParser *entityDataParser = [PDKTEntityDataParser dataParserForCoreDataEntity];
+    PDKTEntityDataParser *entityDataParser = [PDKTEntityDataParserFactory dataParserForCoreDataEntity];
     NSString *entityName=NSStringFromClass([self class]);
     NSString *objectIdValue=[self objectIdWithDictionary:dictionary];
     if (!objectIdValue) {
@@ -66,7 +66,7 @@
     return newObject;
 }
 + (NSString *)objectIdWithDictionary:(NSDictionary *)dictionary{
-    PDKTEntityDataParser *entityDataParser = [PDKTEntityDataParser dataParserForCoreDataEntity];
+    PDKTEntityDataParser *entityDataParser = [PDKTEntityDataParserFactory dataParserForCoreDataEntity];
     NSString *objectId = [self pdktmb_entityId];
     NSString *objectIdValue=[entityDataParser propertyValueForKey:objectId inDictionary:dictionary forEntityClass:[self class]];
     return objectIdValue;

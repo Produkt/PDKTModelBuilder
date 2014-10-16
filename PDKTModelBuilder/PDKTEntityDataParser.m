@@ -8,20 +8,10 @@
 
 #import "PDKTEntityDataParser.h"
 #import "EntityProperties.h"
-#import "__PDKTPlainObjectEntityDataParser.h"
-#import "__PDKTCoreDataEntityDataParser.h"
 
 @interface PDKTEntityDataParser()
 @end
 @implementation PDKTEntityDataParser
-+ (instancetype)dataParserForPlanEntity{
-    return [__PDKTPlainObjectEntityDataParser new];
-}
-+ (instancetype)dataParserForCoreDataEntity{
-    PDKTEntityDataParser *dataParser;
-    dataParser = [__PDKTCoreDataEntityDataParser new];
-    return dataParser;
-}
 - (instancetype)init
 {
     self = [super init];
@@ -32,20 +22,20 @@
 }
 #pragma mark - Automated properties parsing
 - (void)parseDictionary:(NSDictionary *)dictionary withEntity:(NSObject<PDKTModelBuilderEntity> *)entity{
-    NSDictionary *propertiesBindings = @{};
-    if ([[entity class] respondsToSelector:@selector(propertiesBindings)]) {
-        propertiesBindings = [[entity class] propertiesBindings];
-    }
-    NSDictionary *propertiesTypeTransformers = @{};
-    if ([[entity class] respondsToSelector:@selector(propertiesTypeTransformers)]) {
-        propertiesTypeTransformers = [[entity class] propertiesTypeTransformers];
-    }
+    NSDictionary *propertiesBindings = [self propertiesBindingsForEntity:entity];
+    NSDictionary *propertiesTypeTransformers = [self propertiesTypeTransformersForEntity:entity];    
     [propertiesBindings enumerateKeysAndObjectsUsingBlock:^(NSString *entityPropertyName, NSString *sourcePath, BOOL *stop) {
         id propertyValue = [self propertyValueForKey:entityPropertyName sourcePath:sourcePath inDictionary:dictionary withTransformers:propertiesTypeTransformers];
         if (propertyValue) {
             [entity setValue:propertyValue forKey:entityPropertyName];
         }
     }];
+}
+- (NSDictionary *)propertiesBindingsForEntity:(NSObject<PDKTModelBuilderEntity> *)entity{
+    return @{};    
+}
+- (NSDictionary *)propertiesTypeTransformersForEntity:(NSObject<PDKTModelBuilderEntity> *)entity{
+    return @{};
 }
 - (id)propertyValueForKey:(NSString *)key inDictionary:(NSDictionary *)dictionary forEntityClass:(Class)entityClass{
     NSAssert([entityClass conformsToProtocol:@protocol(PDKTModelBuilderEntity)], @"entityClass must conform PDKTModelBuilderEntity");
