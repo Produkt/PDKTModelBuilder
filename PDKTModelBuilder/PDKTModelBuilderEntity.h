@@ -13,4 +13,5 @@
 @optional
 + (NSDictionary *)relationshipsBindings;
 + (NSDictionary *)propertiesTypeTransformers;
++ (NSDictionary *)customDataDictionaryWithSourceDataDictionary:(NSDictionary *)dictionary;
 @end

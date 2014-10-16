@@ -22,10 +22,14 @@
 }
 #pragma mark - Automated properties parsing
 - (void)parseDictionary:(NSDictionary *)dictionary withEntity:(NSObject<PDKTModelBuilderEntity> *)entity{
+    NSDictionary *sourceDictionary = dictionary;
+    if ([[entity class] respondsToSelector:@selector(customDataDictionaryWithSourceDataDictionary:)]) {
+        sourceDictionary = [[entity class] customDataDictionaryWithSourceDataDictionary:dictionary];
+    }
     NSDictionary *propertiesBindings = [self propertiesBindingsForEntity:entity];
     NSDictionary *propertiesTypeTransformers = [self propertiesTypeTransformersForEntity:entity];    
     [propertiesBindings enumerateKeysAndObjectsUsingBlock:^(NSString *entityPropertyName, NSString *sourcePath, BOOL *stop) {
-        id propertyValue = [self propertyValueForKey:entityPropertyName sourcePath:sourcePath inDictionary:dictionary withTransformers:propertiesTypeTransformers];
+        id propertyValue = [self propertyValueForKey:entityPropertyName sourcePath:sourcePath inDictionary:sourceDictionary withTransformers:propertiesTypeTransformers];
         if (propertyValue) {
             [entity setValue:propertyValue forKey:entityPropertyName];
         }
