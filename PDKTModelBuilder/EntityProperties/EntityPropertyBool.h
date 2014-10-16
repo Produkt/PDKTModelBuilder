@@ -1,6 +1,7 @@
 //
 //  EntityPropertyBool.h
-
+//
+//
 //  Created by Javier Soto on 03/01/12.
 //
 

@@ -1,6 +1,6 @@
 //
 //  EntityProperties.h
-//  
+//  PDKTModelBuilder
 //
 //  Created by Daniel García García on 01/10/14.
 //  Copyright (c) 2012 , Inc. All rights reserved.
