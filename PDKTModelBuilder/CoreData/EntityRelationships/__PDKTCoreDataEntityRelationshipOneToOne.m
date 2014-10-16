@@ -10,9 +10,12 @@
 
 @implementation __PDKTCoreDataEntityRelationshipOneToOne
 - (void)parseRelationshipInDictionary:(NSDictionary *)dictionary withEntity:(NSManagedObject *)entity relationshipProperty:(NSString *)relationshipProperty inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext{
-    id item = [self parseItemData:dictionary withClass:self.relatedClass inManagedObjectContext:managedObjectContext];
-    if (item) {
-        [entity setValue:item forKey:relationshipProperty];
+    id relationshipData = [dictionary valueForKeyPath:self.keyPath];
+    if ([relationshipData isKindOfClass:[NSDictionary class]]) {
+        id item = [self parseItemData:relationshipData withClass:self.relatedClass inManagedObjectContext:managedObjectContext];
+        if (item) {
+            [entity setValue:item forKey:relationshipProperty];
+        }
     }
 }
 - (id)parseItemData:(NSDictionary *)itemData withClass:(Class)itemClass inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext{
