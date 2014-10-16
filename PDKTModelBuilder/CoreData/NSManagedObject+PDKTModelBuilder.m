@@ -18,7 +18,7 @@
     return [[NSString stringWithFormat:@"%@Id",[entityName stringByReplacingOccurrencesOfString:@"Entity" withString:@""]]stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:[[entityName substringToIndex:1]lowercaseString]];
 }
 + (void)validateDefaultObjectId:(NSString *)objectId{
-    NSString *objectIdAssertMessage = [NSString stringWithFormat:@"uniqueId must be '%@' or must implement 'pdktmb_entityIdPropertyName'",objectId];
+    NSString *objectIdAssertMessage = [NSString stringWithFormat:@"uniqueId must be '%@' or must implement 'entityIdPropertyName'",objectId];
     objc_property_t property = class_getProperty([self class], [objectId UTF8String]);
     NSAssert(property, objectIdAssertMessage);
 }
@@ -29,7 +29,7 @@
     NSAssert([[self class] conformsToProtocol:@protocol(PDKTModelBuilderCoreDataEntity)], @"must implement PDKTModelBuilderCoreDataEntity for using this method");
     PDKTEntityDataParser *entityDataParser = [PDKTEntityDataParserFactory dataParserForCoreDataEntity];
     NSString *entityName=NSStringFromClass([self class]);
-    NSString *objectId = [self pdktmb_entityId];
+    NSString *objectId = [self entityId];
     NSString *objectIdValue=[entityDataParser propertyValueForKey:objectId inDictionary:dictionary forEntityClass:[self class]];
     if (!objectIdValue) {
         return nil;
@@ -67,7 +67,7 @@
 }
 + (NSString *)objectIdWithDictionary:(NSDictionary *)dictionary{
     PDKTEntityDataParser *entityDataParser = [PDKTEntityDataParserFactory dataParserForCoreDataEntity];
-    NSString *objectId = [self pdktmb_entityId];
+    NSString *objectId = [self entityId];
     NSString *objectIdValue=[entityDataParser propertyValueForKey:objectId inDictionary:dictionary forEntityClass:[self class]];
     return objectIdValue;
 }
@@ -83,11 +83,11 @@
     NSManagedObject *fetchedObject=[fetchResult lastObject];
     return fetchedObject;
 }
-+ (NSString *)pdktmb_entityId{
++ (NSString *)entityId{
     NSString *entityName=NSStringFromClass([self class]);
     NSString *objectId;
-    if ([self respondsToSelector:@selector(pdktmb_entityIdPropertyName)]) {
-        objectId = [(id<PDKTModelBuilderCoreDataEntity>)self pdktmb_entityIdPropertyName];
+    if ([self respondsToSelector:@selector(entityIdPropertyName)]) {
+        objectId = [(id<PDKTModelBuilderCoreDataEntity>)self entityIdPropertyName];
     }else{
         objectId = [self defaultEntityIdPropertyNameForEntityName:entityName];
         [self validateDefaultObjectId:objectId];

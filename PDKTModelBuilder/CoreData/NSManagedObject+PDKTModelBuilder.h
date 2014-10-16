@@ -11,7 +11,7 @@
 
 @protocol PDKTModelBuilderCoreDataEntity <PDKTModelBuilderEntity>
 @optional
-+ (NSString *)pdktmb_entityIdPropertyName;
++ (NSString *)entityIdPropertyName;
 @end
 
 @class PDKTEntityDataParser;
