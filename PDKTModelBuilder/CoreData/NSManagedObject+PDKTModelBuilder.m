@@ -57,14 +57,19 @@
     NSAssert([[self class] conformsToProtocol:@protocol(PDKTModelBuilderCoreDataEntity)], @"must implement PDKTModelBuilderCoreDataEntity for using this method");
     PDKTEntityDataParser *entityDataParser = [PDKTEntityDataParser dataParserForCoreDataEntity];
     NSString *entityName=NSStringFromClass([self class]);
-    NSString *objectId = [self pdktmb_entityId];
-    NSString *objectIdValue=[entityDataParser propertyValueForKey:objectId inDictionary:dictionary forEntityClass:[self class]];
+    NSString *objectIdValue=[self objectIdWithDictionary:dictionary];
     if (!objectIdValue) {
         return nil;
     }
     NSManagedObject *newObject = [NSEntityDescription insertNewObjectForEntityForName:[NSString stringWithFormat:@"%@",entityName] inManagedObjectContext:managedObjectContext];
     [entityDataParser parseDictionary:dictionary withEntity:(NSManagedObject<PDKTModelBuilderEntity> *)newObject];
     return newObject;
+}
++ (NSString *)objectIdWithDictionary:(NSDictionary *)dictionary{
+    PDKTEntityDataParser *entityDataParser = [PDKTEntityDataParser dataParserForCoreDataEntity];
+    NSString *objectId = [self pdktmb_entityId];
+    NSString *objectIdValue=[entityDataParser propertyValueForKey:objectId inDictionary:dictionary forEntityClass:[self class]];
+    return objectIdValue;
 }
 + (instancetype)fetchObjectWithValue:(id)value forKey:(NSString *)key inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext{
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([self class])];
