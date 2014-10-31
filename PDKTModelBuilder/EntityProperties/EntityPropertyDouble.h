@@ -1,9 +1,11 @@
 //
 //  EntityPropertyDouble.h
+//  PDKTModelBuilder
 //
-//  Created by Daniel García García on 01/10/14.
-//  Copyright (c) 2014 Produkt. All rights reserved.
+//  Created by Javier Soto on 03/01/12.
+//  Copyright (c) 2012 , Inc. All rights reserved.
 //
+
 
 #import "EntityProperty.h"
 

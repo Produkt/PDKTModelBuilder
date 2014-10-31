@@ -1,8 +1,8 @@
 //
 //  EntityPropertyFloat.h
-//  
+//  PDKTModelBuilder
 //
-//  Created by Javier Soto on 1/4/12.
+//  Created by Javier Soto on 03/01/12.
 //  Copyright (c) 2012 , Inc. All rights reserved.
 //
 
