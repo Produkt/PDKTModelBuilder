@@ -26,7 +26,7 @@
         static dispatch_once_t onceToken;
         static NSDateFormatter *entyPropertyDateFormatter;
         dispatch_once(&onceToken, ^{
-            NSDateFormatter *entyPropertyDateFormatter = [[NSDateFormatter alloc] init];
+            entyPropertyDateFormatter = [[NSDateFormatter alloc] init];
             [entyPropertyDateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
         });
         date = [entyPropertyDateFormatter dateFromString:objectDescription];
