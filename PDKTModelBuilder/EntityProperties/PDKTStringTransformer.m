@@ -7,9 +7,9 @@
 //
 
 
-#import "EntityPropertyString.h"
+#import "PDKTStringTransformer.h"
 
-@implementation EntityPropertyString
+@implementation PDKTStringTransformer
 
 - (id)parsedValueForObject:(id)object
 {

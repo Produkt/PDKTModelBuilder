@@ -1,5 +1,5 @@
 //
-//  EntityProperty.h
+//  PDKTDataTransformer.h
 //  PDKTModelBuilder
 //
 //  Created by Javier Soto on 03/01/12.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface EntityProperty : NSObject
+@interface PDKTDataTransformer : NSObject
 - (id)parsedValueForObject:(id)object;
 @end

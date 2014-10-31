@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 minube.com. All rights reserved.
 //
 
-#import "EntityProperty.h"
+#import "PDKTDataTransformer.h"
 
-@interface EntityPropertyTimeStamp : EntityProperty
+@interface PDKTDateTransformer : PDKTDataTransformer
 
 @end

@@ -6,11 +6,11 @@
 //  Copyright (c) 2012 , Inc. All rights reserved.
 //
 
-#import "EntityPropertyInteger.h"
-#import "EntityPropertyFloat.h"
-#import "EntityPropertyDouble.h"
-#import "EntityPropertyBool.h"
-#import "EntityPropertyString.h"
-#import "EntityPropertyURL.h"
-#import "EntityPropertyTimeStamp.h"
+#import "PDKTIntegerTransformer.h"
+#import "PDKTFloatTransformer.h"
+#import "PDKTDoubleTransformer.h"
+#import "PDKTBoolTransformer.h"
+#import "PDKTStringTransformer.h"
+#import "PDKTURLTransformer.h"
+#import "PDKTDateTransformer.h"
 

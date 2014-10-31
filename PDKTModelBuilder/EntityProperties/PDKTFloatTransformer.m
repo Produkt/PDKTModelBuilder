@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 , Inc. All rights reserved.
 //
 
-#import "EntityPropertyFloat.h"
+#import "PDKTFloatTransformer.h"
 
-@implementation EntityPropertyFloat
+@implementation PDKTFloatTransformer
 
 - (id)parsedValueForObject:(id)object
 {

@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 , Inc. All rights reserved.
 //
 
-#import "EntityPropertyURL.h"
+#import "PDKTURLTransformer.h"
 
-@implementation EntityPropertyURL
+@implementation PDKTURLTransformer
 
 - (id)parsedValueForObject:(id)object
 {

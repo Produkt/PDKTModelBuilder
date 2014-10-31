@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 , Inc. All rights reserved.
 //
 
-#import "EntityPropertyDouble.h"
+#import "PDKTDoubleTransformer.h"
 
-@implementation EntityPropertyDouble
+@implementation PDKTDoubleTransformer
 
 - (id)parsedValueForObject:(id)object
 {

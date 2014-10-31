@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 , Inc. All rights reserved.
 //
 
-#import "EntityPropertyInteger.h"
+#import "PDKTIntegerTransformer.h"
 
-@implementation EntityPropertyInteger
+@implementation PDKTIntegerTransformer
 
 - (id)parsedValueForObject:(id)object
 {

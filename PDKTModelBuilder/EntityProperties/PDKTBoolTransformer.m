@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 , Inc. All rights reserved.
 //
 
-#import "EntityPropertyBool.h"
+#import "PDKTBoolTransformer.h"
 
-@implementation EntityPropertyBool
+@implementation PDKTBoolTransformer
 
 - (id)parsedValueForObject:(id)object
 {

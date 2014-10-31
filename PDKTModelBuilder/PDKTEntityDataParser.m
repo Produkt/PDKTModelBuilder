@@ -58,7 +58,7 @@
     id propertyValue;
     id rawValue = [dictionary valueForKeyPath:sourcePath];
     if (![rawValue isKindOfClass:[NSNull class]]) {
-        EntityProperty *entityProperty=[propertiesTypeTransformers valueForKey:key]?:[EntityPropertyString new];
+        PDKTDataTransformer *entityProperty=[propertiesTypeTransformers valueForKey:key]?:[PDKTStringTransformer new];
         propertyValue=[entityProperty parsedValueForObject:rawValue];
     }
     return propertyValue;

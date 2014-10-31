@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 minube.com. All rights reserved.
 //
 
-#import "EntityPropertyTimeStamp.h"
+#import "PDKTDateTransformer.h"
 
-@implementation EntityPropertyTimeStamp
+@implementation PDKTDateTransformer
 
 - (id)parsedValueForObject:(id)object
 {

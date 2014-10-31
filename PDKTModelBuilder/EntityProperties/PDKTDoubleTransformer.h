@@ -7,8 +7,8 @@
 //
 
 
-#import "EntityProperty.h"
+#import "PDKTDataTransformer.h"
 
-@interface EntityPropertyDouble : EntityProperty
+@interface PDKTDoubleTransformer : PDKTDataTransformer
 
 @end

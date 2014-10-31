@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 , Inc. All rights reserved.
 //
 
-#import "EntityPropertyInteger.h"
+#import "PDKTIntegerTransformer.h"
 
-@interface EntityPropertyFloat : EntityPropertyInteger
+@interface PDKTFloatTransformer : PDKTIntegerTransformer
 
 @end
