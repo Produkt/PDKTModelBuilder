@@ -26,7 +26,13 @@
     [super tearDown];
 }
 
+- (void)testReturnsABool {
+    XCTAssert([[self.boolTransformer parsedValueForObject:@"YES"] isKindOfClass:NSClassFromString(@"__NSCFBoolean")]);
+}
+
 - (void)testBoolFromBoolString {
+    XCTAssertEqualObjects(@NO, [self.boolTransformer parsedValueForObject:@""]);
+    
     XCTAssertEqualObjects(@YES, [self.boolTransformer parsedValueForObject:@"YES"]);
     XCTAssertEqualObjects(@NO, [self.boolTransformer parsedValueForObject:@"NO"]);
     
