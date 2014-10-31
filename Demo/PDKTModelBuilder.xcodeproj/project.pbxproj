@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		883ACA111A041786006139C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA101A041786006139C6 /* main.m */; };
+		883ACA141A041786006139C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA131A041786006139C6 /* AppDelegate.m */; };
+		883ACA171A041786006139C6 /* PDKTModelBuilder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA151A041786006139C6 /* PDKTModelBuilder.xcdatamodeld */; };
+		883ACA1A1A041786006139C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA191A041786006139C6 /* ViewController.m */; };
+		883ACA1D1A041786006139C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 883ACA1B1A041786006139C6 /* Main.storyboard */; };
+		883ACA1F1A041786006139C6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 883ACA1E1A041786006139C6 /* Images.xcassets */; };
+		883ACA221A041786006139C6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883ACA201A041786006139C6 /* LaunchScreen.xib */; };
+		883ACA2E1A041786006139C6 /* PDKTModelBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA2D1A041786006139C6 /* PDKTModelBuilderTests.m */; };
+		883ACA661A0417BA006139C6 /* __PDKTPlainObjectEntityDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA391A0417BA006139C6 /* __PDKTPlainObjectEntityDataParser.m */; };
+		883ACA671A0417BA006139C6 /* __PDKTCoreDataEntityDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA3C1A0417BA006139C6 /* __PDKTCoreDataEntityDataParser.m */; };
+		883ACA681A0417BA006139C6 /* __PDKTCoreDataEntityRelationshipOneToMany.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA3F1A0417BA006139C6 /* __PDKTCoreDataEntityRelationshipOneToMany.m */; };
+		883ACA691A0417BA006139C6 /* __PDKTCoreDataEntityRelationshipOneToOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA411A0417BA006139C6 /* __PDKTCoreDataEntityRelationshipOneToOne.m */; };
+		883ACA6A1A0417BA006139C6 /* PDKTCoreDataEntityRelationship.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA431A0417BA006139C6 /* PDKTCoreDataEntityRelationship.m */; };
+		883ACA6B1A0417BA006139C6 /* NSManagedObject+PDKTModelBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA451A0417BA006139C6 /* NSManagedObject+PDKTModelBuilder.m */; };
+		883ACA6C1A0417BA006139C6 /* EntityProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA4A1A0417BA006139C6 /* EntityProperty.m */; };
+		883ACA6D1A0417BA006139C6 /* EntityPropertyBool.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA4C1A0417BA006139C6 /* EntityPropertyBool.m */; };
+		883ACA6E1A0417BA006139C6 /* EntityPropertyDouble.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA4E1A0417BA006139C6 /* EntityPropertyDouble.m */; };
+		883ACA6F1A0417BA006139C6 /* EntityPropertyFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA501A0417BA006139C6 /* EntityPropertyFloat.m */; };
+		883ACA701A0417BA006139C6 /* EntityPropertyInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA521A0417BA006139C6 /* EntityPropertyInteger.m */; };
+		883ACA711A0417BA006139C6 /* EntityPropertyString.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA541A0417BA006139C6 /* EntityPropertyString.m */; };
+		883ACA721A0417BA006139C6 /* EntityPropertyTimeStamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA561A0417BA006139C6 /* EntityPropertyTimeStamp.m */; };
+		883ACA731A0417BA006139C6 /* EntityPropertyURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA581A0417BA006139C6 /* EntityPropertyURL.m */; };
+		883ACA741A0417BA006139C6 /* __PDKTEntityRelationshipOneToMany.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA5B1A0417BA006139C6 /* __PDKTEntityRelationshipOneToMany.m */; };
+		883ACA751A0417BA006139C6 /* __PDKTEntityRelationshipOneToOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA5D1A0417BA006139C6 /* __PDKTEntityRelationshipOneToOne.m */; };
+		883ACA761A0417BA006139C6 /* PDKTEntityRelationship.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA5F1A0417BA006139C6 /* PDKTEntityRelationship.m */; };
+		883ACA771A0417BA006139C6 /* PDKTEntityDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA611A0417BA006139C6 /* PDKTEntityDataParser.m */; };
+		883ACA781A0417BA006139C6 /* PDKTEntityDataParserFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA631A0417BA006139C6 /* PDKTEntityDataParserFactory.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		883ACA281A041786006139C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 883ACA031A041786006139C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 883ACA0A1A041786006139C6;
+			remoteInfo = PDKTModelBuilder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		883ACA0B1A041786006139C6 /* PDKTModelBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDKTModelBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		883ACA0F1A041786006139C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		883ACA101A041786006139C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		883ACA121A041786006139C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		883ACA131A041786006139C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		883ACA161A041786006139C6 /* PDKTModelBuilder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PDKTModelBuilder.xcdatamodel; sourceTree = "<group>"; };
+		883ACA181A041786006139C6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		883ACA191A041786006139C6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		883ACA1C1A041786006139C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		883ACA1E1A041786006139C6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		883ACA211A041786006139C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		883ACA271A041786006139C6 /* PDKTModelBuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PDKTModelBuilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		883ACA2C1A041786006139C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		883ACA2D1A041786006139C6 /* PDKTModelBuilderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDKTModelBuilderTests.m; sourceTree = "<group>"; };
+		883ACA381A0417BA006139C6 /* __PDKTPlainObjectEntityDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __PDKTPlainObjectEntityDataParser.h; sourceTree = "<group>"; };
+		883ACA391A0417BA006139C6 /* __PDKTPlainObjectEntityDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __PDKTPlainObjectEntityDataParser.m; sourceTree = "<group>"; };
+		883ACA3B1A0417BA006139C6 /* __PDKTCoreDataEntityDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __PDKTCoreDataEntityDataParser.h; sourceTree = "<group>"; };
+		883ACA3C1A0417BA006139C6 /* __PDKTCoreDataEntityDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __PDKTCoreDataEntityDataParser.m; sourceTree = "<group>"; };
+		883ACA3E1A0417BA006139C6 /* __PDKTCoreDataEntityRelationshipOneToMany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __PDKTCoreDataEntityRelationshipOneToMany.h; sourceTree = "<group>"; };
+		883ACA3F1A0417BA006139C6 /* __PDKTCoreDataEntityRelationshipOneToMany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __PDKTCoreDataEntityRelationshipOneToMany.m; sourceTree = "<group>"; };
+		883ACA401A0417BA006139C6 /* __PDKTCoreDataEntityRelationshipOneToOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __PDKTCoreDataEntityRelationshipOneToOne.h; sourceTree = "<group>"; };
+		883ACA411A0417BA006139C6 /* __PDKTCoreDataEntityRelationshipOneToOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __PDKTCoreDataEntityRelationshipOneToOne.m; sourceTree = "<group>"; };
+		883ACA421A0417BA006139C6 /* PDKTCoreDataEntityRelationship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTCoreDataEntityRelationship.h; sourceTree = "<group>"; };
+		883ACA431A0417BA006139C6 /* PDKTCoreDataEntityRelationship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKTCoreDataEntityRelationship.m; sourceTree = "<group>"; };
+		883ACA441A0417BA006139C6 /* NSManagedObject+PDKTModelBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+PDKTModelBuilder.h"; sourceTree = "<group>"; };
+		883ACA451A0417BA006139C6 /* NSManagedObject+PDKTModelBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+PDKTModelBuilder.m"; sourceTree = "<group>"; };
+		883ACA461A0417BA006139C6 /* PDKTModelBuilder+CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PDKTModelBuilder+CoreData.h"; sourceTree = "<group>"; };
+		883ACA481A0417BA006139C6 /* EntityProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityProperties.h; sourceTree = "<group>"; };
+		883ACA491A0417BA006139C6 /* EntityProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityProperty.h; sourceTree = "<group>"; };
+		883ACA4A1A0417BA006139C6 /* EntityProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityProperty.m; sourceTree = "<group>"; };
+		883ACA4B1A0417BA006139C6 /* EntityPropertyBool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyBool.h; sourceTree = "<group>"; };
+		883ACA4C1A0417BA006139C6 /* EntityPropertyBool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyBool.m; sourceTree = "<group>"; };
+		883ACA4D1A0417BA006139C6 /* EntityPropertyDouble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyDouble.h; sourceTree = "<group>"; };
+		883ACA4E1A0417BA006139C6 /* EntityPropertyDouble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyDouble.m; sourceTree = "<group>"; };
+		883ACA4F1A0417BA006139C6 /* EntityPropertyFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyFloat.h; sourceTree = "<group>"; };
+		883ACA501A0417BA006139C6 /* EntityPropertyFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyFloat.m; sourceTree = "<group>"; };
+		883ACA511A0417BA006139C6 /* EntityPropertyInteger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyInteger.h; sourceTree = "<group>"; };
+		883ACA521A0417BA006139C6 /* EntityPropertyInteger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyInteger.m; sourceTree = "<group>"; };
+		883ACA531A0417BA006139C6 /* EntityPropertyString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyString.h; sourceTree = "<group>"; };
+		883ACA541A0417BA006139C6 /* EntityPropertyString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyString.m; sourceTree = "<group>"; };
+		883ACA551A0417BA006139C6 /* EntityPropertyTimeStamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyTimeStamp.h; sourceTree = "<group>"; };
+		883ACA561A0417BA006139C6 /* EntityPropertyTimeStamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyTimeStamp.m; sourceTree = "<group>"; };
+		883ACA571A0417BA006139C6 /* EntityPropertyURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityPropertyURL.h; sourceTree = "<group>"; };
+		883ACA581A0417BA006139C6 /* EntityPropertyURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityPropertyURL.m; sourceTree = "<group>"; };
+		883ACA5A1A0417BA006139C6 /* __PDKTEntityRelationshipOneToMany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __PDKTEntityRelationshipOneToMany.h; sourceTree = "<group>"; };
+		883ACA5B1A0417BA006139C6 /* __PDKTEntityRelationshipOneToMany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __PDKTEntityRelationshipOneToMany.m; sourceTree = "<group>"; };
+		883ACA5C1A0417BA006139C6 /* __PDKTEntityRelationshipOneToOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __PDKTEntityRelationshipOneToOne.h; sourceTree = "<group>"; };
+		883ACA5D1A0417BA006139C6 /* __PDKTEntityRelationshipOneToOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __PDKTEntityRelationshipOneToOne.m; sourceTree = "<group>"; };
+		883ACA5E1A0417BA006139C6 /* PDKTEntityRelationship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTEntityRelationship.h; sourceTree = "<group>"; };
+		883ACA5F1A0417BA006139C6 /* PDKTEntityRelationship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKTEntityRelationship.m; sourceTree = "<group>"; };
+		883ACA601A0417BA006139C6 /* PDKTEntityDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTEntityDataParser.h; sourceTree = "<group>"; };
+		883ACA611A0417BA006139C6 /* PDKTEntityDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKTEntityDataParser.m; sourceTree = "<group>"; };
+		883ACA621A0417BA006139C6 /* PDKTEntityDataParserFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTEntityDataParserFactory.h; sourceTree = "<group>"; };
+		883ACA631A0417BA006139C6 /* PDKTEntityDataParserFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKTEntityDataParserFactory.m; sourceTree = "<group>"; };
+		883ACA641A0417BA006139C6 /* PDKTModelBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTModelBuilder.h; sourceTree = "<group>"; };
+		883ACA651A0417BA006139C6 /* PDKTModelBuilderEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTModelBuilderEntity.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		883ACA081A041786006139C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		883ACA241A041786006139C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		883ACA021A041786006139C6 = {
+			isa = PBXGroup;
+			children = (
+				883ACA0D1A041786006139C6 /* PDKTModelBuilder */,
+				883ACA2A1A041786006139C6 /* PDKTModelBuilderTests */,
+				883ACA0C1A041786006139C6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		883ACA0C1A041786006139C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				883ACA0B1A041786006139C6 /* PDKTModelBuilder.app */,
+				883ACA271A041786006139C6 /* PDKTModelBuilderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		883ACA0D1A041786006139C6 /* PDKTModelBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				883ACA121A041786006139C6 /* AppDelegate.h */,
+				883ACA131A041786006139C6 /* AppDelegate.m */,
+				883ACA181A041786006139C6 /* ViewController.h */,
+				883ACA191A041786006139C6 /* ViewController.m */,
+				883ACA1B1A041786006139C6 /* Main.storyboard */,
+				883ACA1E1A041786006139C6 /* Images.xcassets */,
+				883ACA201A041786006139C6 /* LaunchScreen.xib */,
+				883ACA151A041786006139C6 /* PDKTModelBuilder.xcdatamodeld */,
+				883ACA371A0417BA006139C6 /* PDKTModelBuilder */,
+				883ACA0E1A041786006139C6 /* Supporting Files */,
+			);
+			path = PDKTModelBuilder;
+			sourceTree = "<group>";
+		};
+		883ACA0E1A041786006139C6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				883ACA0F1A041786006139C6 /* Info.plist */,
+				883ACA101A041786006139C6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		883ACA2A1A041786006139C6 /* PDKTModelBuilderTests */ = {
+			isa = PBXGroup;
+			children = (
+				883ACA2D1A041786006139C6 /* PDKTModelBuilderTests.m */,
+				883ACA2B1A041786006139C6 /* Supporting Files */,
+			);
+			path = PDKTModelBuilderTests;
+			sourceTree = "<group>";
+		};
+		883ACA2B1A041786006139C6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				883ACA2C1A041786006139C6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		883ACA371A0417BA006139C6 /* PDKTModelBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				883ACA3A1A0417BA006139C6 /* CoreData */,
+				883ACA471A0417BA006139C6 /* EntityProperties */,
+				883ACA591A0417BA006139C6 /* EntityRelationships */,
+				883ACA601A0417BA006139C6 /* PDKTEntityDataParser.h */,
+				883ACA611A0417BA006139C6 /* PDKTEntityDataParser.m */,
+				883ACA621A0417BA006139C6 /* PDKTEntityDataParserFactory.h */,
+				883ACA631A0417BA006139C6 /* PDKTEntityDataParserFactory.m */,
+				883ACA381A0417BA006139C6 /* __PDKTPlainObjectEntityDataParser.h */,
+				883ACA391A0417BA006139C6 /* __PDKTPlainObjectEntityDataParser.m */,
+				883ACA641A0417BA006139C6 /* PDKTModelBuilder.h */,
+				883ACA651A0417BA006139C6 /* PDKTModelBuilderEntity.h */,
+			);
+			name = PDKTModelBuilder;
+			path = ../../PDKTModelBuilder;
+			sourceTree = "<group>";
+		};
+		883ACA3A1A0417BA006139C6 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				883ACA3B1A0417BA006139C6 /* __PDKTCoreDataEntityDataParser.h */,
+				883ACA3C1A0417BA006139C6 /* __PDKTCoreDataEntityDataParser.m */,
+				883ACA3D1A0417BA006139C6 /* EntityRelationships */,
+				883ACA441A0417BA006139C6 /* NSManagedObject+PDKTModelBuilder.h */,
+				883ACA451A0417BA006139C6 /* NSManagedObject+PDKTModelBuilder.m */,
+				883ACA461A0417BA006139C6 /* PDKTModelBuilder+CoreData.h */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		883ACA3D1A0417BA006139C6 /* EntityRelationships */ = {
+			isa = PBXGroup;
+			children = (
+				883ACA3E1A0417BA006139C6 /* __PDKTCoreDataEntityRelationshipOneToMany.h */,
+				883ACA3F1A0417BA006139C6 /* __PDKTCoreDataEntityRelationshipOneToMany.m */,
+				883ACA401A0417BA006139C6 /* __PDKTCoreDataEntityRelationshipOneToOne.h */,
+				883ACA411A0417BA006139C6 /* __PDKTCoreDataEntityRelationshipOneToOne.m */,
+				883ACA421A0417BA006139C6 /* PDKTCoreDataEntityRelationship.h */,
+				883ACA431A0417BA006139C6 /* PDKTCoreDataEntityRelationship.m */,
+			);
+			path = EntityRelationships;
+			sourceTree = "<group>";
+		};
+		883ACA471A0417BA006139C6 /* EntityProperties */ = {
+			isa = PBXGroup;
+			children = (
+				883ACA481A0417BA006139C6 /* EntityProperties.h */,
+				883ACA491A0417BA006139C6 /* EntityProperty.h */,
+				883ACA4A1A0417BA006139C6 /* EntityProperty.m */,
+				883ACA4B1A0417BA006139C6 /* EntityPropertyBool.h */,
+				883ACA4C1A0417BA006139C6 /* EntityPropertyBool.m */,
+				883ACA4D1A0417BA006139C6 /* EntityPropertyDouble.h */,
+				883ACA4E1A0417BA006139C6 /* EntityPropertyDouble.m */,
+				883ACA4F1A0417BA006139C6 /* EntityPropertyFloat.h */,
+				883ACA501A0417BA006139C6 /* EntityPropertyFloat.m */,
+				883ACA511A0417BA006139C6 /* EntityPropertyInteger.h */,
+				883ACA521A0417BA006139C6 /* EntityPropertyInteger.m */,
+				883ACA531A0417BA006139C6 /* EntityPropertyString.h */,
+				883ACA541A0417BA006139C6 /* EntityPropertyString.m */,
+				883ACA551A0417BA006139C6 /* EntityPropertyTimeStamp.h */,
+				883ACA561A0417BA006139C6 /* EntityPropertyTimeStamp.m */,
+				883ACA571A0417BA006139C6 /* EntityPropertyURL.h */,
+				883ACA581A0417BA006139C6 /* EntityPropertyURL.m */,
+			);
+			path = EntityProperties;
+			sourceTree = "<group>";
+		};
+		883ACA591A0417BA006139C6 /* EntityRelationships */ = {
+			isa = PBXGroup;
+			children = (
+				883ACA5A1A0417BA006139C6 /* __PDKTEntityRelationshipOneToMany.h */,
+				883ACA5B1A0417BA006139C6 /* __PDKTEntityRelationshipOneToMany.m */,
+				883ACA5C1A0417BA006139C6 /* __PDKTEntityRelationshipOneToOne.h */,
+				883ACA5D1A0417BA006139C6 /* __PDKTEntityRelationshipOneToOne.m */,
+				883ACA5E1A0417BA006139C6 /* PDKTEntityRelationship.h */,
+				883ACA5F1A0417BA006139C6 /* PDKTEntityRelationship.m */,
+			);
+			path = EntityRelationships;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		883ACA0A1A041786006139C6 /* PDKTModelBuilder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 883ACA311A041786006139C6 /* Build configuration list for PBXNativeTarget "PDKTModelBuilder" */;
+			buildPhases = (
+				883ACA071A041786006139C6 /* Sources */,
+				883ACA081A041786006139C6 /* Frameworks */,
+				883ACA091A041786006139C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PDKTModelBuilder;
+			productName = PDKTModelBuilder;
+			productReference = 883ACA0B1A041786006139C6 /* PDKTModelBuilder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		883ACA261A041786006139C6 /* PDKTModelBuilderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 883ACA341A041786006139C6 /* Build configuration list for PBXNativeTarget "PDKTModelBuilderTests" */;
+			buildPhases = (
+				883ACA231A041786006139C6 /* Sources */,
+				883ACA241A041786006139C6 /* Frameworks */,
+				883ACA251A041786006139C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				883ACA291A041786006139C6 /* PBXTargetDependency */,
+			);
+			name = PDKTModelBuilderTests;
+			productName = PDKTModelBuilderTests;
+			productReference = 883ACA271A041786006139C6 /* PDKTModelBuilderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		883ACA031A041786006139C6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Produkt;
+				TargetAttributes = {
+					883ACA0A1A041786006139C6 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					883ACA261A041786006139C6 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 883ACA0A1A041786006139C6;
+					};
+				};
+			};
+			buildConfigurationList = 883ACA061A041786006139C6 /* Build configuration list for PBXProject "PDKTModelBuilder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 883ACA021A041786006139C6;
+			productRefGroup = 883ACA0C1A041786006139C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				883ACA0A1A041786006139C6 /* PDKTModelBuilder */,
+				883ACA261A041786006139C6 /* PDKTModelBuilderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		883ACA091A041786006139C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				883ACA1D1A041786006139C6 /* Main.storyboard in Resources */,
+				883ACA221A041786006139C6 /* LaunchScreen.xib in Resources */,
+				883ACA1F1A041786006139C6 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		883ACA251A041786006139C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		883ACA071A041786006139C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				883ACA6E1A0417BA006139C6 /* EntityPropertyDouble.m in Sources */,
+				883ACA781A0417BA006139C6 /* PDKTEntityDataParserFactory.m in Sources */,
+				883ACA6B1A0417BA006139C6 /* NSManagedObject+PDKTModelBuilder.m in Sources */,
+				883ACA721A0417BA006139C6 /* EntityPropertyTimeStamp.m in Sources */,
+				883ACA6A1A0417BA006139C6 /* PDKTCoreDataEntityRelationship.m in Sources */,
+				883ACA6C1A0417BA006139C6 /* EntityProperty.m in Sources */,
+				883ACA141A041786006139C6 /* AppDelegate.m in Sources */,
+				883ACA171A041786006139C6 /* PDKTModelBuilder.xcdatamodeld in Sources */,
+				883ACA731A0417BA006139C6 /* EntityPropertyURL.m in Sources */,
+				883ACA671A0417BA006139C6 /* __PDKTCoreDataEntityDataParser.m in Sources */,
+				883ACA681A0417BA006139C6 /* __PDKTCoreDataEntityRelationshipOneToMany.m in Sources */,
+				883ACA771A0417BA006139C6 /* PDKTEntityDataParser.m in Sources */,
+				883ACA701A0417BA006139C6 /* EntityPropertyInteger.m in Sources */,
+				883ACA661A0417BA006139C6 /* __PDKTPlainObjectEntityDataParser.m in Sources */,
+				883ACA711A0417BA006139C6 /* EntityPropertyString.m in Sources */,
+				883ACA1A1A041786006139C6 /* ViewController.m in Sources */,
+				883ACA741A0417BA006139C6 /* __PDKTEntityRelationshipOneToMany.m in Sources */,
+				883ACA6D1A0417BA006139C6 /* EntityPropertyBool.m in Sources */,
+				883ACA751A0417BA006139C6 /* __PDKTEntityRelationshipOneToOne.m in Sources */,
+				883ACA111A041786006139C6 /* main.m in Sources */,
+				883ACA6F1A0417BA006139C6 /* EntityPropertyFloat.m in Sources */,
+				883ACA761A0417BA006139C6 /* PDKTEntityRelationship.m in Sources */,
+				883ACA691A0417BA006139C6 /* __PDKTCoreDataEntityRelationshipOneToOne.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		883ACA231A041786006139C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				883ACA2E1A041786006139C6 /* PDKTModelBuilderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		883ACA291A041786006139C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 883ACA0A1A041786006139C6 /* PDKTModelBuilder */;
+			targetProxy = 883ACA281A041786006139C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		883ACA1B1A041786006139C6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				883ACA1C1A041786006139C6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		883ACA201A041786006139C6 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				883ACA211A041786006139C6 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		883ACA2F1A041786006139C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		883ACA301A041786006139C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		883ACA321A041786006139C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PDKTModelBuilder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		883ACA331A041786006139C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PDKTModelBuilder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		883ACA351A041786006139C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PDKTModelBuilderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PDKTModelBuilder.app/PDKTModelBuilder";
+			};
+			name = Debug;
+		};
+		883ACA361A041786006139C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PDKTModelBuilderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PDKTModelBuilder.app/PDKTModelBuilder";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		883ACA061A041786006139C6 /* Build configuration list for PBXProject "PDKTModelBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				883ACA2F1A041786006139C6 /* Debug */,
+				883ACA301A041786006139C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		883ACA311A041786006139C6 /* Build configuration list for PBXNativeTarget "PDKTModelBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				883ACA321A041786006139C6 /* Debug */,
+				883ACA331A041786006139C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		883ACA341A041786006139C6 /* Build configuration list for PBXNativeTarget "PDKTModelBuilderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				883ACA351A041786006139C6 /* Debug */,
+				883ACA361A041786006139C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		883ACA151A041786006139C6 /* PDKTModelBuilder.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				883ACA161A041786006139C6 /* PDKTModelBuilder.xcdatamodel */,
+			);
+			currentVersion = 883ACA161A041786006139C6 /* PDKTModelBuilder.xcdatamodel */;
+			path = PDKTModelBuilder.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 883ACA031A041786006139C6 /* Project object */;
+}

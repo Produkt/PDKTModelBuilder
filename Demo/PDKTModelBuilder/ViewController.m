@@ -1,8 +1,8 @@
 //
 //  ViewController.m
-//  PDKTModelBuilderDemo
+//  PDKTModelBuilder
 //
-//  Created by Daniel García García on 30/09/14.
+//  Created by Daniel García on 31/10/14.
 //  Copyright (c) 2014 Produkt. All rights reserved.
 //
 
