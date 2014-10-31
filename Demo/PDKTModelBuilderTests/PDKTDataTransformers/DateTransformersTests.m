@@ -27,12 +27,12 @@
 }
 
 - (void)testReturnsADate {
-    NSDate *date = [self.dateTransformer parsedValueForObject:@"2014-10-31 20:47:59"];
+    NSDate *date = [self.dateTransformer tranformValueFromObject:@"2014-10-31 20:47:59"];
     XCTAssert([date isKindOfClass:[NSDate class]]);
 }
 
 - (void)testDateFromMySQLTypeString {
-    NSDate *date = [self.dateTransformer parsedValueForObject:@"2014-10-31 20:47:59"];
+    NSDate *date = [self.dateTransformer tranformValueFromObject:@"2014-10-31 20:47:59"];
     NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitYear |
                                                                                 NSCalendarUnitMonth |
                                                                                 NSCalendarUnitDay |
@@ -49,7 +49,7 @@
 }
 
 - (void)testDateFromUnixtime {
-    NSDate *date = [self.dateTransformer parsedValueForObject:@"1414784879"];
+    NSDate *date = [self.dateTransformer tranformValueFromObject:@"1414784879"];
     NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitYear |
                                                                                 NSCalendarUnitMonth |
                                                                                 NSCalendarUnitDay |

@@ -10,7 +10,7 @@
 
 @implementation PDKTIntegerTransformer
 
-- (id)parsedValueForObject:(id)object
+- (id)tranformValueFromObject:(id)object
 {
     if (![object respondsToSelector:@selector(intValue)])
     {

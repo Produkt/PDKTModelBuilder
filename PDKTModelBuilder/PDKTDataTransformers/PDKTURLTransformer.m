@@ -10,7 +10,7 @@
 
 @implementation PDKTURLTransformer
 
-- (id)parsedValueForObject:(id)object
+- (id)tranformValueFromObject:(id)object
 {
     if ([object isEqual:[NSNull null]] || ![object isKindOfClass:[NSString class]] || [object length] == 0)
     {

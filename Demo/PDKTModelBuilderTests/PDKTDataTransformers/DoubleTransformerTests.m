@@ -27,11 +27,11 @@
 }
 
 - (void)testReturnsADouble {
-    XCTAssert([[self.doubleTransformer parsedValueForObject:@"0.5"] isKindOfClass:NSClassFromString(@"__NSCFNumber")]);
+    XCTAssert([[self.doubleTransformer tranformValueFromObject:@"0.5"] isKindOfClass:NSClassFromString(@"__NSCFNumber")]);
 }
 
 - (void)testDoubleFromString {
-    NSNumber *number = [self.doubleTransformer parsedValueForObject:@"0.5"];
+    NSNumber *number = [self.doubleTransformer tranformValueFromObject:@"0.5"];
     XCTAssertEqual([number floatValue], 0.5);
 }
 

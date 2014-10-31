@@ -11,7 +11,7 @@
 
 @implementation PDKTStringTransformer
 
-- (id)parsedValueForObject:(id)object
+- (id)tranformValueFromObject:(id)object
 {
     if (!object || [object isEqual:[NSNull null]])
     {

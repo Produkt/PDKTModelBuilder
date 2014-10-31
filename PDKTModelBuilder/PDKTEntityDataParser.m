@@ -59,7 +59,7 @@
     id rawValue = [dictionary valueForKeyPath:sourcePath];
     if (![rawValue isKindOfClass:[NSNull class]]) {
         PDKTDataTransformer *entityProperty=[propertiesTypeTransformers valueForKey:key]?:[PDKTStringTransformer new];
-        propertyValue=[entityProperty parsedValueForObject:rawValue];
+        propertyValue=[entityProperty tranformValueFromObject:rawValue];
     }
     return propertyValue;
 }

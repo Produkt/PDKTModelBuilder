@@ -27,30 +27,30 @@
 }
 
 - (void)testReturnsABool {
-    XCTAssert([[self.boolTransformer parsedValueForObject:@"YES"] isKindOfClass:NSClassFromString(@"__NSCFBoolean")]);
+    XCTAssert([[self.boolTransformer tranformValueFromObject:@"YES"] isKindOfClass:NSClassFromString(@"__NSCFBoolean")]);
 }
 
 - (void)testBoolFromBoolString {
-    XCTAssertEqualObjects(@NO, [self.boolTransformer parsedValueForObject:@""]);
+    XCTAssertEqualObjects(@NO, [self.boolTransformer tranformValueFromObject:@""]);
     
-    XCTAssertEqualObjects(@YES, [self.boolTransformer parsedValueForObject:@"YES"]);
-    XCTAssertEqualObjects(@NO, [self.boolTransformer parsedValueForObject:@"NO"]);
+    XCTAssertEqualObjects(@YES, [self.boolTransformer tranformValueFromObject:@"YES"]);
+    XCTAssertEqualObjects(@NO, [self.boolTransformer tranformValueFromObject:@"NO"]);
     
-    XCTAssertEqualObjects(@YES, [self.boolTransformer parsedValueForObject:@"true"]);
-    XCTAssertEqualObjects(@NO, [self.boolTransformer parsedValueForObject:@"false"]);
+    XCTAssertEqualObjects(@YES, [self.boolTransformer tranformValueFromObject:@"true"]);
+    XCTAssertEqualObjects(@NO, [self.boolTransformer tranformValueFromObject:@"false"]);
 }
 - (void)testBoolFromNumbers {
-    XCTAssertEqualObjects(@YES, [self.boolTransformer parsedValueForObject:@"1"]);
-    XCTAssertEqualObjects(@YES, [self.boolTransformer parsedValueForObject:@"2"]);
-    XCTAssertEqualObjects(@NO, [self.boolTransformer parsedValueForObject:@"0"]);
-    XCTAssertEqualObjects(@YES, [self.boolTransformer parsedValueForObject:@"-1"]);
+    XCTAssertEqualObjects(@YES, [self.boolTransformer tranformValueFromObject:@"1"]);
+    XCTAssertEqualObjects(@YES, [self.boolTransformer tranformValueFromObject:@"2"]);
+    XCTAssertEqualObjects(@NO, [self.boolTransformer tranformValueFromObject:@"0"]);
+    XCTAssertEqualObjects(@YES, [self.boolTransformer tranformValueFromObject:@"-1"]);
 }
 - (void)testTransformANumberIntoABool {
-    XCTAssertEqualObjects(@YES, [self.boolTransformer parsedValueForObject:@(1)]);
-    XCTAssertEqualObjects(@NO, [self.boolTransformer parsedValueForObject:@(0)]);
+    XCTAssertEqualObjects(@YES, [self.boolTransformer tranformValueFromObject:@(1)]);
+    XCTAssertEqualObjects(@NO, [self.boolTransformer tranformValueFromObject:@(0)]);
 }
 - (void)testBoolFromBool {
-    XCTAssertEqualObjects(@YES, [self.boolTransformer parsedValueForObject:@YES]);
-    XCTAssertEqualObjects(@NO, [self.boolTransformer parsedValueForObject:@NO]);
+    XCTAssertEqualObjects(@YES, [self.boolTransformer tranformValueFromObject:@YES]);
+    XCTAssertEqualObjects(@NO, [self.boolTransformer tranformValueFromObject:@NO]);
 }
 @end

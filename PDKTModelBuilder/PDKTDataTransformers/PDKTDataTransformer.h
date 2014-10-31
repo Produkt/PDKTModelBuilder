@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface PDKTDataTransformer : NSObject
-- (id)parsedValueForObject:(id)object;
+- (id)tranformValueFromObject:(id)object;
 @end
