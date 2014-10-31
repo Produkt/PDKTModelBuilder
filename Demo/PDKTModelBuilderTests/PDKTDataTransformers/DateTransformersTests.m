@@ -18,7 +18,7 @@
 
 - (void)setUp {
     [super setUp];
-    self.dateTransformer = [[PDKTDateTransformer alloc]init];
+    self.dateTransformer = [PDKTDateTransformer new];
 }
 
 - (void)tearDown {

@@ -18,7 +18,7 @@
 
 - (void)setUp {
     [super setUp];
-    self.boolTransformer = [[PDKTBoolTransformer alloc]init];
+    self.boolTransformer = [PDKTBoolTransformer new];
 }
 
 - (void)tearDown {
