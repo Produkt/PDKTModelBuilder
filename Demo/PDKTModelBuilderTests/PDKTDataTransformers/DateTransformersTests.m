@@ -26,10 +26,43 @@
     [super tearDown];
 }
 
-- (void)testDateFromMySQLTypeString {
+- (void)testReturnsADate {
     NSDate *date = [self.dateTransformer parsedValueForObject:@"2014-10-31 20:47:59"];
     XCTAssert([date isKindOfClass:[NSDate class]]);
 }
 
+- (void)testDateFromMySQLTypeString {
+    NSDate *date = [self.dateTransformer parsedValueForObject:@"2014-10-31 20:47:59"];
+    NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitYear |
+                                                                                NSCalendarUnitMonth |
+                                                                                NSCalendarUnitDay |
+                                                                                NSCalendarUnitHour |
+                                                                                NSCalendarUnitMinute |
+                                                                                NSCalendarUnitSecond
+                                                                       fromDate:date];
+    XCTAssertEqual(dateComponents.year, 2014);
+    XCTAssertEqual(dateComponents.month, 10);
+    XCTAssertEqual(dateComponents.day, 31);
+    XCTAssertEqual(dateComponents.hour, 20);
+    XCTAssertEqual(dateComponents.minute, 47);
+    XCTAssertEqual(dateComponents.second, 59);
+}
+
+- (void)testDateFromUnixtime {
+    NSDate *date = [self.dateTransformer parsedValueForObject:@"1414784879"];
+    NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitYear |
+                                                                                NSCalendarUnitMonth |
+                                                                                NSCalendarUnitDay |
+                                                                                NSCalendarUnitHour |
+                                                                                NSCalendarUnitMinute |
+                                                                                NSCalendarUnitSecond
+                                                                       fromDate:date];
+    XCTAssertEqual(dateComponents.year, 2014);
+    XCTAssertEqual(dateComponents.month, 10);
+    XCTAssertEqual(dateComponents.day, 31);
+    XCTAssertEqual(dateComponents.hour, 20);
+    XCTAssertEqual(dateComponents.minute, 47);
+    XCTAssertEqual(dateComponents.second, 59);
+}
 
 @end
