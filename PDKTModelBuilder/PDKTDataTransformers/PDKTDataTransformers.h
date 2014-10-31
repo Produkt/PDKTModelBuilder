@@ -1,5 +1,5 @@
 //
-//  EntityProperties.h
+//  PDKTDataTransformers.h
 //  PDKTModelBuilder
 //
 //  Created by Daniel García García on 01/10/14.

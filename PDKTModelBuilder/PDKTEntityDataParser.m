@@ -7,7 +7,7 @@
 //
 
 #import "PDKTEntityDataParser.h"
-#import "EntityProperties.h"
+#import "PDKTDataTransformers.h"
 
 @interface PDKTEntityDataParser()
 @end
