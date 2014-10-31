@@ -33,6 +33,7 @@
 		883ACA901A041C91006139C6 /* PDKTIntegerTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA861A041C91006139C6 /* PDKTIntegerTransformer.m */; };
 		883ACA911A041C91006139C6 /* PDKTStringTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA881A041C91006139C6 /* PDKTStringTransformer.m */; };
 		883ACA921A041C91006139C6 /* PDKTURLTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA8A1A041C91006139C6 /* PDKTURLTransformer.m */; };
+		883ACA971A041CE8006139C6 /* BoolTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA961A041CE8006139C6 /* BoolTransformerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		883ACA881A041C91006139C6 /* PDKTStringTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKTStringTransformer.m; sourceTree = "<group>"; };
 		883ACA891A041C91006139C6 /* PDKTURLTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTURLTransformer.h; sourceTree = "<group>"; };
 		883ACA8A1A041C91006139C6 /* PDKTURLTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKTURLTransformer.m; sourceTree = "<group>"; };
+		883ACA961A041CE8006139C6 /* BoolTransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoolTransformerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 		883ACA2A1A041786006139C6 /* PDKTModelBuilderTests */ = {
 			isa = PBXGroup;
 			children = (
+				883ACA951A041CE8006139C6 /* PDKTDataTransformers */,
 				883ACA2B1A041786006139C6 /* Supporting Files */,
 			);
 			path = PDKTModelBuilderTests;
@@ -259,6 +262,14 @@
 				883ACA881A041C91006139C6 /* PDKTStringTransformer.m */,
 				883ACA891A041C91006139C6 /* PDKTURLTransformer.h */,
 				883ACA8A1A041C91006139C6 /* PDKTURLTransformer.m */,
+			);
+			path = PDKTDataTransformers;
+			sourceTree = "<group>";
+		};
+		883ACA951A041CE8006139C6 /* PDKTDataTransformers */ = {
+			isa = PBXGroup;
+			children = (
+				883ACA961A041CE8006139C6 /* BoolTransformerTests.m */,
 			);
 			path = PDKTDataTransformers;
 			sourceTree = "<group>";
@@ -393,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				883ACA971A041CE8006139C6 /* BoolTransformerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
