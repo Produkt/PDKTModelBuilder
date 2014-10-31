@@ -35,7 +35,7 @@
     if (superClass != [NSManagedObject class]) {
         [self loadPropertiesTypeTransformersForClass:superClass inPropertiesTypeTransformersMutableDictionary:propertiesTypeTransformers];
     }
-    if ([entityClass respondsToSelector:@selector(propertiesBindings)]) {
+    if ([entityClass respondsToSelector:@selector(propertiesTypeTransformers)]) {
         [propertiesTypeTransformers addEntriesFromDictionary:[entityClass propertiesTypeTransformers]];
     }
 }

@@ -34,14 +34,14 @@
     if (!objectIdValue) {
         return nil;
     }
-    NSManagedObject *entity;
+    NSManagedObject<PDKTModelBuilderEntity> *entity;
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:entityName];
     fetchRequest.fetchLimit = 1;
     fetchRequest.predicate = [NSPredicate predicateWithFormat:@"%@ = %K",objectIdValue,objectId];
     
     NSArray *fetchResult=[managedObjectContext executeFetchRequest:fetchRequest error:nil];
     
-    NSManagedObject *matchedObject = [fetchResult lastObject];
+    NSManagedObject<PDKTModelBuilderEntity> *matchedObject = [fetchResult lastObject];
     if (matchedObject){
         entity = matchedObject;
     }
@@ -49,8 +49,8 @@
     {
         entity = [NSEntityDescription insertNewObjectForEntityForName:[NSString stringWithFormat:@"%@",entityName] inManagedObjectContext:managedObjectContext];
     }
-    [entityDataParser parseDictionary:dictionary withEntity:(NSManagedObject<PDKTModelBuilderEntity> *)entity];
-    [entityDataParser parseRelationshipsInDictionary:dictionary withEntity:(NSManagedObject<PDKTModelBuilderEntity> *)entity];
+    [entityDataParser parseDictionary:dictionary withEntity:entity];
+    [entityDataParser parseRelationshipsInDictionary:dictionary withEntity:entity];
     return entity;
 }
 + (instancetype)insertIntoManagedObjectContext:(NSManagedObjectContext *)managedObjectContext withDictionary:(NSDictionary *)dictionary{
