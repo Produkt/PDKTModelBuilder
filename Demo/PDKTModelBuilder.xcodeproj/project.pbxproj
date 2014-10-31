@@ -36,6 +36,7 @@
 		883ACA971A041CE8006139C6 /* BoolTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA961A041CE8006139C6 /* BoolTransformerTests.m */; };
 		883ACA991A041E5B006139C6 /* DateTransformersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA981A041E5B006139C6 /* DateTransformersTests.m */; };
 		883ACA9B1A042638006139C6 /* DoubleTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA9A1A042638006139C6 /* DoubleTransformerTests.m */; };
+		883ACA9D1A0428C8006139C6 /* FloatTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA9C1A0428C8006139C6 /* FloatTransformerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		883ACA961A041CE8006139C6 /* BoolTransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoolTransformerTests.m; sourceTree = "<group>"; };
 		883ACA981A041E5B006139C6 /* DateTransformersTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateTransformersTests.m; sourceTree = "<group>"; };
 		883ACA9A1A042638006139C6 /* DoubleTransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleTransformerTests.m; sourceTree = "<group>"; };
+		883ACA9C1A0428C8006139C6 /* FloatTransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatTransformerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +278,7 @@
 				883ACA961A041CE8006139C6 /* BoolTransformerTests.m */,
 				883ACA981A041E5B006139C6 /* DateTransformersTests.m */,
 				883ACA9A1A042638006139C6 /* DoubleTransformerTests.m */,
+				883ACA9C1A0428C8006139C6 /* FloatTransformerTests.m */,
 			);
 			path = PDKTDataTransformers;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 			files = (
 				883ACA971A041CE8006139C6 /* BoolTransformerTests.m in Sources */,
 				883ACA9B1A042638006139C6 /* DoubleTransformerTests.m in Sources */,
+				883ACA9D1A0428C8006139C6 /* FloatTransformerTests.m in Sources */,
 				883ACA991A041E5B006139C6 /* DateTransformersTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
