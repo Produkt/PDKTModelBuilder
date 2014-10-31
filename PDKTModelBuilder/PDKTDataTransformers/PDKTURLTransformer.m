@@ -12,12 +12,19 @@
 
 - (id)tranformValueFromObject:(id)object
 {
-    if ([object isEqual:[NSNull null]] || ![object isKindOfClass:[NSString class]] || [object length] == 0)
-    {
-        return nil;
+    if ([object isKindOfClass:[NSURL class]]) {
+        return [object copy];
+    }else if ([object isKindOfClass:[NSString class]]){
+        NSString *urlString = [object stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        return [self isValidURLString:urlString] ? [NSURL URLWithString:urlString] : nil;
     }
-    
-    return [NSURL URLWithString:[object stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    return nil;
+}
+
+- (BOOL)isValidURLString:(NSString *)urlString{
+    NSString *urlRegEx = @"((http|https)://)?((\\w)*|([0-9]*)|([-|_])*)+([\\.|/]((\\w)*|([0-9]*)|([-|_])*))+";
+    BOOL validURL = [[NSPredicate predicateWithFormat:@"SELF MATCHES %@", urlRegEx] evaluateWithObject:urlString];
+    return validURL;
 }
 
 @end

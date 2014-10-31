@@ -39,6 +39,7 @@
 		883ACA9D1A0428C8006139C6 /* FloatTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA9C1A0428C8006139C6 /* FloatTransformerTests.m */; };
 		883ACA9F1A042937006139C6 /* IntegerTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACA9E1A042937006139C6 /* IntegerTransformerTests.m */; };
 		883ACAA11A0429D6006139C6 /* StringTranformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACAA01A0429D6006139C6 /* StringTranformerTests.m */; };
+		883ACAA31A042B63006139C6 /* URLTransformerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACAA21A042B63006139C6 /* URLTransformerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		883ACA9C1A0428C8006139C6 /* FloatTransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatTransformerTests.m; sourceTree = "<group>"; };
 		883ACA9E1A042937006139C6 /* IntegerTransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntegerTransformerTests.m; sourceTree = "<group>"; };
 		883ACAA01A0429D6006139C6 /* StringTranformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringTranformerTests.m; sourceTree = "<group>"; };
+		883ACAA21A042B63006139C6 /* URLTransformerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLTransformerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +287,7 @@
 				883ACA9C1A0428C8006139C6 /* FloatTransformerTests.m */,
 				883ACA9E1A042937006139C6 /* IntegerTransformerTests.m */,
 				883ACAA01A0429D6006139C6 /* StringTranformerTests.m */,
+				883ACAA21A042B63006139C6 /* URLTransformerTests.m */,
 			);
 			path = PDKTDataTransformers;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				883ACA971A041CE8006139C6 /* BoolTransformerTests.m in Sources */,
 				883ACA9B1A042638006139C6 /* DoubleTransformerTests.m in Sources */,
 				883ACAA11A0429D6006139C6 /* StringTranformerTests.m in Sources */,
+				883ACAA31A042B63006139C6 /* URLTransformerTests.m in Sources */,
 				883ACA9D1A0428C8006139C6 /* FloatTransformerTests.m in Sources */,
 				883ACA991A041E5B006139C6 /* DateTransformersTests.m in Sources */,
 				883ACA9F1A042937006139C6 /* IntegerTransformerTests.m in Sources */,
