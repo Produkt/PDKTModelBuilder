@@ -38,6 +38,10 @@
     TestablePicture *picture = [TestablePicture newObjectFromDictionary:pictureInfo];
     XCTAssertNotNil(picture);
     XCTAssert([picture isKindOfClass:[TestablePicture class]]);
+    XCTAssertEqualObjects(picture.pictureId, @"1");
+    XCTAssertEqualObjects(picture.pictureURL, [NSURL URLWithString:@"http://www.apple.com"]);
+    XCTAssertEqualObjects(picture.pictureRating, @(3.5));
+    XCTAssertEqualObjects(picture.picturePublishedDate, [NSDate dateWithTimeIntervalSince1970:1414784879]);
 }
 
 @end

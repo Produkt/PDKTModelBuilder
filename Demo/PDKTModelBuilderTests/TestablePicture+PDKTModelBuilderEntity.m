@@ -7,6 +7,7 @@
 //
 
 #import "TestablePicture+PDKTModelBuilderEntity.h"
+#import "PDKTDataTransformers.h"
 
 @implementation TestablePicture (PDKTModelBuilderEntity)
 + (NSDictionary *)propertiesBindings{
@@ -15,6 +16,13 @@
              @"pictureURL":@"url",
              @"pictureRating":@"rating",
              @"picturePublishedDate":@"published_on"
+             };
+}
++ (NSDictionary *)propertiesTypeTransformers{
+    return @{
+             @"pictureURL":[PDKTURLTransformer new],
+             @"pictureRating":[PDKTFloatTransformer new],
+             @"picturePublishedDate":[PDKTDateTransformer new]
              };
 }
 @end
