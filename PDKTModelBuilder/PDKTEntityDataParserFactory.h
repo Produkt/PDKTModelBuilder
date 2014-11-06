@@ -10,6 +10,6 @@
 #import "PDKTEntityDataParser.h"
 
 @interface PDKTEntityDataParserFactory : NSObject
-+ (PDKTEntityDataParser *)dataParserForPlanEntity;
-+ (PDKTEntityDataParser *)dataParserForCoreDataEntity;
++ (PDKTEntityDataParser *)dataParserForPlanEntityWithDictionary:(NSDictionary *)dictionary andEntity:(NSObject<PDKTModelBuilderEntity> *)entity;
++ (PDKTEntityDataParser *)dataParserForCoreDataEntityWithDictionary:(NSDictionary *)dictionary andEntity:(NSObject<PDKTModelBuilderEntity> *)entity;
 @end

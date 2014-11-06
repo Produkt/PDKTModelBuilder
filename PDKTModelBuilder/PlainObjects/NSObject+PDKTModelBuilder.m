@@ -14,9 +14,13 @@
 + (instancetype)newObjectFromDictionary:(NSDictionary *)dictionary{
     NSAssert([self conformsToProtocol:@protocol(PDKTModelBuilderEntity)], @"must implement PDKTModelBuilderEntity for using this method");
     NSObject<PDKTModelBuilderEntity> *entity = [[[self class] alloc] init];
-    PDKTEntityDataParser *entityDataParser = [PDKTEntityDataParserFactory dataParserForPlanEntity];
-    [entityDataParser parseDictionary:dictionary withEntity:entity];
-    [entityDataParser parseRelationshipsInDictionary:dictionary withEntity:entity];
+    
+    NSDictionary *sourceDictionary = dictionary;
+    if ([[entity class] respondsToSelector:@selector(customDataDictionaryWithSourceDataDictionary:)]) {
+        sourceDictionary = [[entity class] customDataDictionaryWithSourceDataDictionary:dictionary];
+    }
+    PDKTEntityDataParser *entityDataParser = [PDKTEntityDataParserFactory dataParserForPlanEntityWithDictionary:dictionary andEntity:entity];
+    [entityDataParser executeDataParsing];
     return entity;
 }
 @end

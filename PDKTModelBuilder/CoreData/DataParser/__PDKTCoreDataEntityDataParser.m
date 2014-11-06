@@ -11,12 +11,12 @@
 #import <objc/runtime.h>
 
 @implementation __PDKTCoreDataEntityDataParser
-- (NSDictionary *)propertiesBindingsForEntity:(NSObject<PDKTModelBuilderEntity> *)entity{
++ (NSDictionary *)propertiesBindingsForEntity:(NSObject<PDKTModelBuilderEntity> *)entity{
     NSMutableDictionary *propertiesBindings = [[super propertiesBindingsForEntity:entity] mutableCopy];
     [self loadPropertiesBindingsForClass:[entity class] inPropertiesBindingsMutableDictionary:propertiesBindings];
     return propertiesBindings;
 }
-- (void)loadPropertiesBindingsForClass:(Class)entityClass inPropertiesBindingsMutableDictionary:(NSMutableDictionary *)propertiesBindings{
++ (void)loadPropertiesBindingsForClass:(Class)entityClass inPropertiesBindingsMutableDictionary:(NSMutableDictionary *)propertiesBindings{
     Class superClass = class_getSuperclass(entityClass);
     if (superClass != [NSManagedObject class]) {
         [self loadPropertiesBindingsForClass:superClass inPropertiesBindingsMutableDictionary:propertiesBindings];
@@ -25,12 +25,12 @@
         [propertiesBindings addEntriesFromDictionary:[entityClass propertiesBindings]];
     }
 }
-- (NSDictionary *)propertiesTypeTransformersForEntity:(NSObject<PDKTModelBuilderEntity> *)entity{
++ (NSDictionary *)propertiesTypeTransformersForEntity:(NSObject<PDKTModelBuilderEntity> *)entity{
     NSMutableDictionary *propertiesTypeTransformers = [[super propertiesTypeTransformersForEntity:entity] mutableCopy];
     [self loadPropertiesTypeTransformersForClass:[entity class] inPropertiesTypeTransformersMutableDictionary:propertiesTypeTransformers];
     return propertiesTypeTransformers;
 }
-- (void)loadPropertiesTypeTransformersForClass:(Class)entityClass inPropertiesTypeTransformersMutableDictionary:(NSMutableDictionary *)propertiesTypeTransformers{
++ (void)loadPropertiesTypeTransformersForClass:(Class)entityClass inPropertiesTypeTransformersMutableDictionary:(NSMutableDictionary *)propertiesTypeTransformers{
     Class superClass = class_getSuperclass(entityClass);
     if (superClass != [NSManagedObject class]) {
         [self loadPropertiesTypeTransformersForClass:superClass inPropertiesTypeTransformersMutableDictionary:propertiesTypeTransformers];

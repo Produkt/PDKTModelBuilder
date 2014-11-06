@@ -27,10 +27,9 @@
 @implementation NSManagedObject (PDKTModelBuilder)
 + (instancetype)updateOrInsertIntoManagedObjectContext:(NSManagedObjectContext *)managedObjectContext withDictionary:(NSDictionary *)dictionary{
     NSAssert([[self class] conformsToProtocol:@protocol(PDKTModelBuilderCoreDataEntity)], @"must implement PDKTModelBuilderCoreDataEntity for using this method");
-    PDKTEntityDataParser *entityDataParser = [PDKTEntityDataParserFactory dataParserForCoreDataEntity];
     NSString *entityName=NSStringFromClass([self class]);
     NSString *objectId = [self entityId];
-    NSString *objectIdValue=[entityDataParser propertyValueForKey:objectId inDictionary:dictionary forEntityClass:[self class]];
+    NSString *objectIdValue=[PDKTEntityDataParser propertyValueForKey:objectId inDictionary:dictionary forEntityClass:[self class]];
     if (!objectIdValue) {
         return nil;
     }
@@ -49,26 +48,25 @@
     {
         entity = [NSEntityDescription insertNewObjectForEntityForName:[NSString stringWithFormat:@"%@",entityName] inManagedObjectContext:managedObjectContext];
     }
-    [entityDataParser parseDictionary:dictionary withEntity:entity];
-    [entityDataParser parseRelationshipsInDictionary:dictionary withEntity:entity];
+    PDKTEntityDataParser *entityDataParser = [PDKTEntityDataParserFactory dataParserForCoreDataEntityWithDictionary:dictionary andEntity:entity];
+    [entityDataParser executeDataParsing];
     return entity;
 }
 + (instancetype)insertIntoManagedObjectContext:(NSManagedObjectContext *)managedObjectContext withDictionary:(NSDictionary *)dictionary{
     NSAssert([[self class] conformsToProtocol:@protocol(PDKTModelBuilderCoreDataEntity)], @"must implement PDKTModelBuilderCoreDataEntity for using this method");
-    PDKTEntityDataParser *entityDataParser = [PDKTEntityDataParserFactory dataParserForCoreDataEntity];
     NSString *entityName=NSStringFromClass([self class]);
     NSString *objectIdValue=[self objectIdWithDictionary:dictionary];
     if (!objectIdValue) {
         return nil;
     }
-    NSManagedObject *newObject = [NSEntityDescription insertNewObjectForEntityForName:[NSString stringWithFormat:@"%@",entityName] inManagedObjectContext:managedObjectContext];
-    [entityDataParser parseDictionary:dictionary withEntity:(NSManagedObject<PDKTModelBuilderEntity> *)newObject];
+    NSManagedObject<PDKTModelBuilderEntity> *newObject = [NSEntityDescription insertNewObjectForEntityForName:[NSString stringWithFormat:@"%@",entityName] inManagedObjectContext:managedObjectContext];
+    PDKTEntityDataParser *entityDataParser = [PDKTEntityDataParserFactory dataParserForCoreDataEntityWithDictionary:dictionary andEntity:newObject];
+    [entityDataParser executeDataParsing];
     return newObject;
 }
 + (NSString *)objectIdWithDictionary:(NSDictionary *)dictionary{
-    PDKTEntityDataParser *entityDataParser = [PDKTEntityDataParserFactory dataParserForCoreDataEntity];
     NSString *objectId = [self entityId];
-    NSString *objectIdValue=[entityDataParser propertyValueForKey:objectId inDictionary:dictionary forEntityClass:[self class]];
+    NSString *objectIdValue=[PDKTEntityDataParser propertyValueForKey:objectId inDictionary:dictionary forEntityClass:[self class]];
     return objectIdValue;
 }
 + (instancetype)fetchObjectWithValue:(id)value forKey:(NSString *)key inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext{
