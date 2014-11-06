@@ -22,9 +22,13 @@
 }
 
 - (BOOL)isValidURLString:(NSString *)urlString{
-    NSString *urlRegEx = @"((http|https)://)?(([A-Za-z0-9_@./#&+-])*)+([\\.|/](([A-Za-z0-9_@./#&+-\?])*))+";
-    BOOL validURL = [[NSPredicate predicateWithFormat:@"SELF MATCHES %@", urlRegEx] evaluateWithObject:urlString];
-    return validURL;
+    NSString *urlRegEx = @"((http|https)://)?(([A-Za-z0-9-_+]+)[.])?([A-Za-z0-9-_+]+)[.]([A-Za-z0-9-_+]+)(/([A-Za-z0-9-_])*)*([?](&?[A-Za-z0-9-_]+=[A-Za-z0-9-_]+)+)?(#[A-Za-z0-9-_]+)?";
+    NSError *error;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:urlRegEx
+                                                                           options:NSRegularExpressionCaseInsensitive
+                                                                             error:&error];
+    NSTextCheckingResult *match = [regex firstMatchInString:urlString options:0 range:NSMakeRange(0, [urlString length])];
+    return match!=nil ? YES : NO;
 }
 
 @end
