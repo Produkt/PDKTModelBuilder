@@ -31,6 +31,9 @@
 }
 
 - (void)testValidURLFromString {
+    XCTAssertEqualObjects([self.urlTransformer tranformValueFromObject:@"www.apple.com/sub-folder-path?with=parameter&other=param"], [NSURL URLWithString:@"www.apple.com/sub-folder-path?with=parameter&other=param"]);
+    XCTAssertEqualObjects([self.urlTransformer tranformValueFromObject:@"www.apple.com/sub-folder-path?with=parameter"], [NSURL URLWithString:@"www.apple.com/sub-folder-path?with=parameter"]);
+    XCTAssertEqualObjects([self.urlTransformer tranformValueFromObject:@"www.apple.com/sub-folder-path"], [NSURL URLWithString:@"www.apple.com/sub-folder-path"]);
     XCTAssertEqualObjects([self.urlTransformer tranformValueFromObject:@"www.apple.com"], [NSURL URLWithString:@"www.apple.com"]);
     XCTAssertEqualObjects([self.urlTransformer tranformValueFromObject:@"apple.com"], [NSURL URLWithString:@"apple.com"]);
     XCTAssertEqualObjects([self.urlTransformer tranformValueFromObject:@"http://www.apple.com"], [NSURL URLWithString:@"http://www.apple.com"]);
