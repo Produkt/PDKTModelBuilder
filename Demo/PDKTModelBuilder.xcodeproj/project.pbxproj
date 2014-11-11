@@ -42,8 +42,15 @@
 		883ACAD01A043815006139C6 /* PDKTURLTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACAC81A043815006139C6 /* PDKTURLTransformer.m */; };
 		883ACAD31A0438C9006139C6 /* NSObject+PDKTModelBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACAD21A0438C9006139C6 /* NSObject+PDKTModelBuilder.m */; };
 		883ACAD51A043CCA006139C6 /* NSObjectModelsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACAD41A043CCA006139C6 /* NSObjectModelsTests.m */; };
-		883ACAD81A043D4C006139C6 /* TestablePicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACAD71A043D4C006139C6 /* TestablePicture.m */; };
-		883ACADB1A043E6A006139C6 /* TestablePicture+PDKTModelBuilderEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACADA1A043E6A006139C6 /* TestablePicture+PDKTModelBuilderEntity.m */; };
+		88C464511A1291D000A6B9D6 /* NSManagedObjectModelsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C464501A1291D000A6B9D6 /* NSManagedObjectModelsTests.m */; };
+		88C4645C1A1292BE00A6B9D6 /* UserEntity+PDKTModelBuilderEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4645B1A1292BE00A6B9D6 /* UserEntity+PDKTModelBuilderEntity.m */; };
+		88C4645F1A1292D100A6B9D6 /* PictureEntity+PDKTModelBuilderEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4645E1A1292D100A6B9D6 /* PictureEntity+PDKTModelBuilderEntity.m */; };
+		88C4646C1A12938200A6B9D6 /* InMemoryCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C464661A12938200A6B9D6 /* InMemoryCoreDataStack.m */; };
+		88C4646D1A12938200A6B9D6 /* TestablePicture+PDKTModelBuilderEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C464681A12938200A6B9D6 /* TestablePicture+PDKTModelBuilderEntity.m */; };
+		88C4646E1A12938200A6B9D6 /* TestablePicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4646A1A12938200A6B9D6 /* TestablePicture.m */; };
+		88C4646F1A12948300A6B9D6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88C464641A12938200A6B9D6 /* Info.plist */; };
+		88C464721A129FAD00A6B9D6 /* UserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C464711A129FAD00A6B9D6 /* UserEntity.m */; };
+		88C464751A129FAD00A6B9D6 /* PictureEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C464741A129FAD00A6B9D6 /* PictureEntity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +76,6 @@
 		883ACA1E1A041786006139C6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		883ACA211A041786006139C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		883ACA271A041786006139C6 /* PDKTModelBuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PDKTModelBuilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		883ACA2C1A041786006139C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		883ACA3E1A0417BA006139C6 /* __PDKTCoreDataEntityRelationshipOneToMany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __PDKTCoreDataEntityRelationshipOneToMany.h; sourceTree = "<group>"; };
 		883ACA3F1A0417BA006139C6 /* __PDKTCoreDataEntityRelationshipOneToMany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = __PDKTCoreDataEntityRelationshipOneToMany.m; sourceTree = "<group>"; };
 		883ACA401A0417BA006139C6 /* __PDKTCoreDataEntityRelationshipOneToOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = __PDKTCoreDataEntityRelationshipOneToOne.h; sourceTree = "<group>"; };
@@ -122,10 +128,22 @@
 		883ACAD11A0438C9006139C6 /* NSObject+PDKTModelBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PDKTModelBuilder.h"; sourceTree = "<group>"; };
 		883ACAD21A0438C9006139C6 /* NSObject+PDKTModelBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PDKTModelBuilder.m"; sourceTree = "<group>"; };
 		883ACAD41A043CCA006139C6 /* NSObjectModelsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectModelsTests.m; sourceTree = "<group>"; };
-		883ACAD61A043D4C006139C6 /* TestablePicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestablePicture.h; sourceTree = "<group>"; };
-		883ACAD71A043D4C006139C6 /* TestablePicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestablePicture.m; sourceTree = "<group>"; };
-		883ACAD91A043E6A006139C6 /* TestablePicture+PDKTModelBuilderEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestablePicture+PDKTModelBuilderEntity.h"; sourceTree = "<group>"; };
-		883ACADA1A043E6A006139C6 /* TestablePicture+PDKTModelBuilderEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TestablePicture+PDKTModelBuilderEntity.m"; sourceTree = "<group>"; };
+		88C464501A1291D000A6B9D6 /* NSManagedObjectModelsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSManagedObjectModelsTests.m; sourceTree = "<group>"; };
+		88C4645A1A1292BE00A6B9D6 /* UserEntity+PDKTModelBuilderEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserEntity+PDKTModelBuilderEntity.h"; sourceTree = "<group>"; };
+		88C4645B1A1292BE00A6B9D6 /* UserEntity+PDKTModelBuilderEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserEntity+PDKTModelBuilderEntity.m"; sourceTree = "<group>"; };
+		88C4645D1A1292D100A6B9D6 /* PictureEntity+PDKTModelBuilderEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PictureEntity+PDKTModelBuilderEntity.h"; sourceTree = "<group>"; };
+		88C4645E1A1292D100A6B9D6 /* PictureEntity+PDKTModelBuilderEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PictureEntity+PDKTModelBuilderEntity.m"; sourceTree = "<group>"; };
+		88C464641A12938200A6B9D6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88C464651A12938200A6B9D6 /* InMemoryCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InMemoryCoreDataStack.h; sourceTree = "<group>"; };
+		88C464661A12938200A6B9D6 /* InMemoryCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InMemoryCoreDataStack.m; sourceTree = "<group>"; };
+		88C464671A12938200A6B9D6 /* TestablePicture+PDKTModelBuilderEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestablePicture+PDKTModelBuilderEntity.h"; sourceTree = "<group>"; };
+		88C464681A12938200A6B9D6 /* TestablePicture+PDKTModelBuilderEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TestablePicture+PDKTModelBuilderEntity.m"; sourceTree = "<group>"; };
+		88C464691A12938200A6B9D6 /* TestablePicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestablePicture.h; sourceTree = "<group>"; };
+		88C4646A1A12938200A6B9D6 /* TestablePicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestablePicture.m; sourceTree = "<group>"; };
+		88C464701A129FAD00A6B9D6 /* UserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEntity.h; sourceTree = "<group>"; };
+		88C464711A129FAD00A6B9D6 /* UserEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEntity.m; sourceTree = "<group>"; };
+		88C464731A129FAD00A6B9D6 /* PictureEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureEntity.h; sourceTree = "<group>"; };
+		88C464741A129FAD00A6B9D6 /* PictureEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureEntity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +193,7 @@
 				883ACA1E1A041786006139C6 /* Images.xcassets */,
 				883ACA201A041786006139C6 /* LaunchScreen.xib */,
 				883ACA151A041786006139C6 /* PDKTModelBuilder.xcdatamodeld */,
+				88C464521A12927100A6B9D6 /* Models */,
 				883ACA371A0417BA006139C6 /* PDKTModelBuilder */,
 				883ACA0E1A041786006139C6 /* Supporting Files */,
 			);
@@ -194,22 +213,11 @@
 			isa = PBXGroup;
 			children = (
 				883ACAD41A043CCA006139C6 /* NSObjectModelsTests.m */,
+				88C464501A1291D000A6B9D6 /* NSManagedObjectModelsTests.m */,
 				883ACA951A041CE8006139C6 /* PDKTDataTransformers */,
-				883ACA2B1A041786006139C6 /* Supporting Files */,
+				88C464631A12938200A6B9D6 /* Supporting Files */,
 			);
 			path = PDKTModelBuilderTests;
-			sourceTree = "<group>";
-		};
-		883ACA2B1A041786006139C6 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				883ACAD61A043D4C006139C6 /* TestablePicture.h */,
-				883ACAD71A043D4C006139C6 /* TestablePicture.m */,
-				883ACAD91A043E6A006139C6 /* TestablePicture+PDKTModelBuilderEntity.h */,
-				883ACADA1A043E6A006139C6 /* TestablePicture+PDKTModelBuilderEntity.m */,
-				883ACA2C1A041786006139C6 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		883ACA371A0417BA006139C6 /* PDKTModelBuilder */ = {
@@ -334,6 +342,43 @@
 			path = DataTransformers;
 			sourceTree = "<group>";
 		};
+		88C464521A12927100A6B9D6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				88C464731A129FAD00A6B9D6 /* PictureEntity.h */,
+				88C464741A129FAD00A6B9D6 /* PictureEntity.m */,
+				88C464701A129FAD00A6B9D6 /* UserEntity.h */,
+				88C464711A129FAD00A6B9D6 /* UserEntity.m */,
+				88C464591A1292A800A6B9D6 /* PDKTModelBuilderEntity */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		88C464591A1292A800A6B9D6 /* PDKTModelBuilderEntity */ = {
+			isa = PBXGroup;
+			children = (
+				88C4645A1A1292BE00A6B9D6 /* UserEntity+PDKTModelBuilderEntity.h */,
+				88C4645B1A1292BE00A6B9D6 /* UserEntity+PDKTModelBuilderEntity.m */,
+				88C4645D1A1292D100A6B9D6 /* PictureEntity+PDKTModelBuilderEntity.h */,
+				88C4645E1A1292D100A6B9D6 /* PictureEntity+PDKTModelBuilderEntity.m */,
+			);
+			path = PDKTModelBuilderEntity;
+			sourceTree = "<group>";
+		};
+		88C464631A12938200A6B9D6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				88C464641A12938200A6B9D6 /* Info.plist */,
+				88C464651A12938200A6B9D6 /* InMemoryCoreDataStack.h */,
+				88C464661A12938200A6B9D6 /* InMemoryCoreDataStack.m */,
+				88C464671A12938200A6B9D6 /* TestablePicture+PDKTModelBuilderEntity.h */,
+				88C464681A12938200A6B9D6 /* TestablePicture+PDKTModelBuilderEntity.m */,
+				88C464691A12938200A6B9D6 /* TestablePicture.h */,
+				88C4646A1A12938200A6B9D6 /* TestablePicture.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -424,6 +469,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88C4646F1A12948300A6B9D6 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +483,7 @@
 				883ACAA71A043711006139C6 /* __PDKTCoreDataEntityDataParser.m in Sources */,
 				883ACACD1A043815006139C6 /* PDKTFloatTransformer.m in Sources */,
 				883ACA781A0417BA006139C6 /* PDKTEntityDataParserFactory.m in Sources */,
+				88C4645C1A1292BE00A6B9D6 /* UserEntity+PDKTModelBuilderEntity.m in Sources */,
 				883ACAC91A043815006139C6 /* PDKTBoolTransformer.m in Sources */,
 				883ACA6B1A0417BA006139C6 /* NSManagedObject+PDKTModelBuilder.m in Sources */,
 				883ACAAC1A04379E006139C6 /* __PDKTPlainObjectEntityDataParser.m in Sources */,
@@ -444,15 +491,18 @@
 				883ACA6A1A0417BA006139C6 /* PDKTCoreDataEntityRelationship.m in Sources */,
 				883ACACE1A043815006139C6 /* PDKTIntegerTransformer.m in Sources */,
 				883ACA141A041786006139C6 /* AppDelegate.m in Sources */,
+				88C464751A129FAD00A6B9D6 /* PictureEntity.m in Sources */,
 				883ACACA1A043815006139C6 /* PDKTDataTransformer.m in Sources */,
 				883ACA171A041786006139C6 /* PDKTModelBuilder.xcdatamodeld in Sources */,
 				883ACACC1A043815006139C6 /* PDKTDoubleTransformer.m in Sources */,
 				883ACA681A0417BA006139C6 /* __PDKTCoreDataEntityRelationshipOneToMany.m in Sources */,
+				88C464721A129FAD00A6B9D6 /* UserEntity.m in Sources */,
 				883ACA771A0417BA006139C6 /* PDKTEntityDataParser.m in Sources */,
 				883ACA1A1A041786006139C6 /* ViewController.m in Sources */,
 				883ACACB1A043815006139C6 /* PDKTDateTransformer.m in Sources */,
 				883ACAB51A0437DC006139C6 /* __PDKTEntityRelationshipOneToOne.m in Sources */,
 				883ACAB41A0437DC006139C6 /* __PDKTEntityRelationshipOneToMany.m in Sources */,
+				88C4645F1A1292D100A6B9D6 /* PictureEntity+PDKTModelBuilderEntity.m in Sources */,
 				883ACA111A041786006139C6 /* main.m in Sources */,
 				883ACAD31A0438C9006139C6 /* NSObject+PDKTModelBuilder.m in Sources */,
 				883ACAB61A0437DC006139C6 /* PDKTEntityRelationship.m in Sources */,
@@ -465,14 +515,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88C4646E1A12938200A6B9D6 /* TestablePicture.m in Sources */,
 				883ACA971A041CE8006139C6 /* BoolTransformerTests.m in Sources */,
 				883ACA9B1A042638006139C6 /* DoubleTransformerTests.m in Sources */,
 				883ACAA11A0429D6006139C6 /* StringTranformerTests.m in Sources */,
-				883ACAD81A043D4C006139C6 /* TestablePicture.m in Sources */,
-				883ACADB1A043E6A006139C6 /* TestablePicture+PDKTModelBuilderEntity.m in Sources */,
+				88C464511A1291D000A6B9D6 /* NSManagedObjectModelsTests.m in Sources */,
 				883ACAA31A042B63006139C6 /* URLTransformerTests.m in Sources */,
 				883ACA9D1A0428C8006139C6 /* FloatTransformerTests.m in Sources */,
 				883ACA991A041E5B006139C6 /* DateTransformersTests.m in Sources */,
+				88C4646C1A12938200A6B9D6 /* InMemoryCoreDataStack.m in Sources */,
+				88C4646D1A12938200A6B9D6 /* TestablePicture+PDKTModelBuilderEntity.m in Sources */,
 				883ACA9F1A042937006139C6 /* IntegerTransformerTests.m in Sources */,
 				883ACAD51A043CCA006139C6 /* NSObjectModelsTests.m in Sources */,
 			);
@@ -616,7 +668,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = PDKTModelBuilderTests/Info.plist;
+				INFOPLIST_FILE = "PDKTModelBuilderTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PDKTModelBuilder.app/PDKTModelBuilder";
@@ -631,7 +683,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = PDKTModelBuilderTests/Info.plist;
+				INFOPLIST_FILE = "PDKTModelBuilderTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PDKTModelBuilder.app/PDKTModelBuilder";

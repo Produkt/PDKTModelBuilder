@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14A389" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="PictureEntity" representedClassName="PictureEntity" syncable="YES">
+        <attribute name="pictureId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picturePublishedDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="pictureURL" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserEntity" inverseName="hasPictures" inverseEntity="UserEntity" syncable="YES"/>
+    </entity>
+    <entity name="UserEntity" representedClassName="UserEntity" syncable="YES">
+        <attribute name="userBlogURL" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="userEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hasPictures" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PictureEntity" inverseName="author" inverseEntity="PictureEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="UserEntity" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="PictureEntity" positionX="-54" positionY="18" width="128" height="103"/>
+    </elements>
 </model>
