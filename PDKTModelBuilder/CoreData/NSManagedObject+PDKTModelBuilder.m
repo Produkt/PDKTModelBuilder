@@ -18,8 +18,8 @@
     return [[NSString stringWithFormat:@"%@Id",[entityName stringByReplacingOccurrencesOfString:@"Entity" withString:@""]]stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:[[entityName substringToIndex:1]lowercaseString]];
 }
 + (void)validateDefaultObjectId:(NSString *)objectId{
-    NSString *objectIdAssertMessage = [NSString stringWithFormat:@"uniqueId must be '%@' or must implement 'entityIdPropertyName'",objectId];
-    objc_property_t property = class_getProperty([self class], [objectId UTF8String]);
+    __unused NSString *objectIdAssertMessage = [NSString stringWithFormat:@"uniqueId must be '%@' or must implement 'entityIdPropertyName'",objectId];
+    __unused objc_property_t property = class_getProperty([self class], [objectId UTF8String]);
     NSAssert(property, objectIdAssertMessage);
 }
 @end
