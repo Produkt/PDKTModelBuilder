@@ -78,7 +78,7 @@
 + (id)propertyValueForKey:(NSString *)key sourcePath:(NSString *)sourcePath inDictionary:(NSDictionary *)dictionary withTransformers:(NSDictionary *)propertiesTypeTransformers{
     id propertyValue;
     id rawValue = [dictionary valueForKeyPath:sourcePath];
-    if (![rawValue isKindOfClass:[NSNull class]]) {
+    if (rawValue && ![rawValue isKindOfClass:[NSNull class]]) {
         PDKTDataTransformer *entityProperty=[propertiesTypeTransformers valueForKey:key]?:[PDKTStringTransformer new];
         propertyValue=[entityProperty tranformValueFromObject:rawValue];
     }
