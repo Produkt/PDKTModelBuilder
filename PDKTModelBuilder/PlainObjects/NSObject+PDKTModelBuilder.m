@@ -11,7 +11,7 @@
 #import "PDKTEntityDataParserFactory.h"
 
 @implementation NSObject (PDKTModelBuilder)
-+ (instancetype)newObjectFromDictionary:(NSDictionary *)dictionary{
++ (instancetype)objectFromDictionary:(NSDictionary *)dictionary{
     NSAssert([self conformsToProtocol:@protocol(PDKTModelBuilderEntity)], @"must implement PDKTModelBuilderEntity for using this method");
     NSObject<PDKTModelBuilderEntity> *entity = [[[self class] alloc] init];
     

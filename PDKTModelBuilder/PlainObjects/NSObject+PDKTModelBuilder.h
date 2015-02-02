@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (PDKTModelBuilder)
-+ (instancetype)newObjectFromDictionary:(NSDictionary *)dictionary;
++ (instancetype)objectFromDictionary:(NSDictionary *)dictionary;
 @end

@@ -34,7 +34,7 @@
                                   @"rating":@"3.5",
                                   @"published_on":@"2014-10-31 20:47:59"
                                   };
-    TestablePicture *picture = [TestablePicture newObjectFromDictionary:pictureInfo];
+    TestablePicture *picture = [TestablePicture objectFromDictionary:pictureInfo];
     XCTAssertNotNil(picture);
     XCTAssert([picture isKindOfClass:[TestablePicture class]]);
     XCTAssertEqualObjects(picture.pictureId, @"1");
@@ -48,7 +48,7 @@
                                   @"url":@"http://www.apple.com",
                                   @"published_on":@"2014-10-31 20:47:59"
                                   };
-    TestablePicture *picture = [TestablePicture newObjectFromDictionary:pictureInfo];
+    TestablePicture *picture = [TestablePicture objectFromDictionary:pictureInfo];
     XCTAssertNotNil(picture);
     XCTAssert([picture isKindOfClass:[TestablePicture class]]);
     XCTAssertNil(picture.pictureId);
