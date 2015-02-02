@@ -8,15 +8,9 @@
 
 #import "PDKTEntityDataParserFactory.h"
 #import "__PDKTPlainObjectEntityDataParser.h"
-#import "__PDKTCoreDataEntityDataParser.h"
 
 @implementation PDKTEntityDataParserFactory
 + (PDKTEntityDataParser *)dataParserForPlanEntityWithDictionary:(NSDictionary *)dictionary andEntity:(NSObject<PDKTModelBuilderEntity> *)entity{
     return [[__PDKTPlainObjectEntityDataParser alloc]initWithDictionary:dictionary andEntity:entity];
-}
-+ (PDKTEntityDataParser *)dataParserForCoreDataEntityWithDictionary:(NSDictionary *)dictionary andEntity:(NSObject<PDKTModelBuilderEntity> *)entity{
-    PDKTEntityDataParser *dataParser;
-    dataParser = [[__PDKTCoreDataEntityDataParser alloc]initWithDictionary:dictionary andEntity:entity];
-    return dataParser;
 }
 @end

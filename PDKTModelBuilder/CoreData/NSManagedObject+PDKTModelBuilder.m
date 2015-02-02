@@ -7,7 +7,7 @@
 //
 
 #import "NSManagedObject+PDKTModelBuilder.h"
-#import "PDKTEntityDataParserFactory.h"
+#import "PDKTCoreDataEntityDataParserFactory.h"
 #import <objc/runtime.h>
 
 @implementation NSManagedObject (PDKTModelBuilderEntityDefault)
@@ -48,7 +48,7 @@
     {
         entity = [NSEntityDescription insertNewObjectForEntityForName:[NSString stringWithFormat:@"%@",entityName] inManagedObjectContext:managedObjectContext];
     }
-    PDKTEntityDataParser *entityDataParser = [PDKTEntityDataParserFactory dataParserForCoreDataEntityWithDictionary:dictionary andEntity:entity];
+    PDKTEntityDataParser *entityDataParser = [PDKTCoreDataEntityDataParserFactory dataParserForCoreDataEntityWithDictionary:dictionary andEntity:entity];
     [entityDataParser executeDataParsing];
     if ([entity conformsToProtocol:@protocol(PDKTModelBuilderCoreDataEntity)] && [entity respondsToSelector:@selector(setEntityUpdateDate:)]) {
         [(NSManagedObject<PDKTModelBuilderCoreDataEntity> *)entity setEntityUpdateDate:[NSDate date]];
@@ -63,7 +63,7 @@
         return nil;
     }
     NSManagedObject<PDKTModelBuilderEntity> *newObject = [NSEntityDescription insertNewObjectForEntityForName:[NSString stringWithFormat:@"%@",entityName] inManagedObjectContext:managedObjectContext];
-    PDKTEntityDataParser *entityDataParser = [PDKTEntityDataParserFactory dataParserForCoreDataEntityWithDictionary:dictionary andEntity:newObject];
+    PDKTEntityDataParser *entityDataParser = [PDKTCoreDataEntityDataParserFactory dataParserForCoreDataEntityWithDictionary:dictionary andEntity:newObject];
     [entityDataParser executeDataParsing];
     return newObject;
 }
