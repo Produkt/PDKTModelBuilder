@@ -50,6 +50,9 @@
     }
     PDKTEntityDataParser *entityDataParser = [PDKTEntityDataParserFactory dataParserForCoreDataEntityWithDictionary:dictionary andEntity:entity];
     [entityDataParser executeDataParsing];
+    if ([entity conformsToProtocol:@protocol(PDKTModelBuilderCoreDataEntity)] && [entity respondsToSelector:@selector(setEntityUpdateDate:)]) {
+        [(NSManagedObject<PDKTModelBuilderCoreDataEntity> *)entity setEntityUpdateDate:[NSDate date]];
+    }
     return entity;
 }
 + (instancetype)insertIntoManagedObjectContext:(NSManagedObjectContext *)managedObjectContext withDictionary:(NSDictionary *)dictionary{

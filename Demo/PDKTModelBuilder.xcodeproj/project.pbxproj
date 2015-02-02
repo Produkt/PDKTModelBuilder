@@ -323,9 +323,9 @@
 			children = (
 				883ACAB81A043815006139C6 /* PDKTBoolTransformer.h */,
 				883ACAB91A043815006139C6 /* PDKTBoolTransformer.m */,
+				883ACABC1A043815006139C6 /* PDKTDataTransformers.h */,
 				883ACABA1A043815006139C6 /* PDKTDataTransformer.h */,
 				883ACABB1A043815006139C6 /* PDKTDataTransformer.m */,
-				883ACABC1A043815006139C6 /* PDKTDataTransformers.h */,
 				883ACABD1A043815006139C6 /* PDKTDateTransformer.h */,
 				883ACABE1A043815006139C6 /* PDKTDateTransformer.m */,
 				883ACABF1A043815006139C6 /* PDKTDoubleTransformer.h */,
