@@ -64,6 +64,24 @@
     
 }
 
+- (void)testEntityUpdateDate {
+    NSMutableDictionary *userDictionary = [@{
+                                             @"id":@"1",
+                                             @"name":@"John Doe",
+                                             @"email":@"john.doe@apple.com",
+                                             @"blog_url":@"www.tumblr.com/johndoe"
+                                         } mutableCopy];
+    
+    UserEntity *user = [UserEntity updateOrInsertIntoManagedObjectContext:self.managedObjectContext withDictionary:userDictionary];
+    XCTAssertNotNil(user.entityUpdateDate);
+    NSDate *updateDate = user.entityUpdateDate;
+    
+    [userDictionary setObject:@"john.doe@apple.es" forKey:@"email"];
+    user = [UserEntity updateOrInsertIntoManagedObjectContext:self.managedObjectContext withDictionary:userDictionary];
+    XCTAssertNotNil(user.entityUpdateDate);
+    XCTAssertNotEqualObjects(user.entityUpdateDate, updateDate);
+}
+
 - (void)testNSManagedObjectsRelationships {
     NSDictionary *userDictionary = @{
                                      @"id":@"1",

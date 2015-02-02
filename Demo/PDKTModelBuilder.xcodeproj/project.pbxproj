@@ -43,6 +43,7 @@
 		883ACAD51A043CCA006139C6 /* NSObjectModelsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 883ACAD41A043CCA006139C6 /* NSObjectModelsTests.m */; };
 		88619E271A7FC296009AD2B5 /* PDKTEntityDataParserFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 88619E261A7FC296009AD2B5 /* PDKTEntityDataParserFactory.m */; };
 		88619E2A1A7FC2DF009AD2B5 /* PDKTCoreDataEntityDataParserFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 88619E291A7FC2DF009AD2B5 /* PDKTCoreDataEntityDataParserFactory.m */; };
+		88619E2D1A7FC551009AD2B5 /* UserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 88619E2C1A7FC551009AD2B5 /* UserEntity.m */; };
 		88C464511A1291D000A6B9D6 /* NSManagedObjectModelsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C464501A1291D000A6B9D6 /* NSManagedObjectModelsTests.m */; };
 		88C4645C1A1292BE00A6B9D6 /* UserEntity+PDKTModelBuilderEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4645B1A1292BE00A6B9D6 /* UserEntity+PDKTModelBuilderEntity.m */; };
 		88C4645F1A1292D100A6B9D6 /* PictureEntity+PDKTModelBuilderEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4645E1A1292D100A6B9D6 /* PictureEntity+PDKTModelBuilderEntity.m */; };
@@ -50,7 +51,6 @@
 		88C4646D1A12938200A6B9D6 /* TestablePicture+PDKTModelBuilderEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C464681A12938200A6B9D6 /* TestablePicture+PDKTModelBuilderEntity.m */; };
 		88C4646E1A12938200A6B9D6 /* TestablePicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4646A1A12938200A6B9D6 /* TestablePicture.m */; };
 		88C4646F1A12948300A6B9D6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88C464641A12938200A6B9D6 /* Info.plist */; };
-		88C464721A129FAD00A6B9D6 /* UserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C464711A129FAD00A6B9D6 /* UserEntity.m */; };
 		88C464751A129FAD00A6B9D6 /* PictureEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C464741A129FAD00A6B9D6 /* PictureEntity.m */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +131,8 @@
 		88619E261A7FC296009AD2B5 /* PDKTEntityDataParserFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKTEntityDataParserFactory.m; sourceTree = "<group>"; };
 		88619E281A7FC2DF009AD2B5 /* PDKTCoreDataEntityDataParserFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTCoreDataEntityDataParserFactory.h; sourceTree = "<group>"; };
 		88619E291A7FC2DF009AD2B5 /* PDKTCoreDataEntityDataParserFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKTCoreDataEntityDataParserFactory.m; sourceTree = "<group>"; };
+		88619E2B1A7FC551009AD2B5 /* UserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEntity.h; sourceTree = "<group>"; };
+		88619E2C1A7FC551009AD2B5 /* UserEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEntity.m; sourceTree = "<group>"; };
 		88C464501A1291D000A6B9D6 /* NSManagedObjectModelsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSManagedObjectModelsTests.m; sourceTree = "<group>"; };
 		88C4645A1A1292BE00A6B9D6 /* UserEntity+PDKTModelBuilderEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserEntity+PDKTModelBuilderEntity.h"; sourceTree = "<group>"; };
 		88C4645B1A1292BE00A6B9D6 /* UserEntity+PDKTModelBuilderEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserEntity+PDKTModelBuilderEntity.m"; sourceTree = "<group>"; };
@@ -143,8 +145,6 @@
 		88C464681A12938200A6B9D6 /* TestablePicture+PDKTModelBuilderEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TestablePicture+PDKTModelBuilderEntity.m"; sourceTree = "<group>"; };
 		88C464691A12938200A6B9D6 /* TestablePicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestablePicture.h; sourceTree = "<group>"; };
 		88C4646A1A12938200A6B9D6 /* TestablePicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestablePicture.m; sourceTree = "<group>"; };
-		88C464701A129FAD00A6B9D6 /* UserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEntity.h; sourceTree = "<group>"; };
-		88C464711A129FAD00A6B9D6 /* UserEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEntity.m; sourceTree = "<group>"; };
 		88C464731A129FAD00A6B9D6 /* PictureEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureEntity.h; sourceTree = "<group>"; };
 		88C464741A129FAD00A6B9D6 /* PictureEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureEntity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -350,10 +350,10 @@
 		88C464521A12927100A6B9D6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				88619E2B1A7FC551009AD2B5 /* UserEntity.h */,
+				88619E2C1A7FC551009AD2B5 /* UserEntity.m */,
 				88C464731A129FAD00A6B9D6 /* PictureEntity.h */,
 				88C464741A129FAD00A6B9D6 /* PictureEntity.m */,
-				88C464701A129FAD00A6B9D6 /* UserEntity.h */,
-				88C464711A129FAD00A6B9D6 /* UserEntity.m */,
 				88C464591A1292A800A6B9D6 /* PDKTModelBuilderEntity */,
 			);
 			path = Models;
@@ -494,6 +494,7 @@
 				88619E2A1A7FC2DF009AD2B5 /* PDKTCoreDataEntityDataParserFactory.m in Sources */,
 				883ACAD01A043815006139C6 /* PDKTURLTransformer.m in Sources */,
 				883ACA6A1A0417BA006139C6 /* PDKTCoreDataEntityRelationship.m in Sources */,
+				88619E2D1A7FC551009AD2B5 /* UserEntity.m in Sources */,
 				883ACACE1A043815006139C6 /* PDKTIntegerTransformer.m in Sources */,
 				883ACA141A041786006139C6 /* AppDelegate.m in Sources */,
 				88C464751A129FAD00A6B9D6 /* PictureEntity.m in Sources */,
@@ -501,7 +502,6 @@
 				883ACA171A041786006139C6 /* PDKTModelBuilder.xcdatamodeld in Sources */,
 				883ACACC1A043815006139C6 /* PDKTDoubleTransformer.m in Sources */,
 				883ACA681A0417BA006139C6 /* __PDKTCoreDataEntityRelationshipOneToMany.m in Sources */,
-				88C464721A129FAD00A6B9D6 /* UserEntity.m in Sources */,
 				883ACA771A0417BA006139C6 /* PDKTEntityDataParser.m in Sources */,
 				883ACA1A1A041786006139C6 /* ViewController.m in Sources */,
 				883ACACB1A043815006139C6 /* PDKTDateTransformer.m in Sources */,

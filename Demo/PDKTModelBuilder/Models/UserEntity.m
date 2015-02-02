@@ -2,8 +2,8 @@
 //  UserEntity.m
 //  PDKTModelBuilder
 //
-//  Created by Daniel García García on 11/11/14.
-//  Copyright (c) 2014 Produkt. All rights reserved.
+//  Created by Daniel García on 02/02/15.
+//  Copyright (c) 2015 Produkt. All rights reserved.
 //
 
 #import "UserEntity.h"
@@ -12,10 +12,11 @@
 
 @implementation UserEntity
 
+@dynamic userBlogURL;
+@dynamic userEmail;
 @dynamic userId;
 @dynamic userName;
-@dynamic userEmail;
-@dynamic userBlogURL;
+@dynamic entityUpdateDate;
 @dynamic hasPictures;
 
 @end
