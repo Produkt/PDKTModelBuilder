@@ -34,9 +34,14 @@
     }
     return sourceDictionary;
 }
-- (void)executeDataParsing{
-    [self parseDictionary:self.dictionary withEntity:self.entity];
+- (BOOL)executeDataParsing{
+    BOOL isExecuteEntityParsing = NO;
+    if ([self entity:self.entity needsParsingWithDictionary:self.dictionary]) {
+        [self parseDictionary:self.dictionary withEntity:self.entity];
+        isExecuteEntityParsing = YES;
+    }
     [self parseRelationshipsInDictionary:self.dictionary withEntity:self.entity];
+    return isExecuteEntityParsing;
 }
 #pragma mark - Automated properties parsing
 - (void)parseDictionary:(NSDictionary *)dictionary withEntity:(NSObject<PDKTModelBuilderEntity> *)entity{
@@ -51,6 +56,25 @@
 }
 - (void)parseRelationshipsInDictionary:(NSDictionary *)dictionary withEntity:(NSObject<PDKTModelBuilderEntity> *)entity{
     
+}
+
+#pragma mark - Private Methods
+- (BOOL)entity:(NSObject<PDKTModelBuilderEntity> *)entity needsParsingWithDictionary:(NSDictionary *)dictionary {
+    BOOL entityNeedsParsing = YES;
+    NSString *attributeName;
+    if ([[entity class] respondsToSelector:@selector(comparableUnixTimestampAttribute)]) {
+        attributeName = [[entity class] comparableUnixTimestampAttribute];
+    }
+    if (attributeName) {
+        NSNumber *apiAttributeValue = [[self class] propertyValueForKey:attributeName inDictionary:dictionary forEntityClass:[entity class]];
+        if (apiAttributeValue) {
+            NSNumber *entityComparableAttribute = [entity valueForKey:attributeName];
+            if (entityComparableAttribute && ([apiAttributeValue compare:entityComparableAttribute] == NSOrderedSame)) {
+                entityNeedsParsing = NO;
+            }
+        }
+    }
+    return entityNeedsParsing;
 }
 @end
 

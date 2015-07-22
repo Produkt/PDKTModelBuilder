@@ -16,18 +16,23 @@
              @"userId":@"id",
              @"userName":@"name",
              @"userEmail":@"email",
-             @"userBlogURL":@"blog_url"
+             @"userBlogURL":@"blog_url",
+             @"entityUpdateUnixTimestamp": @"updated_at"
              };
 }
 + (NSDictionary *)propertiesTypeTransformers{
     return @{
-             @"userBlogURL":[PDKTURLTransformer new]
+             @"userBlogURL":[PDKTURLTransformer new],
+             @"entityUpdateUnixTimestamp": [PDKTIntegerTransformer new]
              };
 }
 + (NSDictionary *)relationshipsBindings{
     return @{
              @"hasPictures":[PDKTCoreDataEntityRelationship oneToManyRelationshipForKeyPath:@"pictures" andClass:[PictureEntity class]]
              };
+}
++ (NSString *)comparableUnixTimestampAttribute {
+    return @"entityUpdateUnixTimestamp";
 }
 + (NSDictionary *)customDataDictionaryWithSourceDataDictionary:(NSDictionary *)dictionary{
     NSMutableDictionary *dataDictionary = [dictionary mutableCopy];

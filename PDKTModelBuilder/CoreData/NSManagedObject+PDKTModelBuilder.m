@@ -49,9 +49,10 @@
         entity = [NSEntityDescription insertNewObjectForEntityForName:[NSString stringWithFormat:@"%@",entityName] inManagedObjectContext:managedObjectContext];
     }
     PDKTEntityDataParser *entityDataParser = [PDKTCoreDataEntityDataParserFactory dataParserForCoreDataEntityWithDictionary:dictionary andEntity:entity];
-    [entityDataParser executeDataParsing];
-    if ([entity conformsToProtocol:@protocol(PDKTModelBuilderCoreDataEntity)] && [entity respondsToSelector:@selector(setEntityUpdateDate:)]) {
-        [(NSManagedObject<PDKTModelBuilderCoreDataEntity> *)entity setEntityUpdateDate:[NSDate date]];
+    if ([entityDataParser executeDataParsing]) {
+        if ([entity conformsToProtocol:@protocol(PDKTModelBuilderCoreDataEntity)] && [entity respondsToSelector:@selector(setEntityUpdateDate:)]) {
+            [(NSManagedObject<PDKTModelBuilderCoreDataEntity> *)entity setEntityUpdateDate:[NSDate date]];
+        }
     }
     return entity;
 }
