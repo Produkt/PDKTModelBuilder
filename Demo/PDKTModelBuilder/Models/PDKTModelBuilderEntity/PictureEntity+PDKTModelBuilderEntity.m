@@ -10,6 +10,9 @@
 #import "PDKTDataTransformers.h"
 
 @implementation PictureEntity (PDKTModelBuilderEntity)
++ (NSString *)entityName {
+    return @"PictureEntity";
+}
 + (NSDictionary *)propertiesBindings{
     return @{
              @"pictureId":@"id",
@@ -22,5 +25,8 @@
              @"picturePublishedDate":[PDKTDateTransformer new],
              @"pictureURL":[PDKTURLTransformer new]
              };
+}
++ (NSString *)entityIdPropertyName {
+    return @"pictureId";
 }
 @end

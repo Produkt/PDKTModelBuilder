@@ -11,6 +11,9 @@
 #import "PictureEntity.h"
 
 @implementation UserEntity (PDKTModelBuilderEntity)
++ (NSString *)entityName {
+    return @"UserEntity";
+}
 + (NSDictionary *)propertiesBindings{
     return @{
              @"userId":@"id",
@@ -25,6 +28,9 @@
              @"userBlogURL":[PDKTURLTransformer new],
              @"entityUpdateUnixTimestamp": [PDKTIntegerTransformer new]
              };
+}
++ (NSString *)entityIdPropertyName {
+    return @"userId";
 }
 + (NSDictionary *)relationshipsBindings{
     return @{

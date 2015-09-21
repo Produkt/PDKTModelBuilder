@@ -12,7 +12,7 @@
 
 @implementation NSManagedObject (PDKTModelBuilderEntityDefault)
 + (NSString *)defaultEntityIdPropertyName{
-    return [self defaultEntityIdPropertyNameForEntityName:NSStringFromClass([self class])];
+    return [self defaultEntityIdPropertyNameForEntityName:[(id<PDKTModelBuilderCoreDataEntity>)self entityName]];
 }
 + (NSString *)defaultEntityIdPropertyNameForEntityName:(NSString *)entityName{
     return [[NSString stringWithFormat:@"%@Id",[entityName stringByReplacingOccurrencesOfString:@"Entity" withString:@""]]stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:[[entityName substringToIndex:1]lowercaseString]];
@@ -27,7 +27,7 @@
 @implementation NSManagedObject (PDKTModelBuilder)
 + (instancetype)updateOrInsertIntoManagedObjectContext:(NSManagedObjectContext *)managedObjectContext withDictionary:(NSDictionary *)dictionary{
     NSAssert([[self class] conformsToProtocol:@protocol(PDKTModelBuilderCoreDataEntity)], @"must implement PDKTModelBuilderCoreDataEntity for using this method");
-    NSString *entityName=NSStringFromClass([self class]);
+    NSString *entityName = [(id<PDKTModelBuilderCoreDataEntity>)self entityName];
     NSString *objectId = [self entityId];
     NSString *objectIdValue=[PDKTEntityDataParser propertyValueForKey:objectId inDictionary:dictionary forEntityClass:[self class]];
     if (!objectIdValue) {
@@ -58,7 +58,7 @@
 }
 + (instancetype)insertIntoManagedObjectContext:(NSManagedObjectContext *)managedObjectContext withDictionary:(NSDictionary *)dictionary{
     NSAssert([[self class] conformsToProtocol:@protocol(PDKTModelBuilderCoreDataEntity)], @"must implement PDKTModelBuilderCoreDataEntity for using this method");
-    NSString *entityName=NSStringFromClass([self class]);
+    NSString *entityName = [(id<PDKTModelBuilderCoreDataEntity>)self entityName];
     NSString *objectIdValue=[self objectIdWithDictionary:dictionary];
     if (!objectIdValue) {
         return nil;
@@ -74,7 +74,7 @@
     return objectIdValue;
 }
 + (instancetype)fetchObjectWithValue:(id)value forKey:(NSString *)key inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext{
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([self class])];
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:[(id<PDKTModelBuilderCoreDataEntity>)self entityName]];
     fetchRequest.predicate = [NSPredicate predicateWithFormat:@"%@ = %K",value,key];
     fetchRequest.fetchLimit = 1;
     NSError *error=nil;
@@ -86,7 +86,7 @@
     return fetchedObject;
 }
 + (NSString *)entityId{
-    NSString *entityName=NSStringFromClass([self class]);
+    NSString *entityName = [(id<PDKTModelBuilderCoreDataEntity>)self entityName];
     NSString *objectId;
     if ([self respondsToSelector:@selector(entityIdPropertyName)]) {
         objectId = [(id<PDKTModelBuilderCoreDataEntity>)self entityIdPropertyName];
@@ -96,5 +96,6 @@
     }
     return objectId.length ? objectId : nil;
 }
+
 @end
 
