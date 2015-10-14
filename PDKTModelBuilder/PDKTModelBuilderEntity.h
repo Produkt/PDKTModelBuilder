@@ -14,5 +14,5 @@
 + (NSDictionary *)relationshipsBindings;
 + (NSDictionary *)propertiesTypeTransformers;
 + (NSDictionary *)customDataDictionaryWithSourceDataDictionary:(NSDictionary *)dictionary;
-+ (NSString *)comparableUnixTimestampAttribute;
++ (NSString *)comparableAttribute;
 @end

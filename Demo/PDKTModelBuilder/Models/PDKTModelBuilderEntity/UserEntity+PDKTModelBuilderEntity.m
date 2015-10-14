@@ -37,7 +37,7 @@
              @"hasPictures":[PDKTCoreDataEntityRelationship oneToManyRelationshipForKeyPath:@"pictures" andClass:[PictureEntity class]]
              };
 }
-+ (NSString *)comparableUnixTimestampAttribute {
++ (NSString *)comparableAttribute {
     return @"entityUpdateUnixTimestamp";
 }
 + (NSDictionary *)customDataDictionaryWithSourceDataDictionary:(NSDictionary *)dictionary{
