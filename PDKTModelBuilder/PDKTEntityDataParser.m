@@ -70,7 +70,7 @@
         if (apiAttributeValue) {
             id entityComparableAttribute = [entity valueForKey:attributeName];
             if ([apiAttributeValue respondsToSelector:@selector(compare:)] && [entityComparableAttribute respondsToSelector:@selector(compare:)]) {
-                if (entityComparableAttribute && ([apiAttributeValue compare:entityComparableAttribute] == NSOrderedSame)) {
+                if ([apiAttributeValue compare:entityComparableAttribute] == NSOrderedSame) {
                     entityNeedsParsing = NO;
                 }
             }
