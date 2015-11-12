@@ -10,6 +10,8 @@
 
 @protocol PDKTModelBuilderEntity <NSObject>
 + (NSDictionary *)propertiesBindings;
++ (NSString *)entityName;
++ (NSString *)entityIdPropertyName;
 @optional
 + (NSDictionary *)relationshipsBindings;
 + (NSDictionary *)propertiesTypeTransformers;
