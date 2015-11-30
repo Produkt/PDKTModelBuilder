@@ -8,6 +8,7 @@
 
 #import "PictureEntity+PDKTModelBuilderEntity.h"
 #import "PDKTDataTransformers.h"
+#import "UserEntity.h"
 
 @implementation PictureEntity (PDKTModelBuilderEntity)
 + (NSString *)entityName {
@@ -17,16 +18,26 @@
     return @{
              @"pictureId":@"id",
              @"picturePublishedDate":@"published_on",
-             @"pictureURL":@"url"
+             @"pictureURL":@"url",
+             @"pictureModificationDateUnixTimestamp": @"updated_at"
              };
 }
 + (NSDictionary *)propertiesTypeTransformers{
     return @{
              @"picturePublishedDate":[PDKTDateTransformer new],
-             @"pictureURL":[PDKTURLTransformer new]
+             @"pictureURL":[PDKTURLTransformer new],
+             @"pictureModificationDateUnixTimestamp": [PDKTIntegerTransformer new]
              };
 }
 + (NSString *)entityIdPropertyName {
     return @"pictureId";
+}
++ (NSDictionary *)relationshipsBindings{
+    return @{
+             @"author": [PDKTCoreDataEntityRelationship oneToOneRelationshipForKeyPath:@"author" andClass:[UserEntity class]]
+             };
+}
++ (NSString *)comparableAttribute {
+    return @"pictureModificationDateUnixTimestamp";
 }
 @end

@@ -70,7 +70,7 @@
                                              @"name":@"John Doe",
                                              @"email":@"john.doe@apple.com",
                                              @"blog_url":@"www.tumblr.com/johndoe"
-                                         } mutableCopy];
+                                             } mutableCopy];
     
     UserEntity *user = [UserEntity updateOrInsertIntoManagedObjectContext:self.managedObjectContext withDictionary:userDictionary];
     XCTAssertNotNil(user.entityUpdateDate);
@@ -89,17 +89,17 @@
                                      @"email":@"john.doe@apple.com",
                                      @"blog_url":@"www.tumblr.com/johndoe",
                                      @"pictures":@[
-                                                  @{
-                                                    @"id":@"1",
-                                                    @"url":@"www.apple.com/images/picture.jpg",
-                                                    @"published_on":@"1415735002"
-                                                    },
-                                                  @{
-                                                    @"id":@"2",
-                                                    @"url":@"www.apple.com/images/picture2.jpg",
-                                                    @"published_on":@"1415735002"
-                                                    }
-                                         ]
+                                             @{
+                                                 @"id":@"1",
+                                                 @"url":@"www.apple.com/images/picture.jpg",
+                                                 @"published_on":@"1415735002"
+                                                 },
+                                             @{
+                                                 @"id":@"2",
+                                                 @"url":@"www.apple.com/images/picture2.jpg",
+                                                 @"published_on":@"1415735002"
+                                                 }
+                                             ]
                                      };
     
     UserEntity *user = [UserEntity updateOrInsertIntoManagedObjectContext:self.managedObjectContext withDictionary:userDictionary];
@@ -121,7 +121,7 @@
                                      @"blog":@{
                                              @"John Doe's blog"
                                              @"url":@"www.tumblr.com/johndoe"
-                                     },
+                                             },
                                      @"user_pictures":@[
                                              @{
                                                  @"id":@"1",
@@ -264,5 +264,126 @@
     }
     
 }
+- (void)testRemoveAfterRelationshipOneToOne {
+    NSDictionary *pictureDictionary = @{
+                                        @"id": @"1",
+                                        @"published_on":@"1415735002",
+                                        @"url": @"www.apple.com/images/picture_updated.jpg",
+                                        @"author": @{
+                                                @"id":@"1",
+                                                @"name":@"John Doe",
+                                                @"email":@"john.doe@apple.com",
+                                                @"blog_url":@"www.tumblr.com/johndoe",
+                                                },
+                                        @"updated_at": @1437216918
+                                        };
+    PictureEntity *picture = [PictureEntity updateOrInsertIntoManagedObjectContext:self.managedObjectContext withDictionary:pictureDictionary];
+    XCTAssertNotNil(picture.author);
+    XCTAssertNotNil(picture.pictureId);
+    
+    NSDictionary *pictureDictionaryUpdated = @{
+                                               @"id": @"1",
+                                               @"published_on":@"1415735002",
+                                               @"url": @"www.apple.com/images/picture_updated.jpg",
+                                               @"author": [NSNull null],
+                                               @"updated_at": @1437216958
+                                               };
+    PictureEntity *pictureUpdate = [PictureEntity updateOrInsertIntoManagedObjectContext:self.managedObjectContext withDictionary:pictureDictionaryUpdated];
+    XCTAssertNil(pictureUpdate.author);
+    XCTAssertNotNil(pictureUpdate.pictureId);
+}
+- (void)testRemoveAfterRelationshipOneToMany {
+    NSDictionary *userDictionary = @{
+                                     @"id":@"1",
+                                     @"name":@"John Doe",
+                                     @"email":@"john.doe@apple.com",
+                                     @"blog_url":@"www.tumblr.com/johndoe",
+                                     @"updated_at": @1437216918,
+                                     @"pictures":@[
+                                             @{
+                                                 @"id":@"1",
+                                                 @"url":@"www.apple.com/images/picture.jpg",
+                                                 @"published_on":@"1415735002"
+                                                 },
+                                             @{
+                                                 @"id":@"2",
+                                                 @"url":@"www.apple.com/images/picture2.jpg",
+                                                 @"published_on":@"1415735002"
+                                                 }
+                                             ]
+                                     };
+    
+    UserEntity *user = [UserEntity updateOrInsertIntoManagedObjectContext:self.managedObjectContext withDictionary:userDictionary];
+    XCTAssertNotNil(user.hasPictures);
+    XCTAssertNotEqual(user.hasPictures.count, 0);
+    for (PictureEntity *picture in user.hasPictures) {
+        XCTAssert([picture isKindOfClass:[PictureEntity class]]);
+        // Check inverse relationship
+        XCTAssertEqualObjects(picture.author, user);
+    }
+    
+    NSDictionary *userUpdateRelationshipDictionary = @{
+                                                       @"id":@"1",
+                                                       @"name":@"John Doe",
+                                                       @"email":@"john.doe@apple.com",
+                                                       @"blog_url":@"www.tumblr.com/johndoe",
+                                                       @"updated_at": @1437216958,
+                                                       @"pictures":@[]
+                                                       };
+    
+    UserEntity *userUpdateRelations = [UserEntity updateOrInsertIntoManagedObjectContext:self.managedObjectContext withDictionary:userUpdateRelationshipDictionary];
+    XCTAssertNotNil(userUpdateRelations);
+    XCTAssertTrue([userUpdateRelations.hasPictures count] == 0);
+}
+- (void)testRemoveOneItemAfterRelationshipOneToMany {
+    NSDictionary *userDictionary = @{
+                                     @"id":@"1",
+                                     @"name":@"John Doe",
+                                     @"email":@"john.doe@apple.com",
+                                     @"blog_url":@"www.tumblr.com/johndoe",
+                                     @"updated_at": @1437216918,
+                                     @"pictures":@[
+                                             @{
+                                                 @"id":@"1",
+                                                 @"url":@"www.apple.com/images/picture.jpg",
+                                                 @"published_on":@"1415735002"
+                                                 },
+                                             @{
+                                                 @"id":@"2",
+                                                 @"url":@"www.apple.com/images/picture2.jpg",
+                                                 @"published_on":@"1415735002"
+                                                 }
+                                             ]
+                                     };
+    
+    UserEntity *user = [UserEntity updateOrInsertIntoManagedObjectContext:self.managedObjectContext withDictionary:userDictionary];
+    XCTAssertNotNil(user.hasPictures);
+    XCTAssertNotEqual(user.hasPictures.count, 0);
+    for (PictureEntity *picture in user.hasPictures) {
+        XCTAssert([picture isKindOfClass:[PictureEntity class]]);
+        // Check inverse relationship
+        XCTAssertEqualObjects(picture.author, user);
+    }
+    
+    NSDictionary *userUpdateRelationshipDictionary = @{
+                                                       @"id":@"1",
+                                                       @"name":@"John Doe",
+                                                       @"email":@"john.doe@apple.com",
+                                                       @"blog_url":@"www.tumblr.com/johndoe",
+                                                       @"updated_at": @1437216958,
+                                                       @"pictures":@[
+                                                               @{
+                                                                   @"id":@"1",
+                                                                   @"url":@"www.apple.com/images/picture66.jpg",
+                                                                   @"published_on":@"1415735002"
+                                                                   }
+                                                               ]
+                                                       };
+    
+    UserEntity *userUpdateRelations = [UserEntity updateOrInsertIntoManagedObjectContext:self.managedObjectContext withDictionary:userUpdateRelationshipDictionary];
+    XCTAssertNotNil(userUpdateRelations);
+    XCTAssertTrue([userUpdateRelations.hasPictures count] == 1);
+}
+
 
 @end

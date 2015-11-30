@@ -12,11 +12,17 @@
 - (void)parseRelationshipInDictionary:(NSDictionary *)dictionary withEntity:(NSManagedObject *)entity relationshipProperty:(NSString *)relationshipProperty inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext{
     id relationshipData = [dictionary valueForKeyPath:self.keyPath];
     if ([relationshipData isKindOfClass:[NSArray class]]) {
-        for (NSDictionary *relationshipItem in relationshipData) {
-            id item = [self parseItemData:relationshipItem withClass:self.relatedClass inManagedObjectContext:managedObjectContext];
-            if (item) {
-                [self addItem:item toEntity:entity toColletionInPropertyWithName:relationshipProperty];
+        NSArray *relationshipDataArray = (NSArray *)relationshipData;
+        if ([relationshipDataArray count] > 0) {
+            [entity setValue:nil forKey:relationshipProperty];
+            for (NSDictionary *relationshipItem in relationshipDataArray) {
+                id item = [self parseItemData:relationshipItem withClass:self.relatedClass inManagedObjectContext:managedObjectContext];
+                if (item) {
+                    [self addItem:item toEntity:entity toColletionInPropertyWithName:relationshipProperty];
+                }
             }
+        } else {
+            [entity setValue:nil forKey:relationshipProperty];
         }
     }
 }

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
     <entity name="PictureEntity" representedClassName="PictureEntity" syncable="YES">
         <attribute name="pictureId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pictureModificationDateUnixTimestamp" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="picturePublishedDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="pictureURL" optional="YES" attributeType="Transformable" syncable="YES"/>
         <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserEntity" inverseName="hasPictures" inverseEntity="UserEntity" syncable="YES"/>
@@ -16,7 +17,7 @@
         <relationship name="hasPictures" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PictureEntity" inverseName="author" inverseEntity="PictureEntity" syncable="YES"/>
     </entity>
     <elements>
-        <element name="PictureEntity" positionX="-54" positionY="18" width="128" height="103"/>
+        <element name="PictureEntity" positionX="-54" positionY="18" width="128" height="120"/>
         <element name="UserEntity" positionX="-63" positionY="-18" width="128" height="150"/>
     </elements>
 </model>
