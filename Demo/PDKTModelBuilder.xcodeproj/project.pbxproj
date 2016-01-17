@@ -52,6 +52,7 @@
 		88C4646F1A12948300A6B9D6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88C464641A12938200A6B9D6 /* Info.plist */; };
 		88C464751A129FAD00A6B9D6 /* PictureEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C464741A129FAD00A6B9D6 /* PictureEntity.m */; };
 		A9D84FB31B5FA4DE003E3BD1 /* UserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D84FB21B5FA4DE003E3BD1 /* UserEntity.m */; };
+		A9E7B51A1C4BB031009F8A64 /* PDKTDateTimeZoneCeroTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E7B5191C4BB030009F8A64 /* PDKTDateTimeZoneCeroTransformer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +148,8 @@
 		88C464741A129FAD00A6B9D6 /* PictureEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureEntity.m; sourceTree = "<group>"; };
 		A9D84FB11B5FA4DE003E3BD1 /* UserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEntity.h; sourceTree = "<group>"; };
 		A9D84FB21B5FA4DE003E3BD1 /* UserEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEntity.m; sourceTree = "<group>"; };
+		A9E7B5181C4BB030009F8A64 /* PDKTDateTimeZoneCeroTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTDateTimeZoneCeroTransformer.h; sourceTree = "<group>"; };
+		A9E7B5191C4BB030009F8A64 /* PDKTDateTimeZoneCeroTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKTDateTimeZoneCeroTransformer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +336,8 @@
 				883ACABB1A043815006139C6 /* PDKTDataTransformer.m */,
 				883ACABD1A043815006139C6 /* PDKTDateTransformer.h */,
 				883ACABE1A043815006139C6 /* PDKTDateTransformer.m */,
+				A9E7B5181C4BB030009F8A64 /* PDKTDateTimeZoneCeroTransformer.h */,
+				A9E7B5191C4BB030009F8A64 /* PDKTDateTimeZoneCeroTransformer.m */,
 				883ACABF1A043815006139C6 /* PDKTDoubleTransformer.h */,
 				883ACAC01A043815006139C6 /* PDKTDoubleTransformer.m */,
 				883ACAC11A043815006139C6 /* PDKTFloatTransformer.h */,
@@ -499,6 +504,7 @@
 				883ACA141A041786006139C6 /* AppDelegate.m in Sources */,
 				88C464751A129FAD00A6B9D6 /* PictureEntity.m in Sources */,
 				883ACACA1A043815006139C6 /* PDKTDataTransformer.m in Sources */,
+				A9E7B51A1C4BB031009F8A64 /* PDKTDateTimeZoneCeroTransformer.m in Sources */,
 				883ACA171A041786006139C6 /* PDKTModelBuilder.xcdatamodeld in Sources */,
 				883ACACC1A043815006139C6 /* PDKTDoubleTransformer.m in Sources */,
 				883ACA681A0417BA006139C6 /* __PDKTCoreDataEntityRelationshipOneToMany.m in Sources */,
