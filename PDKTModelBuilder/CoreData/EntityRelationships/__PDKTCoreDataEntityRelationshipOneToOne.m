@@ -16,10 +16,6 @@
         if (item) {
             [entity setValue:item forKey:relationshipProperty];
         }
-    } else if (!relationshipData || [relationshipData isEqual:[NSNull null]]) {
-        if ([entity valueForKey:relationshipProperty]) {
-            [managedObjectContext deleteObject:[entity valueForKey:relationshipProperty]];
-        }
     }
 }
 - (id)parseItemData:(NSDictionary *)itemData withClass:(Class)itemClass inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext{
