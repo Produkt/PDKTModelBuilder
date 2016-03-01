@@ -53,6 +53,7 @@
 		88C464751A129FAD00A6B9D6 /* PictureEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C464741A129FAD00A6B9D6 /* PictureEntity.m */; };
 		A9D84FB31B5FA4DE003E3BD1 /* UserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D84FB21B5FA4DE003E3BD1 /* UserEntity.m */; };
 		A9E7B51A1C4BB031009F8A64 /* PDKTDateTimeZoneCeroTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E7B5191C4BB030009F8A64 /* PDKTDateTimeZoneCeroTransformer.m */; };
+		E71269DA1C85C039008DCFF4 /* PDKTISO8601DateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E71269D91C85C039008DCFF4 /* PDKTISO8601DateTransformer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,8 @@
 		A9D84FB21B5FA4DE003E3BD1 /* UserEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEntity.m; sourceTree = "<group>"; };
 		A9E7B5181C4BB030009F8A64 /* PDKTDateTimeZoneCeroTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTDateTimeZoneCeroTransformer.h; sourceTree = "<group>"; };
 		A9E7B5191C4BB030009F8A64 /* PDKTDateTimeZoneCeroTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKTDateTimeZoneCeroTransformer.m; sourceTree = "<group>"; };
+		E71269D81C85C039008DCFF4 /* PDKTISO8601DateTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKTISO8601DateTransformer.h; sourceTree = "<group>"; };
+		E71269D91C85C039008DCFF4 /* PDKTISO8601DateTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKTISO8601DateTransformer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +351,8 @@
 				883ACAC61A043815006139C6 /* PDKTStringTransformer.m */,
 				883ACAC71A043815006139C6 /* PDKTURLTransformer.h */,
 				883ACAC81A043815006139C6 /* PDKTURLTransformer.m */,
+				E71269D81C85C039008DCFF4 /* PDKTISO8601DateTransformer.h */,
+				E71269D91C85C039008DCFF4 /* PDKTISO8601DateTransformer.m */,
 			);
 			path = DataTransformers;
 			sourceTree = "<group>";
@@ -508,6 +513,7 @@
 				883ACA171A041786006139C6 /* PDKTModelBuilder.xcdatamodeld in Sources */,
 				883ACACC1A043815006139C6 /* PDKTDoubleTransformer.m in Sources */,
 				883ACA681A0417BA006139C6 /* __PDKTCoreDataEntityRelationshipOneToMany.m in Sources */,
+				E71269DA1C85C039008DCFF4 /* PDKTISO8601DateTransformer.m in Sources */,
 				883ACA771A0417BA006139C6 /* PDKTEntityDataParser.m in Sources */,
 				883ACA1A1A041786006139C6 /* ViewController.m in Sources */,
 				883ACACB1A043815006139C6 /* PDKTDateTransformer.m in Sources */,
