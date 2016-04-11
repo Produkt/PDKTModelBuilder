@@ -25,4 +25,10 @@
              @"picturePublishedDate":[PDKTDateTransformer new]
              };
 }
++ (NSString *)entityName {
+    return @"TestablePicture";
+}
++ (NSString *)entityIdPropertyName {
+    return @"pictureId";
+}
 @end

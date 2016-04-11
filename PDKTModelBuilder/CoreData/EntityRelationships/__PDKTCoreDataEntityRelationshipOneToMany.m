@@ -9,14 +9,22 @@
 #import "__PDKTCoreDataEntityRelationshipOneToMany.h"
 
 @implementation __PDKTCoreDataEntityRelationshipOneToMany
+
+
 - (void)parseRelationshipInDictionary:(NSDictionary *)dictionary withEntity:(NSManagedObject *)entity relationshipProperty:(NSString *)relationshipProperty inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext{
     id relationshipData = [dictionary valueForKeyPath:self.keyPath];
     if ([relationshipData isKindOfClass:[NSArray class]]) {
-        for (NSDictionary *relationshipItem in relationshipData) {
-            id item = [self parseItemData:relationshipItem withClass:self.relatedClass inManagedObjectContext:managedObjectContext];
-            if (item) {
-                [self addItem:item toEntity:entity toColletionInPropertyWithName:relationshipProperty];
+        NSArray *relationshipDataArray = (NSArray *)relationshipData;
+        if ([relationshipDataArray count] > 0) {
+            [self removeInContext:managedObjectContext relationshipProperty:relationshipProperty entity:entity];
+            for (NSDictionary *relationshipItem in relationshipDataArray) {
+                id item = [self parseItemData:relationshipItem withClass:self.relatedClass inManagedObjectContext:managedObjectContext];
+                if (item) {
+                    [self addItem:item toEntity:entity toColletionInPropertyWithName:relationshipProperty];
+                }
             }
+        } else {
+            [self removeInContext:managedObjectContext relationshipProperty:relationshipProperty entity:entity];
         }
     }
 }
@@ -36,6 +44,13 @@
             [methodInvocation setArgument:&item atIndex:2];
             [methodInvocation invoke];
         }
+    }
+}
+
+#pragma mark - Private
+- (void)removeInContext:(NSManagedObjectContext *)managedObjectContext relationshipProperty:(NSString *)relationshipProperty entity:(NSManagedObject *)entity {
+    for (NSManagedObject *element in [entity valueForKey:relationshipProperty]) {
+        [managedObjectContext deleteObject:element];
     }
 }
 @end

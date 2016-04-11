@@ -11,23 +11,34 @@
 #import "PictureEntity.h"
 
 @implementation UserEntity (PDKTModelBuilderEntity)
++ (NSString *)entityName {
+    return @"UserEntity";
+}
 + (NSDictionary *)propertiesBindings{
     return @{
              @"userId":@"id",
              @"userName":@"name",
              @"userEmail":@"email",
-             @"userBlogURL":@"blog_url"
+             @"userBlogURL":@"blog_url",
+             @"entityUpdateUnixTimestamp": @"updated_at"
              };
 }
 + (NSDictionary *)propertiesTypeTransformers{
     return @{
-             @"userBlogURL":[PDKTURLTransformer new]
+             @"userBlogURL":[PDKTURLTransformer new],
+             @"entityUpdateUnixTimestamp": [PDKTIntegerTransformer new]
              };
+}
++ (NSString *)entityIdPropertyName {
+    return @"userId";
 }
 + (NSDictionary *)relationshipsBindings{
     return @{
              @"hasPictures":[PDKTCoreDataEntityRelationship oneToManyRelationshipForKeyPath:@"pictures" andClass:[PictureEntity class]]
              };
+}
++ (NSString *)comparableAttribute {
+    return @"entityUpdateUnixTimestamp";
 }
 + (NSDictionary *)customDataDictionaryWithSourceDataDictionary:(NSDictionary *)dictionary{
     NSMutableDictionary *dataDictionary = [dictionary mutableCopy];

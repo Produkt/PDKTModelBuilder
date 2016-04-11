@@ -17,5 +17,6 @@
 @property (nonatomic, retain) NSDate * picturePublishedDate;
 @property (nonatomic, retain) id pictureURL;
 @property (nonatomic, retain) UserEntity *author;
+@property (nonatomic, retain) NSNumber * pictureModificationDateUnixTimestamp;
 
 @end

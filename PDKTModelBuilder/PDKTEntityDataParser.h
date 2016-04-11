@@ -11,7 +11,7 @@
 
 @interface PDKTEntityDataParser : NSObject
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary andEntity:(NSObject<PDKTModelBuilderEntity> *)entity;
-- (void)executeDataParsing;
+- (BOOL)executeDataParsing;
 @end
 
 @interface PDKTEntityDataParser(PropertyParse)

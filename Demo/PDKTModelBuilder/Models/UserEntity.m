@@ -2,7 +2,7 @@
 //  UserEntity.m
 //  PDKTModelBuilder
 //
-//  Created by Daniel García on 02/02/15.
+//  Created by Antonio on 22/7/15.
 //  Copyright (c) 2015 Produkt. All rights reserved.
 //
 
@@ -12,11 +12,12 @@
 
 @implementation UserEntity
 
+@dynamic entityUpdateDate;
 @dynamic userBlogURL;
 @dynamic userEmail;
 @dynamic userId;
 @dynamic userName;
-@dynamic entityUpdateDate;
+@dynamic entityUpdateUnixTimestamp;
 @dynamic hasPictures;
 
 @end
